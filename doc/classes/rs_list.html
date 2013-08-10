@@ -1,0 +1,528 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpOpenFW Developer Documentation » \rs_list</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpOpenFW Developer Documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/phpOpenFW.html"><i class="icon-folder-open"></i> phpOpenFW</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">521</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_display_headers" title="display_headers :: "><span class="description">display_headers()
+        </span><pre>display_headers()</pre></a></li>
+<li class="method public "><a href="#method_empty_message" title="empty_message :: "><span class="description">empty_message()
+        </span><pre>empty_message()</pre></a></li>
+<li class="method public "><a href="#method_escape_data" title="escape_data :: "><span class="description">escape_data()
+        </span><pre>escape_data()</pre></a></li>
+<li class="method public "><a href="#method_group_by" title="group_by :: "><span class="description">group_by()
+        </span><pre>group_by()</pre></a></li>
+<li class="method public "><a href="#method_identify" title="identify :: "><span class="description">identify()
+        </span><pre>identify()</pre></a></li>
+<li class="method public "><a href="#method_label" title="label :: "><span class="description">label()
+        </span><pre>label()</pre></a></li>
+<li class="method public "><a href="#method_no_xsl" title="no_xsl :: "><span class="description">no_xsl()
+        </span><pre>no_xsl()</pre></a></li>
+<li class="method public "><a href="#method_render" title="render :: "><span class="description">render()
+        </span><pre>render()</pre></a></li>
+<li class="method public "><a href="#method_set_cell_attr" title="set_cell_attr :: "><span class="description">set_cell_attr()
+        </span><pre>set_cell_attr()</pre></a></li>
+<li class="method public "><a href="#method_set_col_attr" title="set_col_attr :: "><span class="description">set_col_attr()
+        </span><pre>set_col_attr()</pre></a></li>
+<li class="method public "><a href="#method_set_max_rows" title="set_max_rows :: "><span class="description">set_max_rows()
+        </span><pre>set_max_rows()</pre></a></li>
+<li class="method public "><a href="#method_set_result_format" title="set_result_format :: "><span class="description">set_result_format()
+        </span><pre>set_result_format()</pre></a></li>
+<li class="method public "><a href="#method_set_row_attr" title="set_row_attr :: "><span class="description">set_row_attr()
+        </span><pre>set_row_attr()</pre></a></li>
+<li class="method public "><a href="#method_set_separator" title="set_separator :: "><span class="description">set_separator()
+        </span><pre>set_separator()</pre></a></li>
+<li class="method public "><a href="#method_set_xsl" title="set_xsl :: "><span class="description">set_xsl()
+        </span><pre>set_xsl()</pre></a></li>
+<li class="method public "><a href="#method_show_more" title="show_more :: "><span class="description">show_more()
+        </span><pre>show_more()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="method private "><a href="#method_end_table" title="end_table :: "><span class="description">end_table()
+        </span><pre>end_table()</pre></a></li>
+<li class="method private "><a href="#method_start_cell" title="start_cell :: "><span class="description">start_cell()
+        </span><pre>start_cell()</pre></a></li>
+<li class="method private "><a href="#method_start_row" title="start_row :: "><span class="description">start_row()
+        </span><pre>start_row()</pre></a></li>
+<li class="method private "><a href="#method_start_table" title="start_table :: "><span class="description">start_table()
+        </span><pre>start_table()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_cols" title="$cols :: "><span class="description">Number of columns in a recordset</span><pre>$cols</pre></a></li>
+<li class="property private "><a href="#property_data_outline" title="$data_outline :: "><span class="description">An array that describes how to layout the list</span><pre>$data_outline</pre></a></li>
+<li class="property private "><a href="#property_display_col_headers" title="$display_col_headers :: "><span class="description">Display the column headers (TRUE - On, FALSE - Off)</span><pre>$display_col_headers</pre></a></li>
+<li class="property private "><a href="#property_empty_msg" title="$empty_msg :: "><span class="description">Message Displayed upon empty record set.</span><pre>$empty_msg</pre></a></li>
+<li class="property private "><a href="#property_escape_data" title="$escape_data :: "><span class="description">Escape Data (CDATA) Default = true.</span><pre>$escape_data</pre></a></li>
+<li class="property private "><a href="#property_group_by" title="$group_by :: "><span class="description">Column to group by.</span><pre>$group_by</pre></a></li>
+<li class="property private "><a href="#property_group_by_vals" title="$group_by_vals :: "><span class="description">Column Header Values (Key =&gt; Val).</span><pre>$group_by_vals</pre></a></li>
+<li class="property private "><a href="#property_label" title="$label :: "><span class="description">Label to be used for the list</span><pre>$label</pre></a></li>
+<li class="property private "><a href="#property_max_rows" title="$max_rows :: "><span class="description">Maximum number of rows to display</span><pre>$max_rows</pre></a></li>
+<li class="property private "><a href="#property_more_link" title="$more_link :: "><span class="description">Show more link</span><pre>$more_link</pre></a></li>
+<li class="property private "><a href="#property_record_set" title="$record_set :: "><span class="description">The record set to build the list from</span><pre>$record_set</pre></a></li>
+<li class="property private "><a href="#property_result_format" title="$result_format :: "><span class="description">Result set format (table or LDAP)</span><pre>$result_format</pre></a></li>
+<li class="property private "><a href="#property_rs_attrs" title="$rs_attrs :: "><span class="description">Record set attributes</span><pre>$rs_attrs</pre></a></li>
+<li class="property private "><a href="#property_rs_keys" title="$rs_keys :: "><span class="description">Record Set Keys.</span><pre>$rs_keys</pre></a></li>
+<li class="property private "><a href="#property_separator" title="$separator :: "><span class="description">Multi-part Cell Separator</span><pre>$separator</pre></a></li>
+<li class="property private "><a href="#property_table_class" title="$table_class :: "><span class="description">The CSS class of the table</span><pre>$table_class</pre></a></li>
+<li class="property private "><a href="#property_table_id" title="$table_id :: "><span class="description">The CSS id of the table</span><pre>$table_id</pre></a></li>
+<li class="property private "><a href="#property_xml" title="$xml :: "><span class="description">The XML derived from the record set</span><pre>$xml</pre></a></li>
+<li class="property private "><a href="#property_xsl_template" title="$xsl_template :: "><span class="description">The XSL template to be used during transformation</span><pre>$xsl_template</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\rs_list"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/rs_list.html">rs_list</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Record Set List Class</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/phpOpenFW.Objects.html">phpOpenFW</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Objects</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($do, $rs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$do</h4></div>
+<div class="subelement argument"><h4>$rs</h4></div>
+</div></div>
+</div>
+<a id="method_display_headers"></a><div class="element clickable method public method_display_headers" data-toggle="collapse" data-target=".method_display_headers .collapse">
+<h2>display_headers()
+        </h2>
+<pre>display_headers($bool) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$bool</h4></div>
+</div></div>
+</div>
+<a id="method_empty_message"></a><div class="element clickable method public method_empty_message" data-toggle="collapse" data-target=".method_empty_message .collapse">
+<h2>empty_message()
+        </h2>
+<pre>empty_message($msg) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$msg</h4></div>
+</div></div>
+</div>
+<a id="method_escape_data"></a><div class="element clickable method public method_escape_data" data-toggle="collapse" data-target=".method_escape_data .collapse">
+<h2>escape_data()
+        </h2>
+<pre>escape_data($bool) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$bool</h4></div>
+</div></div>
+</div>
+<a id="method_group_by"></a><div class="element clickable method public method_group_by" data-toggle="collapse" data-target=".method_group_by .collapse">
+<h2>group_by()
+        </h2>
+<pre>group_by($col, $col_vals) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$col_vals</h4></div>
+</div></div>
+</div>
+<a id="method_identify"></a><div class="element clickable method public method_identify" data-toggle="collapse" data-target=".method_identify .collapse">
+<h2>identify()
+        </h2>
+<pre>identify($id, $class) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$class</h4></div>
+</div></div>
+</div>
+<a id="method_label"></a><div class="element clickable method public method_label" data-toggle="collapse" data-target=".method_label .collapse">
+<h2>label()
+        </h2>
+<pre>label($label) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$label</h4></div>
+</div></div>
+</div>
+<a id="method_no_xsl"></a><div class="element clickable method public method_no_xsl" data-toggle="collapse" data-target=".method_no_xsl .collapse">
+<h2>no_xsl()
+        </h2>
+<pre>no_xsl() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_render"></a><div class="element clickable method public method_render" data-toggle="collapse" data-target=".method_render .collapse">
+<h2>render()
+        </h2>
+<pre>render() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_set_cell_attr"></a><div class="element clickable method public method_set_cell_attr" data-toggle="collapse" data-target=".method_set_cell_attr .collapse">
+<h2>set_cell_attr()
+        </h2>
+<pre>set_cell_attr($row, $cell, $attr, $val, $overwrite) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$cell</h4></div>
+<div class="subelement argument"><h4>$attr</h4></div>
+<div class="subelement argument"><h4>$val</h4></div>
+<div class="subelement argument"><h4>$overwrite</h4></div>
+</div></div>
+</div>
+<a id="method_set_col_attr"></a><div class="element clickable method public method_set_col_attr" data-toggle="collapse" data-target=".method_set_col_attr .collapse">
+<h2>set_col_attr()
+        </h2>
+<pre>set_col_attr($col, $attr, $val, $overwrite) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$attr</h4></div>
+<div class="subelement argument"><h4>$val</h4></div>
+<div class="subelement argument"><h4>$overwrite</h4></div>
+</div></div>
+</div>
+<a id="method_set_max_rows"></a><div class="element clickable method public method_set_max_rows" data-toggle="collapse" data-target=".method_set_max_rows .collapse">
+<h2>set_max_rows()
+        </h2>
+<pre>set_max_rows($num) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$num</h4></div>
+</div></div>
+</div>
+<a id="method_set_result_format"></a><div class="element clickable method public method_set_result_format" data-toggle="collapse" data-target=".method_set_result_format .collapse">
+<h2>set_result_format()
+        </h2>
+<pre>set_result_format($format) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$format</h4></div>
+</div></div>
+</div>
+<a id="method_set_row_attr"></a><div class="element clickable method public method_set_row_attr" data-toggle="collapse" data-target=".method_set_row_attr .collapse">
+<h2>set_row_attr()
+        </h2>
+<pre>set_row_attr($row, $attr, $val, $overwrite) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$attr</h4></div>
+<div class="subelement argument"><h4>$val</h4></div>
+<div class="subelement argument"><h4>$overwrite</h4></div>
+</div></div>
+</div>
+<a id="method_set_separator"></a><div class="element clickable method public method_set_separator" data-toggle="collapse" data-target=".method_set_separator .collapse">
+<h2>set_separator()
+        </h2>
+<pre>set_separator($string) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$string</h4></div>
+</div></div>
+</div>
+<a id="method_set_xsl"></a><div class="element clickable method public method_set_xsl" data-toggle="collapse" data-target=".method_set_xsl .collapse">
+<h2>set_xsl()
+        </h2>
+<pre>set_xsl($stylesheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$stylesheet</h4></div>
+</div></div>
+</div>
+<a id="method_show_more"></a><div class="element clickable method public method_show_more" data-toggle="collapse" data-target=".method_show_more .collapse">
+<h2>show_more()
+        </h2>
+<pre>show_more($more_link) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$more_link</h4></div>
+</div></div>
+</div>
+<a id="method_end_table"></a><div class="element clickable method private method_end_table" data-toggle="collapse" data-target=".method_end_table .collapse">
+<h2>end_table()
+        </h2>
+<pre>end_table($row_count) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row_count</h4></div>
+</div></div>
+</div>
+<a id="method_start_cell"></a><div class="element clickable method private method_start_cell" data-toggle="collapse" data-target=".method_start_cell .collapse">
+<h2>start_cell()
+        </h2>
+<pre>start_cell($row_key, $cell) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row_key</h4></div>
+<div class="subelement argument"><h4>$cell</h4></div>
+</div></div>
+</div>
+<a id="method_start_row"></a><div class="element clickable method private method_start_row" data-toggle="collapse" data-target=".method_start_row .collapse">
+<h2>start_row()
+        </h2>
+<pre>start_row($row_key, $row_count) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row_key</h4></div>
+<div class="subelement argument"><h4>$row_count</h4></div>
+</div></div>
+</div>
+<a id="method_start_table"></a><div class="element clickable method private method_start_table" data-toggle="collapse" data-target=".method_start_table .collapse">
+<h2>start_table()
+        </h2>
+<pre>start_table($order, $label) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$order</h4></div>
+<div class="subelement argument"><h4>$label</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_cols"> </a><div class="element clickable property private property_cols" data-toggle="collapse" data-target=".property_cols .collapse">
+<h2>Number of columns in a recordset</h2>
+<pre>$cols : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_data_outline"> </a><div class="element clickable property private property_data_outline" data-toggle="collapse" data-target=".property_data_outline .collapse">
+<h2>An array that describes how to layout the list</h2>
+<pre>$data_outline : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_display_col_headers"> </a><div class="element clickable property private property_display_col_headers" data-toggle="collapse" data-target=".property_display_col_headers .collapse">
+<h2>Display the column headers (TRUE - On, FALSE - Off)</h2>
+<pre>$display_col_headers : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_empty_msg"> </a><div class="element clickable property private property_empty_msg" data-toggle="collapse" data-target=".property_empty_msg .collapse">
+<h2>Message Displayed upon empty record set.</h2>
+<pre>$empty_msg : String</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_escape_data"> </a><div class="element clickable property private property_escape_data" data-toggle="collapse" data-target=".property_escape_data .collapse">
+<h2>Escape Data (CDATA) Default = true.</h2>
+<pre>$escape_data : Bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_group_by"> </a><div class="element clickable property private property_group_by" data-toggle="collapse" data-target=".property_group_by .collapse">
+<h2>Column to group by.</h2>
+<pre>$group_by : String</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_group_by_vals"> </a><div class="element clickable property private property_group_by_vals" data-toggle="collapse" data-target=".property_group_by_vals .collapse">
+<h2>Column Header Values (Key =&gt; Val).</h2>
+<pre>$group_by_vals : Array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_label"> </a><div class="element clickable property private property_label" data-toggle="collapse" data-target=".property_label .collapse">
+<h2>Label to be used for the list</h2>
+<pre>$label : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_max_rows"> </a><div class="element clickable property private property_max_rows" data-toggle="collapse" data-target=".property_max_rows .collapse">
+<h2>Maximum number of rows to display</h2>
+<pre>$max_rows : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_more_link"> </a><div class="element clickable property private property_more_link" data-toggle="collapse" data-target=".property_more_link .collapse">
+<h2>Show more link</h2>
+<pre>$more_link : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_record_set"> </a><div class="element clickable property private property_record_set" data-toggle="collapse" data-target=".property_record_set .collapse">
+<h2>The record set to build the list from</h2>
+<pre>$record_set : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_result_format"> </a><div class="element clickable property private property_result_format" data-toggle="collapse" data-target=".property_result_format .collapse">
+<h2>Result set format (table or LDAP)</h2>
+<pre>$result_format : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_rs_attrs"> </a><div class="element clickable property private property_rs_attrs" data-toggle="collapse" data-target=".property_rs_attrs .collapse">
+<h2>Record set attributes</h2>
+<pre>$rs_attrs : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_rs_keys"> </a><div class="element clickable property private property_rs_keys" data-toggle="collapse" data-target=".property_rs_keys .collapse">
+<h2>Record Set Keys.</h2>
+<pre>$rs_keys : Array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_separator"> </a><div class="element clickable property private property_separator" data-toggle="collapse" data-target=".property_separator .collapse">
+<h2>Multi-part Cell Separator</h2>
+<pre>$separator : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_table_class"> </a><div class="element clickable property private property_table_class" data-toggle="collapse" data-target=".property_table_class .collapse">
+<h2>The CSS class of the table</h2>
+<pre>$table_class : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_table_id"> </a><div class="element clickable property private property_table_id" data-toggle="collapse" data-target=".property_table_id .collapse">
+<h2>The CSS id of the table</h2>
+<pre>$table_id : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_xml"> </a><div class="element clickable property private property_xml" data-toggle="collapse" data-target=".property_xml .collapse">
+<h2>The XML derived from the record set</h2>
+<pre>$xml : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_xsl_template"> </a><div class="element clickable property private property_xsl_template" data-toggle="collapse" data-target=".property_xsl_template .collapse">
+<h2>The XSL template to be used during transformation</h2>
+<pre>$xsl_template : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-11-21T13:10:14-05:00.<br></footer></div>
+</div>
+</body>
+</html>

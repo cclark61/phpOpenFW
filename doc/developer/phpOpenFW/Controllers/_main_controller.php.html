@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page main_controller.php</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name"><img src="../../media/images/Page_logo.png" alt="File" style="vertical-align: middle">/main_controller.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+									<a href="#sec-includes">Includes</a>
+			|											<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Main Framework Controller</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Christian J. Clark</li>
+				<li><span class="field">version:</span> Started: ??-??-????, Last updated: 11-20-2012</li>
+				<li><span class="field">copyright:</span> Copyright (c) Christian J. Clark</li>
+				<li><span class="field">filesource:</span> <a href="../../__filesource/fsource_phpOpenFW_Controllers_main_controller.php.html">Source Code for this file</a></li>
+				<li><span class="field">license:</span> <a href="http://www.gnu.org/licenses/gpl-2.0.txt">http://www.gnu.org/licenses/gpl-2.0.txt</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	<a name="sec-includes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Includes</span>
+			|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			
+Strict standards: Only variables should be passed by reference in /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Smarty-2.6.0/libs/Smarty_Compiler.class.php on line 712
+
+Call Stack:
+    0.0001     224448   1. {main}() /data/www/html/emonlade.net/phpDocumentor/phpdoc:0
+    0.0028     234224   2. include('/data/www/html/emonlade.net/phpDocumentor/phpDocumentor/phpdoc.inc') /data/www/html/emonlade.net/phpDocumentor/phpdoc:59
+    0.0704    7640552   3. phpDocumentor_setup->createDocs() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/phpdoc.inc:65
+    4.6882   58879632   4. phpDocumentor_IntermediateParser->Output() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Setup.inc.php:754
+    4.8213   58154912   5. phpDocumentor_IntermediateParser->Convert() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/IntermediateParser.inc:1865
+    4.8213   58155144   6. Converter->walk() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/IntermediateParser.inc:1652
+   15.2253   60366240   7. HTMLframesConverter->endPage() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Converter.inc:1939
+   15.2255   60368688   8. Smarty->fetch() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Converters/HTML/frames/HTMLframesConverter.inc:366
+   15.2261   60480576   9. include('/data/www/html/Library/php/phpOpenFW1/doc/developer/phpOpenFW/Form_Engine/37fe0d91c3b034db82eb2bc6d4fa57b5/%%363^%%3636363891^page.tpl.php') /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Smarty-2.6.0/libs/Smarty.class.php:1298
+   15.2265   60487160  10. Smarty->_smarty_include() /data/www/html/Library/php/phpOpenFW1/doc/developer/phpOpenFW/Form_Engine/37fe0d91c3b034db82eb2bc6d4fa57b5/%%363^%%3636363891^page.tpl.php:160
+   15.2265   60490232  11. Smarty->_compile_resource() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Smarty-2.6.0/libs/Smarty.class.php:1935
+   15.2270   60492920  12. Smarty->_compile_source() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Smarty-2.6.0/libs/Smarty.class.php:1458
+   15.2271   60519192  13. Smarty_Compiler->_compile_file() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Smarty-2.6.0/libs/Smarty.class.php:1523
+   15.2280   60534584  14. Smarty_Compiler->_compile_tag() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Smarty-2.6.0/libs/Smarty_Compiler.class.php:316
+   15.2282   60535544  15. Smarty_Compiler->_compile_custom_tag() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Smarty-2.6.0/libs/Smarty_Compiler.class.php:537
+
+<a name="_$app_logic_path/structure/message_class_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Page.png" alt=" " />
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name">"$app_logic_path/structure/message.class.php"</span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Controllers_main_controller.php.html#a47">47</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_$_SESSION[frame_path]/core/structure/objects/element_class_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Page.png" alt=" " />
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name">"$_SESSION[frame_path]/core/structure/objects/element.class.php"</span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Controllers_main_controller.php.html#a41">41</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_$app_logic_path/structure/page_class_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Page.png" alt=" " />
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name">"$app_logic_path/structure/page.class.php"</span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Controllers_main_controller.php.html#a46">46</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_$app_logic_path/structure/module_class_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Page.png" alt=" " />
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name">"$app_logic_path/structure/module.class.php"</span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Controllers_main_controller.php.html#a48">48</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_dirname(__FILE__)_/controller_common_inc_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Page.png" alt=" " />
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name">dirname(__FILE__).'/controller_common.inc.php'</span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Controllers_main_controller.php.html#a20">20</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_$app_logic_path/security/login_class_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Page.png" alt=" " />
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name">"$app_logic_path/security/login.class.php"</span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Controllers_main_controller.php.html#a146">146</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_$_SESSION[file_path]/login_inc_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Page.png" alt=" " />
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name">"$_SESSION[file_path]/login.inc.php"</span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Controllers_main_controller.php.html#a150">150</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_$app_logic_path/security/login_class_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Page.png" alt=" " />
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name">"$app_logic_path/security/login.class.php"</span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Controllers_main_controller.php.html#a88">88</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_$_SESSION[file_path]/login_inc_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Page.png" alt=" " />
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name">"$_SESSION[file_path]/login.inc.php"</span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Controllers_main_controller.php.html#a95">95</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+		</div>
+	</div>
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|												<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionget_html_path" id="functionget_html_path"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">get_html_path</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Controllers_main_controller.php.html#a257">257</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get HTML Path Function</p>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_html_path
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionload_plugin" id="functionload_plugin"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">load_plugin</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Controllers_main_controller.php.html#a291">291</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load Plugin Function</p>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			load_plugin
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$plugin</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$plugin</span><span class="var-description">: The Name of the plugin without the &quot;.inc.php&quot;</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionset_plugin_folder" id="functionset_plugin_folder"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">set_plugin_folder</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Controllers_main_controller.php.html#a327">327</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set External Plugin Folder</p>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_plugin_folder
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$dir</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dir</span><span class="var-description">: File path to plugin folder</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 21 Nov 2012 18:25:28 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class form</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> form</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Form Class</p>
+		<p class="notes">
+			Located in <a class="field" href="_core---structure---forms---form.class.php.html">/core/structure/forms/form.class.php</a> (line <span class="field"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a20">20</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../phpOpenFW/Objects/element.html">element</a>
+   |
+   --form</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$alt_rows" title="details" class="var-name">$alt_rows</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$button" title="details" class="var-name">$button</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$button_cell_attrs" title="details" class="var-name">$button_cell_attrs</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$cols" title="details" class="var-name">$cols</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$form_elements" title="details" class="var-name">$form_elements</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$form_label" title="details" class="var-name">$form_label</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$headers" title="details" class="var-name">$headers</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$hidden_elements" title="details" class="var-name">$hidden_elements</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$page_action" title="details" class="var-name">$page_action</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$row_attrs" title="details" class="var-name">$row_attrs</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																								<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">form</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$form_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$form_action</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#add_element" title="details" class="method-name">add_element</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$form_element</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$num_cols</span> = <span class="var-default">1</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$attrs</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#add_hidden" title="details" class="method-name">add_hidden</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$hidden_element</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#add_label" title="details" class="method-name">add_label</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$caption</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$num_cols</span> = <span class="var-default">1</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$attrs</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$attrs2</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#add_text" title="details" class="method-name">add_text</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$content</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#end_fieldset" title="details" class="method-name">end_fieldset</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#label" title="details" class="method-name">label</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$label</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#no_button" title="details" class="method-name">no_button</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#no_xsl" title="details" class="method-name">no_xsl</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#process_element" title="details" class="method-name">process_element</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$element</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#render" title="details" class="method-name">render</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$buffer</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#set_alt_rows" title="details" class="method-name">set_alt_rows</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#set_button" title="details" class="method-name">set_button</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$button</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#set_button_attrs" title="details" class="method-name">set_button_attrs</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$button_attrs</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#set_columns" title="details" class="method-name">set_columns</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$cols</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#set_headers" title="details" class="method-name">set_headers</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$headers</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#set_row_attr" title="details" class="method-name">set_row_attr</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$row</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$attr_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$attr_val</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#start_fieldset" title="details" class="method-name">start_fieldset</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$content</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#use_key" title="details" class="method-name">use_key</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">'form_key'</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$alt_rows" id="$alt_rows"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$alt_rows</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a58">58</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Flag: true = put &quot;alt&quot; class in row element, false = don't</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$button" id="$button"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$button</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The text for the submit button</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$button_cell_attrs" id="$button_cell_attrs"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$button_cell_attrs</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a68">68</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> An Array, in the form of &quot;Key&quot; =&gt; &quot;Value&quot;, of Button Cell Attributes</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$cols" id="$cols"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$cols</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a53">53</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> number of columns in the form</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$form_elements" id="$form_elements"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$form_elements</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a43">43</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> An array of elements in the form</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$form_label" id="$form_label"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$form_label</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a28">28</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The label of the form being created</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$headers" id="$headers"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$headers</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a63">63</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> An Array of Headers to be used at the top of the form table</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$hidden_elements" id="$hidden_elements"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$hidden_elements</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a48">48</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> An array of hidden elements in the form</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$page_action" id="$page_action"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$page_action</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The action of the current page</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$row_attrs" id="$row_attrs"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$row_attrs</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a73">73</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> An Array, in the form of &quot;Key&quot; =&gt; &quot;Value&quot;, of Row Attributes</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../phpOpenFW/Objects/element.html">element</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../phpOpenFW/Objects/element.html#var$attributes">element::$attributes</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../phpOpenFW/Objects/element.html#var$child_nodes">element::$child_nodes</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../phpOpenFW/Objects/element.html#var$element">element::$element</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../phpOpenFW/Objects/element.html#var$element_xml">element::$element_xml</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../phpOpenFW/Objects/element.html#var$endtag">element::$endtag</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../phpOpenFW/Objects/element.html#var$inset_val">element::$inset_val</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../phpOpenFW/Objects/element.html#var$style">element::$style</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../phpOpenFW/Objects/element.html#var$tabs">element::$tabs</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../phpOpenFW/Objects/element.html#var$xsl_template">element::$xsl_template</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a83">83</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Form constructor function</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">form</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$form_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$form_action</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$form_name</span><span class="var-description">: Name of the form</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$form_action</span><span class="var-description">: Action of the form (Where it's going)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodadd_element" id="add_element"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">add_element</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a299">299</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a field to the form</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			add_element
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$form_element</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$num_cols</span> = <span class="var-default">1</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$attrs</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$form_element</span><span class="var-description">: New Form element</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$num_cols</span><span class="var-description">: Number of columns to span</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$attrs</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodadd_hidden" id="add_hidden"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">add_hidden</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a311">311</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a hidden field to the form</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			add_hidden
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$hidden_element</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$hidden_element</span><span class="var-description">: New hidden form element</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodadd_label" id="add_label"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">add_label</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a335">335</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a label field to the form</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			add_label
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$caption</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$num_cols</span> = <span class="var-default">1</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$attrs</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$attrs2</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$caption</span><span class="var-description">: Label Caption</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$num_cols</span><span class="var-description">: Number of columns to span</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$attrs</span><span class="var-description">: &quot;For&quot; Attribute Value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$attrs2</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodadd_text" id="add_text"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">add_text</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a322">322</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a text/html/markup to the form</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			add_text
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$content</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$content</span><span class="var-description">: The Content to insert</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodend_fieldset" id="end_fieldset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">end_fieldset</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a395">395</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">End a fieldset in the form</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			end_fieldset
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodlabel" id="label"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">label</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a408">408</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Form Label</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			label
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$label</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$label</span><span class="var-description">: Form Label</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodno_button" id="no_button"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">no_button</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a243">243</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Turn off the submit button from showing</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			no_button
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodno_xsl" id="no_xsl"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">no_xsl</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a423">423</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Turn off xsl transformation</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			no_xsl
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodprocess_element" id="process_element"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">process_element</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a350">350</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Process the current form element passed (string, object, array)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			process_element
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$element</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$element</span><span class="var-description">: The form element to process</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrender" id="render"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">render</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a112">112</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Form render function</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			render
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$buffer</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$buffer</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../phpOpenFW/Objects/element.html#methodrender">element::render()</a></dt>
+						<dd>Element class render function</dd>
+					</dl>
+			
+	</div>
+<a name="methodset_alt_rows" id="set_alt_rows"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">set_alt_rows</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a416">416</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set alternating row class &quot;alt&quot;</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_alt_rows
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodset_button" id="set_button"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">set_button</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a236">236</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the submit button description at the bottom of the page</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_button
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$button</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$button</span><span class="var-description">: Text or array strings to be used for the submit button(s)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_button_attrs" id="set_button_attrs"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">set_button_attrs</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a251">251</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the attributes for the table cell containing the form button(s)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_button_attrs
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$button_attrs</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$button_attrs</span><span class="var-description">: A Key/Value array of attributes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_columns" id="set_columns"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">set_columns</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a228">228</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the number of columns in the form</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_columns
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$cols</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$cols</span><span class="var-description">: Number of columns in the form table</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_headers" id="set_headers"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">set_headers</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a263">263</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the form table headers</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_headers
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$headers</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$headers</span><span class="var-description">: An array of values to be used as the headers for the form table</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_row_attr" id="set_row_attr"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">set_row_attr</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a276">276</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set a row attribute</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_row_attr
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$row</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$attr_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$attr_val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$row</span><span class="var-description">: The row number to set the attribute on.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$attr_name</span><span class="var-description">: The attribute name.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$attr_val</span><span class="var-description">: The attribute value.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstart_fieldset" id="start_fieldset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">start_fieldset</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a376">376</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Start a fieldset in the form</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			start_fieldset
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$content</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$content</span><span class="var-description">: The legend to insert after the start of the fieldset</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: The id of the fieldset</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$class</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoduse_key" id="use_key"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">use_key</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Form_Engine_corestructureformsform.class.php.html#a431">431</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create and use a hidden unique form key</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			use_key
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">'form_key'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: Key Name</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../phpOpenFW/Objects/element.html">element</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../phpOpenFW/Objects/element.html#methodadd_child">element::add_child()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../phpOpenFW/Objects/element.html#methodattr">element::attr()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../phpOpenFW/Objects/element.html#methodattrs">element::attrs()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../phpOpenFW/Objects/element.html#methoddisplay_inline">element::display_inline()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../phpOpenFW/Objects/element.html#methoddisplay_tree">element::display_tree()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../phpOpenFW/Objects/element.html#methodforce_endtag">element::force_endtag()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../phpOpenFW/Objects/element.html#methodinset">element::inset()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../phpOpenFW/Objects/element.html#methodrender">element::render()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../phpOpenFW/Objects/element.html#methodset_attribute">element::set_attribute()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../phpOpenFW/Objects/element.html#methodset_tabs">element::set_tabs()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../phpOpenFW/Objects/element.html#methodset_xsl">element::set_xsl()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../phpOpenFW/Objects/element.html#methodxml_escape">element::xml_escape()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../phpOpenFW/Objects/element.html#method__destruct">element::__destruct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../phpOpenFW/Objects/element.html#method__toString">element::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sat, 10 Aug 2013 04:00:12 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

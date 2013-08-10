@@ -1,0 +1,1406 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpOpenFW Developer Documentation » global</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpOpenFW Developer Documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/phpOpenFW.html"><i class="icon-folder-open"></i> phpOpenFW</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">521</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Namespaces</li>
+<li>
+<a href="../namespaces/global.html" title="global"><i class="icon-th"></i>global</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+</ul>
+</div>
+<div class="span8 namespace-contents">
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li class="active"><a href="../namespaces/global.html">global</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a id="function_HandleXSLError"></a><div class="element clickable function  function_HandleXSLError" data-toggle="collapse" data-target=".function_HandleXSLError .collapse">
+<h2>XSL Load Error Handler</h2>
+<pre>HandleXSLError(string $errno, $errstr, $errfile, $errline) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$errno</h4>
+<code>string</code><p>Error Number</p></div>
+<div class="subelement argument"><h4>$errstr</h4></div>
+<div class="subelement argument"><h4>$errfile</h4></div>
+<div class="subelement argument"><h4>$errline</h4></div>
+</div></div>
+</div>
+<a id="function_action_message"></a><div class="element clickable function  function_action_message" data-toggle="collapse" data-target=".function_action_message .collapse">
+<h2>action_message()
+        </h2>
+<pre>action_message($message) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$message</h4></div>
+</div></div>
+</div>
+<a id="function_add_url_params"></a><div class="element clickable function  function_add_url_params" data-toggle="collapse" data-target=".function_add_url_params .collapse">
+<h2>add_url_params()
+        </h2>
+<pre>add_url_params($in_url, $params, $xml_escape, $url_encode) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$in_url</h4></div>
+<div class="subelement argument"><h4>$params</h4></div>
+<div class="subelement argument"><h4>$xml_escape</h4></div>
+<div class="subelement argument"><h4>$url_encode</h4></div>
+</div></div>
+</div>
+<a id="function_anchor"></a><div class="element clickable function  function_anchor" data-toggle="collapse" data-target=".function_anchor .collapse">
+<h2>anchor()
+        </h2>
+<pre>anchor($href, $content, $attrs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$href</h4></div>
+<div class="subelement argument"><h4>$content</h4></div>
+<div class="subelement argument"><h4>$attrs</h4></div>
+</div></div>
+</div>
+<a id="function_array2xml"></a><div class="element clickable function  function_array2xml" data-toggle="collapse" data-target=".function_array2xml .collapse">
+<h2>Generate XML Data from an array</h2>
+<pre>array2xml(string $element, array $data, string $num_prefix, $depth, $count) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$element</h4>
+<code>string</code><p>Top level XML data element name</p></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Array to generate XML from</p></div>
+<div class="subelement argument">
+<h4>$num_prefix</h4>
+<code>string</code><p>Prefix to use for numeric element names</p></div>
+<div class="subelement argument"><h4>$depth</h4></div>
+<div class="subelement argument"><h4>$count</h4></div>
+</div></div>
+</div>
+<a id="function_br"></a><div class="element clickable function  function_br" data-toggle="collapse" data-target=".function_br .collapse">
+<h2>br()
+        </h2>
+<pre>br($attrs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$attrs</h4></div>
+</div></div>
+</div>
+<a id="function_button"></a><div class="element clickable function  function_button" data-toggle="collapse" data-target=".function_button .collapse">
+<h2>button()
+        </h2>
+<pre>button($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_dd"></a><div class="element clickable function  function_dd" data-toggle="collapse" data-target=".function_dd .collapse">
+<h2>dd()
+        </h2>
+<pre>dd($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_default_data_source"></a><div class="element clickable function  function_default_data_source" data-toggle="collapse" data-target=".function_default_data_source .collapse">
+<h2>default_data_source()
+        </h2>
+<pre>default_data_source($index) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$index</h4></div>
+</div></div>
+</div>
+<a id="function_div"></a><div class="element clickable function  function_div" data-toggle="collapse" data-target=".function_div .collapse">
+<h2>Creates an XHTML &lt;div&gt; element</h2>
+<pre>div(string $content, array $attrs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code>string</code><p>Content inside of div</p></div>
+<div class="subelement argument">
+<h4>$attrs</h4>
+<code>array</code><p>An array, in the form of [key] => [value], of attributes</p>
+</div>
+</div></div>
+</div>
+<a id="function_dt"></a><div class="element clickable function  function_dt" data-toggle="collapse" data-target=".function_dt .collapse">
+<h2>dt()
+        </h2>
+<pre>dt($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_em"></a><div class="element clickable function  function_em" data-toggle="collapse" data-target=".function_em .collapse">
+<h2>em()
+        </h2>
+<pre>em($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_fieldset"></a><div class="element clickable function  function_fieldset" data-toggle="collapse" data-target=".function_fieldset .collapse">
+<h2>fieldset()
+        </h2>
+<pre>fieldset($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_form"></a><div class="element clickable function  function_form" data-toggle="collapse" data-target=".function_form .collapse">
+<h2>form()
+        </h2>
+<pre>form($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_gen_content"></a><div class="element clickable function  function_gen_content" data-toggle="collapse" data-target=".function_gen_content .collapse">
+<h2>gen_content()
+        </h2>
+<pre>gen_content($elm, $content, $attrs, $escape) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$elm</h4></div>
+<div class="subelement argument"><h4>$content</h4></div>
+<div class="subelement argument"><h4>$attrs</h4></div>
+<div class="subelement argument"><h4>$escape</h4></div>
+</div></div>
+</div>
+<a id="function_gen_links"></a><div class="element clickable function  function_gen_links" data-toggle="collapse" data-target=".function_gen_links .collapse">
+<h2>gen_links()
+        </h2>
+<pre>gen_links($links, $extra_class) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$links</h4></div>
+<div class="subelement argument"><h4>$extra_class</h4></div>
+</div></div>
+</div>
+<a id="function_get_html_path"></a><div class="element clickable function  function_get_html_path" data-toggle="collapse" data-target=".function_get_html_path .collapse">
+<h2>get_html_path()
+        </h2>
+<pre>get_html_path() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_h1"></a><div class="element clickable function  function_h1" data-toggle="collapse" data-target=".function_h1 .collapse">
+<h2>h1()
+        </h2>
+<pre>h1($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_h2"></a><div class="element clickable function  function_h2" data-toggle="collapse" data-target=".function_h2 .collapse">
+<h2>h2()
+        </h2>
+<pre>h2($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_h3"></a><div class="element clickable function  function_h3" data-toggle="collapse" data-target=".function_h3 .collapse">
+<h2>h3()
+        </h2>
+<pre>h3($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_h4"></a><div class="element clickable function  function_h4" data-toggle="collapse" data-target=".function_h4 .collapse">
+<h2>h4()
+        </h2>
+<pre>h4($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_h5"></a><div class="element clickable function  function_h5" data-toggle="collapse" data-target=".function_h5 .collapse">
+<h2>h5()
+        </h2>
+<pre>h5($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_h6"></a><div class="element clickable function  function_h6" data-toggle="collapse" data-target=".function_h6 .collapse">
+<h2>h6()
+        </h2>
+<pre>h6($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_hr"></a><div class="element clickable function  function_hr" data-toggle="collapse" data-target=".function_hr .collapse">
+<h2>hr()
+        </h2>
+<pre>hr($attrs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$attrs</h4></div>
+</div></div>
+</div>
+<a id="function_image"></a><div class="element clickable function  function_image" data-toggle="collapse" data-target=".function_image .collapse">
+<h2>image()
+        </h2>
+<pre>image($src, $alt, $attrs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$src</h4></div>
+<div class="subelement argument"><h4>$alt</h4></div>
+<div class="subelement argument"><h4>$attrs</h4></div>
+</div></div>
+</div>
+<a id="function_img"></a><div class="element clickable function  function_img" data-toggle="collapse" data-target=".function_img .collapse">
+<h2>img()
+        </h2>
+<pre>img($attrs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$attrs</h4></div>
+</div></div>
+</div>
+<a id="function_input"></a><div class="element clickable function  function_input" data-toggle="collapse" data-target=".function_input .collapse">
+<h2>input()
+        </h2>
+<pre>input($attrs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$attrs</h4></div>
+</div></div>
+</div>
+<a id="function_is_valid_date"></a><div class="element clickable function  function_is_valid_date" data-toggle="collapse" data-target=".function_is_valid_date .collapse">
+<h2>is_valid_date()
+        </h2>
+<pre>is_valid_date($date) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$date</h4></div>
+</div></div>
+</div>
+<a id="function_is_valid_sql_date"></a><div class="element clickable function  function_is_valid_sql_date" data-toggle="collapse" data-target=".function_is_valid_sql_date .collapse">
+<h2>is_valid_sql_date()
+        </h2>
+<pre>is_valid_sql_date($date) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$date</h4></div>
+</div></div>
+</div>
+<a id="function_is_valid_time"></a><div class="element clickable function  function_is_valid_time" data-toggle="collapse" data-target=".function_is_valid_time .collapse">
+<h2>is_valid_time()
+        </h2>
+<pre>is_valid_time($time) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$time</h4></div>
+</div></div>
+</div>
+<a id="function_label"></a><div class="element clickable function  function_label" data-toggle="collapse" data-target=".function_label .collapse">
+<h2>label()
+        </h2>
+<pre>label($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_legend"></a><div class="element clickable function  function_legend" data-toggle="collapse" data-target=".function_legend .collapse">
+<h2>legend()
+        </h2>
+<pre>legend($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_li"></a><div class="element clickable function  function_li" data-toggle="collapse" data-target=".function_li .collapse">
+<h2>li()
+        </h2>
+<pre>li($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_load_config"></a><div class="element clickable function  function_load_config" data-toggle="collapse" data-target=".function_load_config .collapse">
+<h2>load_config()
+        </h2>
+<pre>load_config() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_load_form_elements"></a><div class="element clickable function  function_load_form_elements" data-toggle="collapse" data-target=".function_load_form_elements .collapse">
+<h2>load_form_elements()
+        </h2>
+<pre>load_form_elements() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_load_plugin"></a><div class="element clickable function  function_load_plugin" data-toggle="collapse" data-target=".function_load_plugin .collapse">
+<h2>load_plugin()
+        </h2>
+<pre>load_plugin($plugin) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$plugin</h4></div>
+</div></div>
+</div>
+<a id="function_lower_rec_keys"></a><div class="element clickable function  function_lower_rec_keys" data-toggle="collapse" data-target=".function_lower_rec_keys .collapse">
+<h2>lower_rec_keys()
+        </h2>
+<pre>lower_rec_keys($driver_type, $records) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$driver_type</h4></div>
+<div class="subelement argument"><h4>$records</h4></div>
+</div></div>
+</div>
+<a id="function_mystamp_pretty"></a><div class="element clickable function  function_mystamp_pretty" data-toggle="collapse" data-target=".function_mystamp_pretty .collapse">
+<h2>mystamp_pretty()
+        </h2>
+<pre>mystamp_pretty($mysql_stamp, $format) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$mysql_stamp</h4></div>
+<div class="subelement argument"><h4>$format</h4></div>
+</div></div>
+</div>
+<a id="function_ol"></a><div class="element clickable function  function_ol" data-toggle="collapse" data-target=".function_ol .collapse">
+<h2>ol()
+        </h2>
+<pre>ol($lis, $attrs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$lis</h4></div>
+<div class="subelement argument"><h4>$attrs</h4></div>
+</div></div>
+</div>
+<a id="function_option"></a><div class="element clickable function  function_option" data-toggle="collapse" data-target=".function_option .collapse">
+<h2>option()
+        </h2>
+<pre>option($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_p"></a><div class="element clickable function  function_p" data-toggle="collapse" data-target=".function_p .collapse">
+<h2>p()
+        </h2>
+<pre>p($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_pre"></a><div class="element clickable function  function_pre" data-toggle="collapse" data-target=".function_pre .collapse">
+<h2>pre()
+        </h2>
+<pre>pre($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_print_array"></a><div class="element clickable function  function_print_array" data-toggle="collapse" data-target=".function_print_array .collapse">
+<h2>print_array()
+        </h2>
+<pre>print_array($in_array) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$in_array</h4></div>
+</div></div>
+</div>
+<a id="function_qdb_delete"></a><div class="element clickable function  function_qdb_delete" data-toggle="collapse" data-target=".function_qdb_delete .collapse">
+<h2>qdb_delete()
+        </h2>
+<pre>qdb_delete($db_config, $db_table, $where, $opts) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$db_config</h4></div>
+<div class="subelement argument"><h4>$db_table</h4></div>
+<div class="subelement argument"><h4>$where</h4></div>
+<div class="subelement argument"><h4>$opts</h4></div>
+</div></div>
+</div>
+<a id="function_qdb_exec"></a><div class="element clickable function  function_qdb_exec" data-toggle="collapse" data-target=".function_qdb_exec .collapse">
+<h2>qdb_exec()
+        </h2>
+<pre>qdb_exec($db_config, $strsql, $bind_params, $return_format, $opts) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$db_config</h4></div>
+<div class="subelement argument"><h4>$strsql</h4></div>
+<div class="subelement argument"><h4>$bind_params</h4></div>
+<div class="subelement argument"><h4>$return_format</h4></div>
+<div class="subelement argument"><h4>$opts</h4></div>
+</div></div>
+</div>
+<a id="function_qdb_first_row"></a><div class="element clickable function  function_qdb_first_row" data-toggle="collapse" data-target=".function_qdb_first_row .collapse">
+<h2>qdb_first_row()
+        </h2>
+<pre>qdb_first_row($db_config, $strsql, $bind_params, $opts) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$db_config</h4></div>
+<div class="subelement argument"><h4>$strsql</h4></div>
+<div class="subelement argument"><h4>$bind_params</h4></div>
+<div class="subelement argument"><h4>$opts</h4></div>
+</div></div>
+</div>
+<a id="function_qdb_list"></a><div class="element clickable function  function_qdb_list" data-toggle="collapse" data-target=".function_qdb_list .collapse">
+<h2>qdb_list()
+        </h2>
+<pre>qdb_list($db_config, $strsql, $return_format, $opts) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$db_config</h4></div>
+<div class="subelement argument"><h4>$strsql</h4></div>
+<div class="subelement argument"><h4>$return_format</h4></div>
+<div class="subelement argument"><h4>$opts</h4></div>
+</div></div>
+</div>
+<a id="function_qdb_lookup"></a><div class="element clickable function  function_qdb_lookup" data-toggle="collapse" data-target=".function_qdb_lookup .collapse">
+<h2>qdb_lookup()
+        </h2>
+<pre>qdb_lookup($data_source, $sql, $fields, $bind_params, $opts) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data_source</h4></div>
+<div class="subelement argument"><h4>$sql</h4></div>
+<div class="subelement argument"><h4>$fields</h4></div>
+<div class="subelement argument"><h4>$bind_params</h4></div>
+<div class="subelement argument"><h4>$opts</h4></div>
+</div></div>
+</div>
+<a id="function_qdb_result"></a><div class="element clickable function  function_qdb_result" data-toggle="collapse" data-target=".function_qdb_result .collapse">
+<h2>Run a Query or Prepare and execute a query.</h2>
+<pre>qdb_result(string $db_config, string $strsql, array $bind_params, array $opts) : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Return a "data_result" object.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$db_config</h4>
+<code>string</code><p>Index of DB config</p></div>
+<div class="subelement argument">
+<h4>$strsql</h4>
+<code>string</code><p>SQL Statement</p></div>
+<div class="subelement argument">
+<h4>$bind_params</h4>
+<code>array</code><p>Bind Parameters</p></div>
+<div class="subelement argument">
+<h4>$opts</h4>
+<code>array</code><p>Options ('debug')</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code>A "data_result" object which can be used to get the records.</div>
+</div></div>
+</div>
+<a id="function_qdb_row"></a><div class="element clickable function  function_qdb_row" data-toggle="collapse" data-target=".function_qdb_row .collapse">
+<h2>qdb_row()
+        </h2>
+<pre>qdb_row($db_config, $strsql, $row_index, $data_format, $bind_params, $opts) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$db_config</h4></div>
+<div class="subelement argument"><h4>$strsql</h4></div>
+<div class="subelement argument"><h4>$row_index</h4></div>
+<div class="subelement argument"><h4>$data_format</h4></div>
+<div class="subelement argument"><h4>$bind_params</h4></div>
+<div class="subelement argument"><h4>$opts</h4></div>
+</div></div>
+</div>
+<a id="function_reg_data_source"></a><div class="element clickable function  function_reg_data_source" data-toggle="collapse" data-target=".function_reg_data_source .collapse">
+<h2>reg_data_source()
+        </h2>
+<pre>reg_data_source($ds_index, $ds_params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$ds_index</h4></div>
+<div class="subelement argument"><h4>$ds_params</h4></div>
+</div></div>
+</div>
+<a id="function_rs_trim"></a><div class="element clickable function  function_rs_trim" data-toggle="collapse" data-target=".function_rs_trim .collapse">
+<h2>rs_trim()
+        </h2>
+<pre>rs_trim($rs, $trim_data, $trim_row_keys, $trim_col_keys) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$rs</h4></div>
+<div class="subelement argument"><h4>$trim_data</h4></div>
+<div class="subelement argument"><h4>$trim_row_keys</h4></div>
+<div class="subelement argument"><h4>$trim_col_keys</h4></div>
+</div></div>
+</div>
+<a id="function_select"></a><div class="element clickable function  function_select" data-toggle="collapse" data-target=".function_select .collapse">
+<h2>select()
+        </h2>
+<pre>select($opts, $attrs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$opts</h4></div>
+<div class="subelement argument"><h4>$attrs</h4></div>
+</div></div>
+</div>
+<a id="function_session_kill"></a><div class="element clickable function  function_session_kill" data-toggle="collapse" data-target=".function_session_kill .collapse">
+<h2>session_kill()
+        </h2>
+<pre>session_kill($plugin) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$plugin</h4></div>
+</div></div>
+</div>
+<a id="function_set_plugin_folder"></a><div class="element clickable function  function_set_plugin_folder" data-toggle="collapse" data-target=".function_set_plugin_folder .collapse">
+<h2>set_plugin_folder()
+        </h2>
+<pre>set_plugin_folder($dir) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$dir</h4></div>
+</div></div>
+</div>
+<a id="function_set_version"></a><div class="element clickable function  function_set_version" data-toggle="collapse" data-target=".function_set_version .collapse">
+<h2>Set Version Function</h2>
+<pre>set_version() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_span"></a><div class="element clickable function  function_span" data-toggle="collapse" data-target=".function_span .collapse">
+<h2>span()
+        </h2>
+<pre>span($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_start_ajax_debug"></a><div class="element clickable function  function_start_ajax_debug" data-toggle="collapse" data-target=".function_start_ajax_debug .collapse">
+<h2>Start AJAX debugging (i.e.</h2>
+<pre>start_ajax_debug() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Start buffering)</p></div></div></div>
+</div>
+<a id="function_stop_ajax_debug"></a><div class="element clickable function  function_stop_ajax_debug" data-toggle="collapse" data-target=".function_stop_ajax_debug .collapse">
+<h2>stop_ajax_debug()
+        </h2>
+<pre>stop_ajax_debug($file) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+</div></div>
+</div>
+<a id="function_strip_cdata_tags"></a><div class="element clickable function  function_strip_cdata_tags" data-toggle="collapse" data-target=".function_strip_cdata_tags .collapse">
+<h2>Strip all CDATA begin and end tags from the string passed.</h2>
+<pre>strip_cdata_tags(string $str_data) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$str_data</h4>
+<code>string</code><p>String to strip CDATA tags from</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Cleaned string</div>
+</div></div>
+</div>
+<a id="function_strong"></a><div class="element clickable function  function_strong" data-toggle="collapse" data-target=".function_strong .collapse">
+<h2>strong()
+        </h2>
+<pre>strong($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_transform_date"></a><div class="element clickable function  function_transform_date" data-toggle="collapse" data-target=".function_transform_date .collapse">
+<h2>transform_date()
+        </h2>
+<pre>transform_date($date, $start_format, $end_format, $clean_nums) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$date</h4></div>
+<div class="subelement argument"><h4>$start_format</h4></div>
+<div class="subelement argument"><h4>$end_format</h4></div>
+<div class="subelement argument"><h4>$clean_nums</h4></div>
+</div></div>
+</div>
+<a id="function_u"></a><div class="element clickable function  function_u" data-toggle="collapse" data-target=".function_u .collapse">
+<h2>u()
+        </h2>
+<pre>u($c, $a) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$c</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+</div></div>
+</div>
+<a id="function_ul"></a><div class="element clickable function  function_ul" data-toggle="collapse" data-target=".function_ul .collapse">
+<h2>ul()
+        </h2>
+<pre>ul($lis, $attrs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$lis</h4></div>
+<div class="subelement argument"><h4>$attrs</h4></div>
+</div></div>
+</div>
+<a id="function_valid_date"></a><div class="element clickable function  function_valid_date" data-toggle="collapse" data-target=".function_valid_date .collapse">
+<h2>valid_date()
+        </h2>
+<pre>valid_date($date) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$date</h4></div>
+</div></div>
+</div>
+<a id="function_valid_time"></a><div class="element clickable function  function_valid_time" data-toggle="collapse" data-target=".function_valid_time .collapse">
+<h2>valid_time()
+        </h2>
+<pre>valid_time($time) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$time</h4></div>
+</div></div>
+</div>
+<a id="function_xml_escape"></a><div class="element clickable function  function_xml_escape" data-toggle="collapse" data-target=".function_xml_escape .collapse">
+<h2>Return a string as valid XML escaped value</h2>
+<pre>xml_escape(string $str_data) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$str_data</h4>
+<code>string</code><p>Data to escape</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Escaped data</div>
+</div></div>
+</div>
+<a id="function_xml_escape_array"></a><div class="element clickable function  function_xml_escape_array" data-toggle="collapse" data-target=".function_xml_escape_array .collapse">
+<h2>Return an array with valid XML escaped values</h2>
+<pre>xml_escape_array(array $in_data) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$in_data</h4>
+<code>array</code><p>Data to escape</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Escaped data</div>
+</div></div>
+</div>
+<a id="function_xml_transform"></a><div class="element clickable function  function_xml_transform" data-toggle="collapse" data-target=".function_xml_transform .collapse">
+<h2>XML Transformation function</h2>
+<pre>xml_transform(string $xml_data, string $xsl_template, $show_xml_on_error, $use_cache) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Transform an XML string given an XSL template</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$xml_data</h4>
+<code>string</code><p>XML data string</p></div>
+<div class="subelement argument">
+<h4>$xsl_template</h4>
+<code>string</code><p>File path to an XSL template</p></div>
+<div class="subelement argument"><h4>$show_xml_on_error</h4></div>
+<div class="subelement argument"><h4>$use_cache</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="authentication" class="element ajax clickable class">
+<h1>authentication<a href="../classes/authentication.html">¶</a>
+</h1>
+<p class="short_description">Authentication Class</p>
+<div class="details collapse"></div>
+<a href="../classes/authentication.html" class="more">« More »</a>
+</div>
+<div id="button" class="element ajax clickable class">
+<h1>button<a href="../classes/button.html">¶</a>
+</h1>
+<p class="short_description">(XML) Element Class</p>
+<div class="details collapse"></div>
+<a href="../classes/button.html" class="more">« More »</a>
+</div>
+<div id="calendar" class="element ajax clickable class">
+<h1>calendar<a href="../classes/calendar.html">¶</a>
+</h1>
+<p class="short_description">Calendar Class</p>
+<div class="details collapse"></div>
+<a href="../classes/calendar.html" class="more">« More »</a>
+</div>
+<div id="cga" class="element ajax clickable class">
+<h1>cga<a href="../classes/cga.html">¶</a>
+</h1>
+<p class="short_description">Checkbox Group from Array Class</p>
+<div class="details collapse"></div>
+<a href="../classes/cga.html" class="more">« More »</a>
+</div>
+<div id="checkbox" class="element ajax clickable class">
+<h1>checkbox<a href="../classes/checkbox.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/checkbox.html" class="more">« More »</a>
+</div>
+<div id="checkbox" class="element ajax clickable class">
+<h1>checkbox<a href="../classes/checkbox.html">¶</a>
+</h1>
+<p class="short_description">Checkbox Class</p>
+<div class="details collapse"></div>
+<a href="../classes/checkbox.html" class="more">« More »</a>
+</div>
+<div id="code_benchmark" class="element ajax clickable class">
+<h1>code_benchmark<a href="../classes/code_benchmark.html">¶</a>
+</h1>
+<p class="short_description">Code Benchmark Class</p>
+<div class="details collapse"></div>
+<a href="../classes/code_benchmark.html" class="more">« More »</a>
+</div>
+<div id="contact" class="element ajax clickable class">
+<h1>contact<a href="../classes/contact.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/contact.html" class="more">« More »</a>
+</div>
+<div id="data_query" class="element ajax clickable class">
+<h1>data_query<a href="../classes/data_query.html">¶</a>
+</h1>
+<p class="short_description">Data Query Class</p>
+<div class="details collapse"></div>
+<a href="../classes/data_query.html" class="more">« More »</a>
+</div>
+<div id="data_result" class="element ajax clickable class">
+<h1>data_result<a href="../classes/data_result.html">¶</a>
+</h1>
+<p class="short_description">Data Result Class</p>
+<div class="details collapse"></div>
+<a href="../classes/data_result.html" class="more">« More »</a>
+</div>
+<div id="data_trans" class="element ajax clickable class">
+<h1>data_trans<a href="../classes/data_trans.html">¶</a>
+</h1>
+<p class="short_description">Data Transaction Class</p>
+<div class="details collapse"></div>
+<a href="../classes/data_trans.html" class="more">« More »</a>
+</div>
+<div id="dr_db2" class="element ajax clickable class">
+<h1>dr_db2<a href="../classes/dr_db2.html">¶</a>
+</h1>
+<p class="short_description">dr_db2 Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dr_db2.html" class="more">« More »</a>
+</div>
+<div id="dr_ldap" class="element ajax clickable class">
+<h1>dr_ldap<a href="../classes/dr_ldap.html">¶</a>
+</h1>
+<p class="short_description">dr_ldap Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dr_ldap.html" class="more">« More »</a>
+</div>
+<div id="dr_mssql" class="element ajax clickable class">
+<h1>dr_mssql<a href="../classes/dr_mssql.html">¶</a>
+</h1>
+<p class="short_description">dr_mssql Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dr_mssql.html" class="more">« More »</a>
+</div>
+<div id="dr_mysql" class="element ajax clickable class">
+<h1>dr_mysql<a href="../classes/dr_mysql.html">¶</a>
+</h1>
+<p class="short_description">dr_mysql Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dr_mysql.html" class="more">« More »</a>
+</div>
+<div id="dr_mysqli" class="element ajax clickable class">
+<h1>dr_mysqli<a href="../classes/dr_mysqli.html">¶</a>
+</h1>
+<p class="short_description">dr_mysqli Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dr_mysqli.html" class="more">« More »</a>
+</div>
+<div id="dr_oracle" class="element ajax clickable class">
+<h1>dr_oracle<a href="../classes/dr_oracle.html">¶</a>
+</h1>
+<p class="short_description">dr_oracle Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dr_oracle.html" class="more">« More »</a>
+</div>
+<div id="dr_pgsql" class="element ajax clickable class">
+<h1>dr_pgsql<a href="../classes/dr_pgsql.html">¶</a>
+</h1>
+<p class="short_description">dr_pgsql Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dr_pgsql.html" class="more">« More »</a>
+</div>
+<div id="dr_sqlsrv" class="element ajax clickable class">
+<h1>dr_sqlsrv<a href="../classes/dr_sqlsrv.html">¶</a>
+</h1>
+<p class="short_description">dr_sqlsrv Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dr_sqlsrv.html" class="more">« More »</a>
+</div>
+<div id="dr_structure" class="element ajax clickable class">
+<h1>dr_structure<a href="../classes/dr_structure.html">¶</a>
+</h1>
+<p class="short_description">Data Result Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dr_structure.html" class="more">« More »</a>
+</div>
+<div id="dt_db2" class="element ajax clickable class">
+<h1>dt_db2<a href="../classes/dt_db2.html">¶</a>
+</h1>
+<p class="short_description">dt_db2 Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dt_db2.html" class="more">« More »</a>
+</div>
+<div id="dt_ldap" class="element ajax clickable class">
+<h1>dt_ldap<a href="../classes/dt_ldap.html">¶</a>
+</h1>
+<p class="short_description">dt_ldap Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dt_ldap.html" class="more">« More »</a>
+</div>
+<div id="dt_mssql" class="element ajax clickable class">
+<h1>dt_mssql<a href="../classes/dt_mssql.html">¶</a>
+</h1>
+<p class="short_description">dt_mssql Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dt_mssql.html" class="more">« More »</a>
+</div>
+<div id="dt_mysql" class="element ajax clickable class">
+<h1>dt_mysql<a href="../classes/dt_mysql.html">¶</a>
+</h1>
+<p class="short_description">dt_mysql Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dt_mysql.html" class="more">« More »</a>
+</div>
+<div id="dt_mysqli" class="element ajax clickable class">
+<h1>dt_mysqli<a href="../classes/dt_mysqli.html">¶</a>
+</h1>
+<p class="short_description">dt_mysqli Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dt_mysqli.html" class="more">« More »</a>
+</div>
+<div id="dt_oracle" class="element ajax clickable class">
+<h1>dt_oracle<a href="../classes/dt_oracle.html">¶</a>
+</h1>
+<p class="short_description">dt_oracle Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dt_oracle.html" class="more">« More »</a>
+</div>
+<div id="dt_pgsql" class="element ajax clickable class">
+<h1>dt_pgsql<a href="../classes/dt_pgsql.html">¶</a>
+</h1>
+<p class="short_description">dt_pgsql Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dt_pgsql.html" class="more">« More »</a>
+</div>
+<div id="dt_sqlsrv" class="element ajax clickable class">
+<h1>dt_sqlsrv<a href="../classes/dt_sqlsrv.html">¶</a>
+</h1>
+<p class="short_description">dt_sqlsrv Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dt_sqlsrv.html" class="more">« More »</a>
+</div>
+<div id="dt_structure" class="element ajax clickable class">
+<h1>dt_structure<a href="../classes/dt_structure.html">¶</a>
+</h1>
+<p class="short_description">dt_structure Class</p>
+<div class="details collapse"></div>
+<a href="../classes/dt_structure.html" class="more">« More »</a>
+</div>
+<div id="file_upload" class="element ajax clickable class">
+<h1>file_upload<a href="../classes/file_upload.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/file_upload.html" class="more">« More »</a>
+</div>
+<div id="file_upload" class="element ajax clickable class">
+<h1>file_upload<a href="../classes/file_upload.html">¶</a>
+</h1>
+<p class="short_description">File Upload Field Class</p>
+<div class="details collapse"></div>
+<a href="../classes/file_upload.html" class="more">« More »</a>
+</div>
+<div id="form" class="element ajax clickable class">
+<h1>form<a href="../classes/form.html">¶</a>
+</h1>
+<p class="short_description">Form Class</p>
+<div class="details collapse"></div>
+<a href="../classes/form.html" class="more">« More »</a>
+</div>
+<div id="group_form_element" class="element ajax clickable class">
+<h1>group_form_element<a href="../classes/group_form_element.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/group_form_element.html" class="more">« More »</a>
+</div>
+<div id="hidden" class="element ajax clickable class">
+<h1>hidden<a href="../classes/hidden.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/hidden.html" class="more">« More »</a>
+</div>
+<div id="hidden" class="element ajax clickable class">
+<h1>hidden<a href="../classes/hidden.html">¶</a>
+</h1>
+<p class="short_description">Hidden Field Class</p>
+<div class="details collapse"></div>
+<a href="../classes/hidden.html" class="more">« More »</a>
+</div>
+<div id="input_image" class="element ajax clickable class">
+<h1>input_image<a href="../classes/input_image.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/input_image.html" class="more">« More »</a>
+</div>
+<div id="input_image" class="element ajax clickable class">
+<h1>input_image<a href="../classes/input_image.html">¶</a>
+</h1>
+<p class="short_description">Image Button Class</p>
+<div class="details collapse"></div>
+<a href="../classes/input_image.html" class="more">« More »</a>
+</div>
+<div id="login" class="element ajax clickable class">
+<h1>login<a href="../classes/login.html">¶</a>
+</h1>
+<p class="short_description">Login Class</p>
+<div class="details collapse"></div>
+<a href="../classes/login.html" class="more">« More »</a>
+</div>
+<div id="message" class="element ajax clickable class">
+<h1>message<a href="../classes/message.html">¶</a>
+</h1>
+<p class="short_description">Message Page Class</p>
+<div class="details collapse"></div>
+<a href="../classes/message.html" class="more">« More »</a>
+</div>
+<div id="module" class="element ajax clickable class">
+<h1>module<a href="../classes/module.html">¶</a>
+</h1>
+<p class="short_description">Module Page Class</p>
+<div class="details collapse"></div>
+<a href="../classes/module.html" class="more">« More »</a>
+</div>
+<div id="module_list" class="element ajax clickable class">
+<h1>module_list<a href="../classes/module_list.html">¶</a>
+</h1>
+<p class="short_description">Module List Class</p>
+<div class="details collapse"></div>
+<a href="../classes/module_list.html" class="more">« More »</a>
+</div>
+<div id="month_calendar" class="element ajax clickable class">
+<h1>month_calendar<a href="../classes/month_calendar.html">¶</a>
+</h1>
+<p class="short_description">Month Class</p>
+<div class="details collapse"></div>
+<a href="../classes/month_calendar.html" class="more">« More »</a>
+</div>
+<div id="nav" class="element ajax clickable class">
+<h1>nav<a href="../classes/nav.html">¶</a>
+</h1>
+<p class="short_description">Nav Class</p>
+<div class="details collapse"></div>
+<a href="../classes/nav.html" class="more">« More »</a>
+</div>
+<div id="page" class="element ajax clickable class">
+<h1>page<a href="../classes/page.html">¶</a>
+</h1>
+<p class="short_description">Page Class</p>
+<div class="details collapse"></div>
+<a href="../classes/page.html" class="more">« More »</a>
+</div>
+<div id="phplitefw_controller" class="element ajax clickable class">
+<h1>phplitefw_controller<a href="../classes/phplitefw_controller.html">¶</a>
+</h1>
+<p class="short_description">Main Framework Controller (phpLiteFW)</p>
+<div class="details collapse"></div>
+<a href="../classes/phplitefw_controller.html" class="more">« More »</a>
+</div>
+<div id="radio" class="element ajax clickable class">
+<h1>radio<a href="../classes/radio.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/radio.html" class="more">« More »</a>
+</div>
+<div id="radio" class="element ajax clickable class">
+<h1>radio<a href="../classes/radio.html">¶</a>
+</h1>
+<p class="short_description">Radio Button Class</p>
+<div class="details collapse"></div>
+<a href="../classes/radio.html" class="more">« More »</a>
+</div>
+<div id="rga" class="element ajax clickable class">
+<h1>rga<a href="../classes/rga.html">¶</a>
+</h1>
+<p class="short_description">Radio Group from Array Class</p>
+<div class="details collapse"></div>
+<a href="../classes/rga.html" class="more">« More »</a>
+</div>
+<div id="rgt" class="element ajax clickable class">
+<h1>rgt<a href="../classes/rgt.html">¶</a>
+</h1>
+<p class="short_description">Radio Group from Table Class</p>
+<div class="details collapse"></div>
+<a href="../classes/rgt.html" class="more">« More »</a>
+</div>
+<div id="rs_list" class="element ajax clickable class">
+<h1>rs_list<a href="../classes/rs_list.html">¶</a>
+</h1>
+<p class="short_description">Record Set List Class</p>
+<div class="details collapse"></div>
+<a href="../classes/rs_list.html" class="more">« More »</a>
+</div>
+<div id="secret" class="element ajax clickable class">
+<h1>secret<a href="../classes/secret.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/secret.html" class="more">« More »</a>
+</div>
+<div id="secret" class="element ajax clickable class">
+<h1>secret<a href="../classes/secret.html">¶</a>
+</h1>
+<p class="short_description">Secret Textbox Class</p>
+<div class="details collapse"></div>
+<a href="../classes/secret.html" class="more">« More »</a>
+</div>
+<div id="select_form_element" class="element ajax clickable class">
+<h1>select_form_element<a href="../classes/select_form_element.html">¶</a>
+</h1>
+<p class="short_description">Select Form Element Class (Abstract)</p>
+<div class="details collapse"></div>
+<a href="../classes/select_form_element.html" class="more">« More »</a>
+</div>
+<div id="server_side_validation" class="element ajax clickable class">
+<h1>server_side_validation<a href="../classes/server_side_validation.html">¶</a>
+</h1>
+<p class="short_description">Server Side Validation Class</p>
+<div class="details collapse"></div>
+<a href="../classes/server_side_validation.html" class="more">« More »</a>
+</div>
+<div id="ssa" class="element ajax clickable class">
+<h1>ssa<a href="../classes/ssa.html">¶</a>
+</h1>
+<p class="short_description">Simple Select from Array Class</p>
+<div class="details collapse"></div>
+<a href="../classes/ssa.html" class="more">« More »</a>
+</div>
+<div id="sst" class="element ajax clickable class">
+<h1>sst<a href="../classes/sst.html">¶</a>
+</h1>
+<p class="short_description">Simple Select from Table Class</p>
+<div class="details collapse"></div>
+<a href="../classes/sst.html" class="more">« More »</a>
+</div>
+<div id="submit" class="element ajax clickable class">
+<h1>submit<a href="../classes/submit.html">¶</a>
+</h1>
+<p class="short_description">(XML) Element Class</p>
+<div class="details collapse"></div>
+<a href="../classes/submit.html" class="more">« More »</a>
+</div>
+<div id="table" class="element ajax clickable class">
+<h1>table<a href="../classes/table.html">¶</a>
+</h1>
+<p class="short_description">(XHTML) Table Class</p>
+<div class="details collapse"></div>
+<a href="../classes/table.html" class="more">« More »</a>
+</div>
+<div id="textarea" class="element ajax clickable class">
+<h1>textarea<a href="../classes/textarea.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/textarea.html" class="more">« More »</a>
+</div>
+<div id="textarea" class="element ajax clickable class">
+<h1>textarea<a href="../classes/textarea.html">¶</a>
+</h1>
+<p class="short_description">Textarea Class</p>
+<div class="details collapse"></div>
+<a href="../classes/textarea.html" class="more">« More »</a>
+</div>
+<div id="textbox" class="element ajax clickable class">
+<h1>textbox<a href="../classes/textbox.html">¶</a>
+</h1>
+<p class="short_description">Textbox Class</p>
+<div class="details collapse"></div>
+<a href="../classes/textbox.html" class="more">« More »</a>
+</div>
+<div id="textbox" class="element ajax clickable class">
+<h1>textbox<a href="../classes/textbox.html">¶</a>
+</h1>
+<p class="short_description">Textbox Class</p>
+<div class="details collapse"></div>
+<a href="../classes/textbox.html" class="more">« More »</a>
+</div>
+<div id="user_list" class="element ajax clickable class">
+<h1>user_list<a href="../classes/user_list.html">¶</a>
+</h1>
+<p class="short_description">User List Class</p>
+<div class="details collapse"></div>
+<a href="../classes/user_list.html" class="more">« More »</a>
+</div>
+<div id="xml_nav" class="element ajax clickable class">
+<h1>xml_nav<a href="../classes/xml_nav.html">¶</a>
+</h1>
+<p class="short_description">XML Nav Class</p>
+<div class="details collapse"></div>
+<a href="../classes/xml_nav.html" class="more">« More »</a>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_CONTROLLER_EXISTS"> </a><div class="element clickable constant  constant_CONTROLLER_EXISTS" data-toggle="collapse" data-target=".constant_CONTROLLER_EXISTS .collapse">
+<h2>CONTROLLER_EXISTS</h2>
+<pre>CONTROLLER_EXISTS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_CONTROLLER_EXISTS"> </a><div class="element clickable constant  constant_CONTROLLER_EXISTS" data-toggle="collapse" data-target=".constant_CONTROLLER_EXISTS .collapse">
+<h2>CONTROLLER_EXISTS</h2>
+<pre>CONTROLLER_EXISTS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_PHPOPENFW_VERSION"> </a><div class="element clickable constant  constant_PHPOPENFW_VERSION" data-toggle="collapse" data-target=".constant_PHPOPENFW_VERSION .collapse">
+<h2>PHPOPENFW_VERSION</h2>
+<pre>PHPOPENFW_VERSION </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-11-21T13:10:14-05:00.<br></footer></div>
+</div>
+</body>
+</html>

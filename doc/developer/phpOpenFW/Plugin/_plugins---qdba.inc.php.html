@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page qdba.inc.php</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name"><img src="../../media/images/Page_logo.png" alt="File" style="vertical-align: middle">/plugins/qdba.inc.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Quick Database Actions plugin</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Christian J. Clark</li>
+				<li><span class="field">version:</span> Started: 3-15-2007, Last updated: 11-17-2012</li>
+				<li><span class="field">copyright:</span> Copyright (c) Christian J. Clark</li>
+				<li><span class="field">filesource:</span> <a href="../../__filesource/fsource_phpOpenFW_Plugin_pluginsqdba.inc.php.html">Source Code for this file</a></li>
+				<li><span class="field">license:</span> <a href="http://www.gnu.org/licenses/gpl-2.0.txt">http://www.gnu.org/licenses/gpl-2.0.txt</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			
+Strict standards: Only variables should be passed by reference in /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Smarty-2.6.0/libs/Smarty_Compiler.class.php on line 712
+
+Call Stack:
+    0.0001     224448   1. {main}() /data/www/html/emonlade.net/phpDocumentor/phpdoc:0
+    0.0028     234224   2. include('/data/www/html/emonlade.net/phpDocumentor/phpDocumentor/phpdoc.inc') /data/www/html/emonlade.net/phpDocumentor/phpdoc:59
+    0.0704    7640552   3. phpDocumentor_setup->createDocs() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/phpdoc.inc:65
+    4.6882   58879632   4. phpDocumentor_IntermediateParser->Output() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Setup.inc.php:754
+    4.8213   58154912   5. phpDocumentor_IntermediateParser->Convert() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/IntermediateParser.inc:1865
+    4.8213   58155144   6. Converter->walk() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/IntermediateParser.inc:1652
+   19.3815   61282952   7. HTMLframesConverter->endPage() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Converter.inc:1939
+   19.3816   61285328   8. Smarty->fetch() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Converters/HTML/frames/HTMLframesConverter.inc:366
+   19.3821   61397280   9. include('/data/www/html/Library/php/phpOpenFW1/doc/developer/phpOpenFW/Controllers/37fe0d91c3b034db82eb2bc6d4fa57b5/%%363^%%3636363891^page.tpl.php') /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Smarty-2.6.0/libs/Smarty.class.php:1298
+   19.3824   61403744  10. Smarty->_smarty_include() /data/www/html/Library/php/phpOpenFW1/doc/developer/phpOpenFW/Controllers/37fe0d91c3b034db82eb2bc6d4fa57b5/%%363^%%3636363891^page.tpl.php:262
+   19.3825   61406808  11. Smarty->_compile_resource() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Smarty-2.6.0/libs/Smarty.class.php:1935
+   19.3825   61412480  12. Smarty->_compile_source() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Smarty-2.6.0/libs/Smarty.class.php:1458
+   19.3826   61439776  13. Smarty_Compiler->_compile_file() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Smarty-2.6.0/libs/Smarty.class.php:1523
+   19.3831   61476240  14. Smarty_Compiler->_compile_tag() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Smarty-2.6.0/libs/Smarty_Compiler.class.php:316
+   19.3832   61477200  15. Smarty_Compiler->_compile_custom_tag() /data/www/html/emonlade.net/phpDocumentor/phpDocumentor/Smarty-2.6.0/libs/Smarty_Compiler.class.php:537
+
+<a name="functionqdb_delete" id="functionqdb_delete"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">qdb_delete</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Plugin_pluginsqdba.inc.php.html#a232">232</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Safe Delete Row or Rows from a table</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Record Set</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			qdb_delete
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$db_config</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$db_table</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$opts</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$db_config</span><span class="var-description">: Index of DB config</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$db_table</span><span class="var-description">: Database Table</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$where</span><span class="var-description">: Where clause (must not be empty, in order for execution to take place)</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opts</span><span class="var-description">: Options</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionqdb_exec" id="functionqdb_exec"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">qdb_exec</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Plugin_pluginsqdba.inc.php.html#a160">160</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prepare and execute a query. Return results if they exist.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Record Set</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			qdb_exec
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$db_config</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$strsql</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$bind_params</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$return_format</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$opts</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$db_config</span><span class="var-description">: Index of DB config</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$strsql</span><span class="var-description">: SQL Statement</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$bind_params</span><span class="var-description">: Bind Parameters</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$return_format</span><span class="var-description">: Return Format to return (&quot;&quot;, &quot;key&quot;, &quot;key:value&quot;)</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opts</span><span class="var-description">: Options ('debug')</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionqdb_first_row" id="functionqdb_first_row"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">qdb_first_row</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Plugin_pluginsqdba.inc.php.html#a59">59</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute a query. Return the first row if possible.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array representing the first row or FALSE if that row does not exist.</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			qdb_first_row
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$db_config</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$strsql</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$bind_params</span> = <span class="var-default">false</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$opts</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$db_config</span><span class="var-description">: Index of DB config</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$strsql</span><span class="var-description">: SQL Statement</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$bind_params</span><span class="var-description">: Bind Parameters</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opts</span><span class="var-description">: Options ('debug')</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionqdb_list" id="functionqdb_list"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">qdb_list</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Plugin_pluginsqdba.inc.php.html#a198">198</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pull a list of records from a table</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Record Set</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			qdb_list
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$db_config</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$strsql</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$return_format</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$opts</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$db_config</span><span class="var-description">: Index of DB config</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$strsql</span><span class="var-description">: SQL Statement</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$return_format</span><span class="var-description">: Return Format to return (&quot;&quot;, &quot;key&quot;, &quot;key:value&quot;)</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opts</span><span class="var-description">: Options ('debug')</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionqdb_lookup" id="functionqdb_lookup"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">qdb_lookup</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Plugin_pluginsqdba.inc.php.html#a269">269</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Quick Database Field Lookup</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The value at the field index or false if it did not exist.</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			qdb_lookup
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$data_source</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$sql</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$fields</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$bind_params</span> = <span class="var-default">false</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$opts</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data_source</span><span class="var-description">: Index of DB config</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sql</span><span class="var-description">: SQL Statement</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$fields</span><span class="var-description">: The field from which to pull the value from</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$bind_params</span><span class="var-description">: (Optional) An array in the proper format of the data source being used, of bind parameters.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opts</span><span class="var-description">: Options</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionqdb_result" id="functionqdb_result"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">qdb_result</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Plugin_pluginsqdba.inc.php.html#a28">28</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Run a Query or Prepare and execute a query. Return a &quot;data_result&quot; object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> &quot;data_result&quot; object which can be used to get the records.</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">object A</span>
+		<span class="method-name">
+			qdb_result
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$db_config</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$strsql</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$bind_params</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opts</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$db_config</span><span class="var-description">: Index of DB config</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$strsql</span><span class="var-description">: SQL Statement</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$bind_params</span><span class="var-description">: Bind Parameters</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opts</span><span class="var-description">: Options ('debug')</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionqdb_row" id="functionqdb_row"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">qdb_row</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Plugin_pluginsqdba.inc.php.html#a98">98</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute a query. Return one row or value if possible.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Either a record or a value</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			qdb_row
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$db_config</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$strsql</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$row_index</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$data_format</span> = <span class="var-default">false</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$bind_params</span> = <span class="var-default">false</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$opts</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$db_config</span><span class="var-description">: Index of DB config</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$strsql</span><span class="var-description">: SQL Statement</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$row_index</span><span class="var-description">: The row index to use to pick out the row to return,</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data_format</span><span class="var-description">: The data format to index the dataset by (&quot;&quot;, &quot;key&quot;, &quot;key:value&quot;)</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$bind_params</span><span class="var-description">: Bind Parameters</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opts</span><span class="var-description">: Options</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionrs_trim" id="functionrs_trim"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">rs_trim</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Plugin_pluginsqdba.inc.php.html#a338">338</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Recordset Trim Function</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Modified Record Set</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			rs_trim
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$rs</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$trim_data</span> = <span class="var-default">true</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$trim_row_keys</span> = <span class="var-default">false</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$trim_col_keys</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$rs</span><span class="var-description">: The recordset to trim</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$trim_data</span><span class="var-description">: True = Trim the data (default), False = Do not trim data</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$trim_row_keys</span><span class="var-description">: True = Trim the record row keys, False = Do not trim record row keys (default)</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$trim_col_keys</span><span class="var-description">: True = Trim the record column keys, False = Do not trim record column keys (default)</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 21 Nov 2012 18:25:32 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

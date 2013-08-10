@@ -1,0 +1,683 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpOpenFW Developer Documentation » \message</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpOpenFW Developer Documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/phpOpenFW.html"><i class="icon-folder-open"></i> phpOpenFW</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">521</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method___destruct" title="__destruct :: "><span class="description">__destruct()
+        </span><pre>__destruct()</pre></a></li>
+<li class="method public "><a href="#method_render" title="render :: "><span class="description">render()
+        </span><pre>render()</pre></a></li>
+<li class="method public inherited"><a href="#method_set_template_dir" title="set_template_dir :: "><span class="description">set_template_dir()
+        </span><pre>set_template_dir()</pre></a></li>
+<li class="method public inherited"><a href="#method_set_xsl_template" title="set_xsl_template :: "><span class="description">set_xsl_template()
+        </span><pre>set_xsl_template()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected inherited"><a href="#method_add_xml" title="add_xml :: "><span class="description">add_xml()
+        </span><pre>add_xml()</pre></a></li>
+<li class="method protected inherited"><a href="#method_file_path" title="file_path :: "><span class="description">file_path()
+        </span><pre>file_path()</pre></a></li>
+<li class="method protected inherited"><a href="#method_frame_path" title="frame_path :: "><span class="description">frame_path()
+        </span><pre>frame_path()</pre></a></li>
+<li class="method protected inherited"><a href="#method_html_path" title="html_path :: "><span class="description">html_path()
+        </span><pre>html_path()</pre></a></li>
+<li class="method protected inherited"><a href="#method_initialize" title="initialize :: "><span class="description">initialize()
+        </span><pre>initialize()</pre></a></li>
+<li class="method protected inherited"><a href="#method_load_db_engine" title="load_db_engine :: "><span class="description">load_db_engine()
+        </span><pre>load_db_engine()</pre></a></li>
+<li class="method protected inherited"><a href="#method_load_form_engine" title="load_form_engine :: "><span class="description">load_form_engine()
+        </span><pre>load_form_engine()</pre></a></li>
+<li class="method protected inherited"><a href="#method_local_html_path" title="local_html_path :: "><span class="description">local_html_path()
+        </span><pre>local_html_path()</pre></a></li>
+<li class="method protected inherited"><a href="#method_set_output_xml" title="set_output_xml :: "><span class="description">set_output_xml()
+        </span><pre>set_output_xml()</pre></a></li>
+<li class="method protected inherited"><a href="#method_set_page_type" title="set_page_type :: "><span class="description">set_page_type()
+        </span><pre>set_page_type()</pre></a></li>
+<li class="method protected inherited"><a href="#method_xsl_template" title="xsl_template :: "><span class="description">xsl_template()
+        </span><pre>xsl_template()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property_account_name" title="$account_name :: "><span class="description">Account Name (pulled from config.inc.php)</span><pre>$account_name</pre></a></li>
+<li class="property protected inherited"><a href="#property_app_logic_path" title="$app_logic_path :: "><span class="description">File path of the application logic directory for this logic</span><pre>$app_logic_path</pre></a></li>
+<li class="property protected inherited"><a href="#property_app_xml" title="$app_xml :: "><span class="description">Application injected XML data</span><pre>$app_xml</pre></a></li>
+<li class="property protected inherited"><a href="#property_content_xml" title="$content_xml :: "><span class="description">the page content in XML format</span><pre>$content_xml</pre></a></li>
+<li class="property protected inherited"><a href="#property_creator" title="$creator :: "><span class="description">Creator to used for the copyright (pulled from config.inc.php)</span><pre>$creator</pre></a></li>
+<li class="property protected inherited"><a href="#property_css_files" title="$css_files :: "><span class="description">An array of CSS files to included</span><pre>$css_files</pre></a></li>
+<li class="property protected inherited"><a href="#property_file_path" title="$file_path :: "><span class="description">root file path of the application</span><pre>$file_path</pre></a></li>
+<li class="property protected inherited"><a href="#property_frame_path" title="$frame_path :: "><span class="description">root file path of the framework (pulled from config.inc.php)</span><pre>$frame_path</pre></a></li>
+<li class="property protected inherited"><a href="#property_html_path" title="$html_path :: "><span class="description">root html path of the application (pulled from config.inc.php)</span><pre>$html_path</pre></a></li>
+<li class="property protected inherited"><a href="#property_js_files" title="$js_files :: "><span class="description">An array of javascript files to included</span><pre>$js_files</pre></a></li>
+<li class="property protected inherited"><a href="#property_local_file_path" title="$local_file_path :: "><span class="description">The absolute file path of the current module</span><pre>$local_file_path</pre></a></li>
+<li class="property protected inherited"><a href="#property_local_html_path" title="$local_html_path :: "><span class="description">The local html path of this module</span><pre>$local_html_path</pre></a></li>
+<li class="property protected inherited"><a href="#property_menu_xml" title="$menu_xml :: "><span class="description">the page menu in XML format</span><pre>$menu_xml</pre></a></li>
+<li class="property protected inherited"><a href="#property_mods_dir" title="$mods_dir :: "><span class="description">Modules Directory</span><pre>$mods_dir</pre></a></li>
+<li class="property protected inherited"><a href="#property_nav_xml_format" title="$nav_xml_format :: "><span class="description">Application navigation XML format (numeric, rewrite, long_url)</span><pre>$nav_xml_format</pre></a></li>
+<li class="property protected inherited"><a href="#property_output_type" title="$output_type :: "><span class="description">page output format (default HTML)</span><pre>$output_type</pre></a></li>
+<li class="property protected inherited"><a href="#property_page_type" title="$page_type :: "><span class="description">Page type, default: page</span><pre>$page_type</pre></a></li>
+<li class="property protected inherited"><a href="#property_page_xml" title="$page_xml :: "><span class="description">the entire current page in XML format</span><pre>$page_xml</pre></a></li>
+<li class="property protected inherited"><a href="#property_site_title" title="$site_title :: "><span class="description">Title of the Site (pulled from config.inc.php)</span><pre>$site_title</pre></a></li>
+<li class="property protected inherited"><a href="#property_site_xml" title="$site_xml :: "><span class="description">Static Site XML data (config.inc.php)</span><pre>$site_xml</pre></a></li>
+<li class="property protected inherited"><a href="#property_templates_dir" title="$templates_dir :: "><span class="description">the XSL template directory to be used to transform the $page_xml into HTML or XHTML</span><pre>$templates_dir</pre></a></li>
+<li class="property protected inherited"><a href="#property_theme" title="$theme :: "><span class="description">current theme to be used for the application (pulled from config.inc.php)</span><pre>$theme</pre></a></li>
+<li class="property protected inherited"><a href="#property_theme_dir" title="$theme_dir :: "><span class="description">Current theme directory</span><pre>$theme_dir</pre></a></li>
+<li class="property protected inherited"><a href="#property_time_zone" title="$time_zone :: "><span class="description">Time Zone</span><pre>$time_zone</pre></a></li>
+<li class="property protected inherited"><a href="#property_xsl_template" title="$xsl_template :: "><span class="description">the XSL template to be used to transform the $page_xml into HTML or XHTML</span><pre>$xsl_template</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="property private "><a href="#property_msg_code" title="$msg_code :: "><span class="description">code of the message to be displayed</span><pre>$msg_code</pre></a></li></ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\message"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/message.html">message</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Message Page Class</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/phpOpenFW.Application-Logic-1-Structure.html">phpOpenFW</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Application-Logic-1-Structure</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($msg) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$msg</h4></div>
+</div></div>
+</div>
+<a id="method___destruct"></a><div class="element clickable method public method___destruct" data-toggle="collapse" data-target=".method___destruct .collapse">
+<h2>__destruct()
+        </h2>
+<pre>__destruct() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_render"></a><div class="element clickable method public method_render" data-toggle="collapse" data-target=".method_render .collapse">
+<h2>render()
+        </h2>
+<pre>render() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_set_template_dir"></a><div class="element clickable method public method_set_template_dir" data-toggle="collapse" data-target=".method_set_template_dir .collapse">
+<h2>set_template_dir()
+        </h2>
+<pre>set_template_dir($dir) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::set_template_dir()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$dir</h4></div>
+</div></div>
+</div>
+<a id="method_set_xsl_template"></a><div class="element clickable method public method_set_xsl_template" data-toggle="collapse" data-target=".method_set_xsl_template .collapse">
+<h2>set_xsl_template()
+        </h2>
+<pre>set_xsl_template($xsl_temp) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::set_xsl_template()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$xsl_temp</h4></div>
+</div></div>
+</div>
+<a id="method_add_xml"></a><div class="element clickable method protected method_add_xml" data-toggle="collapse" data-target=".method_add_xml .collapse">
+<h2>add_xml()
+        </h2>
+<pre>add_xml($key, $val) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::add_xml()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$key</h4></div>
+<div class="subelement argument"><h4>$val</h4></div>
+</div></div>
+</div>
+<a id="method_file_path"></a><div class="element clickable method protected method_file_path" data-toggle="collapse" data-target=".method_file_path .collapse">
+<h2>file_path()
+        </h2>
+<pre>file_path() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::file_path()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_frame_path"></a><div class="element clickable method protected method_frame_path" data-toggle="collapse" data-target=".method_frame_path .collapse">
+<h2>frame_path()
+        </h2>
+<pre>frame_path() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::frame_path()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_html_path"></a><div class="element clickable method protected method_html_path" data-toggle="collapse" data-target=".method_html_path .collapse">
+<h2>html_path()
+        </h2>
+<pre>html_path() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::html_path()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_initialize"></a><div class="element clickable method protected method_initialize" data-toggle="collapse" data-target=".method_initialize .collapse">
+<h2>initialize()
+        </h2>
+<pre>initialize() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::initialize()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_load_db_engine"></a><div class="element clickable method protected method_load_db_engine" data-toggle="collapse" data-target=".method_load_db_engine .collapse">
+<h2>load_db_engine()
+        </h2>
+<pre>load_db_engine() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::load_db_engine()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_load_form_engine"></a><div class="element clickable method protected method_load_form_engine" data-toggle="collapse" data-target=".method_load_form_engine .collapse">
+<h2>load_form_engine()
+        </h2>
+<pre>load_form_engine() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::load_form_engine()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_local_html_path"></a><div class="element clickable method protected method_local_html_path" data-toggle="collapse" data-target=".method_local_html_path .collapse">
+<h2>local_html_path()
+        </h2>
+<pre>local_html_path() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::local_html_path()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_set_output_xml"></a><div class="element clickable method protected method_set_output_xml" data-toggle="collapse" data-target=".method_set_output_xml .collapse">
+<h2>set_output_xml()
+        </h2>
+<pre>set_output_xml() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::set_output_xml()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_set_page_type"></a><div class="element clickable method protected method_set_page_type" data-toggle="collapse" data-target=".method_set_page_type .collapse">
+<h2>set_page_type()
+        </h2>
+<pre>set_page_type($type) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::set_page_type()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$type</h4></div>
+</div></div>
+</div>
+<a id="method_xsl_template"></a><div class="element clickable method protected method_xsl_template" data-toggle="collapse" data-target=".method_xsl_template .collapse">
+<h2>xsl_template()
+        </h2>
+<pre>xsl_template() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::xsl_template()</td>
+</tr></table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_account_name"> </a><div class="element clickable property protected property_account_name" data-toggle="collapse" data-target=".property_account_name .collapse">
+<h2>Account Name (pulled from config.inc.php)</h2>
+<pre>$account_name : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$account_name</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_app_logic_path"> </a><div class="element clickable property protected property_app_logic_path" data-toggle="collapse" data-target=".property_app_logic_path .collapse">
+<h2>File path of the application logic directory for this logic</h2>
+<pre>$app_logic_path : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$app_logic_path</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_app_xml"> </a><div class="element clickable property protected property_app_xml" data-toggle="collapse" data-target=".property_app_xml .collapse">
+<h2>Application injected XML data</h2>
+<pre>$app_xml : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$app_xml</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_content_xml"> </a><div class="element clickable property protected property_content_xml" data-toggle="collapse" data-target=".property_content_xml .collapse">
+<h2>the page content in XML format</h2>
+<pre>$content_xml : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$content_xml</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_creator"> </a><div class="element clickable property protected property_creator" data-toggle="collapse" data-target=".property_creator .collapse">
+<h2>Creator to used for the copyright (pulled from config.inc.php)</h2>
+<pre>$creator : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$creator</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_css_files"> </a><div class="element clickable property protected property_css_files" data-toggle="collapse" data-target=".property_css_files .collapse">
+<h2>An array of CSS files to included</h2>
+<pre>$css_files : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$css_files</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_file_path"> </a><div class="element clickable property protected property_file_path" data-toggle="collapse" data-target=".property_file_path .collapse">
+<h2>root file path of the application</h2>
+<pre>$file_path : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$file_path</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_frame_path"> </a><div class="element clickable property protected property_frame_path" data-toggle="collapse" data-target=".property_frame_path .collapse">
+<h2>root file path of the framework (pulled from config.inc.php)</h2>
+<pre>$frame_path : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$frame_path</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_html_path"> </a><div class="element clickable property protected property_html_path" data-toggle="collapse" data-target=".property_html_path .collapse">
+<h2>root html path of the application (pulled from config.inc.php)</h2>
+<pre>$html_path : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$html_path</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_js_files"> </a><div class="element clickable property protected property_js_files" data-toggle="collapse" data-target=".property_js_files .collapse">
+<h2>An array of javascript files to included</h2>
+<pre>$js_files : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$js_files</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_local_file_path"> </a><div class="element clickable property protected property_local_file_path" data-toggle="collapse" data-target=".property_local_file_path .collapse">
+<h2>The absolute file path of the current module</h2>
+<pre>$local_file_path : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$local_file_path</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_local_html_path"> </a><div class="element clickable property protected property_local_html_path" data-toggle="collapse" data-target=".property_local_html_path .collapse">
+<h2>The local html path of this module</h2>
+<pre>$local_html_path : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$local_html_path</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_menu_xml"> </a><div class="element clickable property protected property_menu_xml" data-toggle="collapse" data-target=".property_menu_xml .collapse">
+<h2>the page menu in XML format</h2>
+<pre>$menu_xml : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$menu_xml</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_mods_dir"> </a><div class="element clickable property protected property_mods_dir" data-toggle="collapse" data-target=".property_mods_dir .collapse">
+<h2>Modules Directory</h2>
+<pre>$mods_dir : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$mods_dir</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_nav_xml_format"> </a><div class="element clickable property protected property_nav_xml_format" data-toggle="collapse" data-target=".property_nav_xml_format .collapse">
+<h2>Application navigation XML format (numeric, rewrite, long_url)</h2>
+<pre>$nav_xml_format : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$nav_xml_format</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_output_type"> </a><div class="element clickable property protected property_output_type" data-toggle="collapse" data-target=".property_output_type .collapse">
+<h2>page output format (default HTML)</h2>
+<pre>$output_type : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$output_type</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_page_type"> </a><div class="element clickable property protected property_page_type" data-toggle="collapse" data-target=".property_page_type .collapse">
+<h2>Page type, default: page</h2>
+<pre>$page_type : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$page_type</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_page_xml"> </a><div class="element clickable property protected property_page_xml" data-toggle="collapse" data-target=".property_page_xml .collapse">
+<h2>the entire current page in XML format</h2>
+<pre>$page_xml : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$page_xml</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_site_title"> </a><div class="element clickable property protected property_site_title" data-toggle="collapse" data-target=".property_site_title .collapse">
+<h2>Title of the Site (pulled from config.inc.php)</h2>
+<pre>$site_title : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$site_title</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_site_xml"> </a><div class="element clickable property protected property_site_xml" data-toggle="collapse" data-target=".property_site_xml .collapse">
+<h2>Static Site XML data (config.inc.php)</h2>
+<pre>$site_xml : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$site_xml</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_templates_dir"> </a><div class="element clickable property protected property_templates_dir" data-toggle="collapse" data-target=".property_templates_dir .collapse">
+<h2>the XSL template directory to be used to transform the $page_xml into HTML or XHTML</h2>
+<pre>$templates_dir : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$templates_dir</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_theme"> </a><div class="element clickable property protected property_theme" data-toggle="collapse" data-target=".property_theme .collapse">
+<h2>current theme to be used for the application (pulled from config.inc.php)</h2>
+<pre>$theme : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$theme</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_theme_dir"> </a><div class="element clickable property protected property_theme_dir" data-toggle="collapse" data-target=".property_theme_dir .collapse">
+<h2>Current theme directory</h2>
+<pre>$theme_dir : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$theme_dir</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_time_zone"> </a><div class="element clickable property protected property_time_zone" data-toggle="collapse" data-target=".property_time_zone .collapse">
+<h2>Time Zone</h2>
+<pre>$time_zone : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$time_zone</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_xsl_template"> </a><div class="element clickable property protected property_xsl_template" data-toggle="collapse" data-target=".property_xsl_template .collapse">
+<h2>the XSL template to be used to transform the $page_xml into HTML or XHTML</h2>
+<pre>$xsl_template : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\page::$$xsl_template</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_msg_code"> </a><div class="element clickable property private property_msg_code" data-toggle="collapse" data-target=".property_msg_code .collapse">
+<h2>code of the message to be displayed</h2>
+<pre>$msg_code : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-11-21T13:10:14-05:00.<br></footer></div>
+</div>
+</body>
+</html>

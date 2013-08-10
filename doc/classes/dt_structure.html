@@ -1,0 +1,729 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpOpenFW Developer Documentation » \dt_structure</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpOpenFW Developer Documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/phpOpenFW.html"><i class="icon-folder-open"></i> phpOpenFW</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">521</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method___destruct" title="__destruct :: "><span class="description">__destruct()
+        </span><pre>__destruct()</pre></a></li>
+<li class="method public "><a href="#method_affected_rows" title="affected_rows :: "><span class="description">affected_rows()
+        </span><pre>affected_rows()</pre></a></li>
+<li class="method public "><a href="#method_assoc_result" title="assoc_result :: "><span class="description">assoc_result()
+        </span><pre>assoc_result()</pre></a></li>
+<li class="method public "><a href="#method_auto_commit" title="auto_commit :: "><span class="description">auto_commit()
+        </span><pre>auto_commit()</pre></a></li>
+<li class="method public "><a href="#method_bind" title="bind :: "><span class="description">bind()
+        </span><pre>bind()</pre></a></li>
+<li class="method public "><a href="#method_clear_last_insert_id" title="clear_last_insert_id :: "><span class="description">clear_last_insert_id()
+        </span><pre>clear_last_insert_id()</pre></a></li>
+<li class="method public "><a href="#method_clear_result" title="clear_result :: "><span class="description">clear_result()
+        </span><pre>clear_result()</pre></a></li>
+<li class="method public "><a href="#method_commit" title="commit :: "><span class="description">commit()
+        </span><pre>commit()</pre></a></li>
+<li class="method public "><a href="#method_execute" title="execute :: "><span class="description">execute()
+        </span><pre>execute()</pre></a></li>
+<li class="method public "><a href="#method_get_conn_handle" title="get_conn_handle :: "><span class="description">get_conn_handle()
+        </span><pre>get_conn_handle()</pre></a></li>
+<li class="method public "><a href="#method_get_opt" title="get_opt :: "><span class="description">get_opt()
+        </span><pre>get_opt()</pre></a></li>
+<li class="method public "><a href="#method_get_pass" title="get_pass :: "><span class="description">get_pass()
+        </span><pre>get_pass()</pre></a></li>
+<li class="method public "><a href="#method_get_query" title="get_query :: "><span class="description">get_query()
+        </span><pre>get_query()</pre></a></li>
+<li class="method public "><a href="#method_get_user" title="get_user :: "><span class="description">get_user()
+        </span><pre>get_user()</pre></a></li>
+<li class="method public "><a href="#method_is_bound" title="is_bound :: "><span class="description">is_bound()
+        </span><pre>is_bound()</pre></a></li>
+<li class="method public "><a href="#method_is_open" title="is_open :: "><span class="description">is_open()
+        </span><pre>is_open()</pre></a></li>
+<li class="method public "><a href="#method_is_trans_started" title="is_trans_started :: "><span class="description">is_trans_started()
+        </span><pre>is_trans_started()</pre></a></li>
+<li class="method public "><a href="#method_key_assoc_result" title="key_assoc_result :: "><span class="description">key_assoc_result()
+        </span><pre>key_assoc_result()</pre></a></li>
+<li class="method public "><a href="#method_key_val_result" title="key_val_result :: "><span class="description">key_val_result()
+        </span><pre>key_val_result()</pre></a></li>
+<li class="method public "><a href="#method_last_insert_id" title="last_insert_id :: "><span class="description">last_insert_id()
+        </span><pre>last_insert_id()</pre></a></li>
+<li class="method public "><a href="#method_num_fields" title="num_fields :: "><span class="description">num_fields()
+        </span><pre>num_fields()</pre></a></li>
+<li class="method public "><a href="#method_num_rows" title="num_rows :: "><span class="description">num_rows()
+        </span><pre>num_rows()</pre></a></li>
+<li class="method public "><a href="#method_prepare" title="prepare :: "><span class="description">prepare()
+        </span><pre>prepare()</pre></a></li>
+<li class="method public "><a href="#method_rollback" title="rollback :: "><span class="description">rollback()
+        </span><pre>rollback()</pre></a></li>
+<li class="method public "><a href="#method_set_opt" title="set_opt :: "><span class="description">set_opt()
+        </span><pre>set_opt()</pre></a></li>
+<li class="method public "><a href="#method_set_trans_type" title="set_trans_type :: "><span class="description">set_trans_type()
+        </span><pre>set_trans_type()</pre></a></li>
+<li class="method public "><a href="#method_shutdown" title="shutdown :: "><span class="description">shutdown()
+        </span><pre>shutdown()</pre></a></li>
+<li class="method public "><a href="#method_start_trans" title="start_trans :: "><span class="description">start_trans()
+        </span><pre>start_trans()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method_cache_results" title="cache_results :: "><span class="description">cache_results()
+        </span><pre>cache_results()</pre></a></li>
+<li class="method protected "><a href="#method_connection_error" title="connection_error :: "><span class="description">connection_error()
+        </span><pre>connection_error()</pre></a></li>
+<li class="method protected "><a href="#method_gen_error" title="gen_error :: "><span class="description">gen_error()
+        </span><pre>gen_error()</pre></a></li>
+<li class="method protected "><a href="#method_increment_counters" title="increment_counters :: "><span class="description">increment_counters()
+        </span><pre>increment_counters()</pre></a></li>
+<li class="method protected "><a href="#method_not_available" title="not_available :: "><span class="description">not_available()
+        </span><pre>not_available()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="method private "><a href="#method_display_error" title="display_error :: "><span class="description">display_error()
+        </span><pre>display_error()</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_affected_rows" title="$affected_rows :: "><span class="description">Number of rows affected by query</span><pre>$affected_rows</pre></a></li>
+<li class="property protected "><a href="#property_auto_commit" title="$auto_commit :: "><span class="description">Auto commit flag</span><pre>$auto_commit</pre></a></li>
+<li class="property protected "><a href="#property_bind_params" title="$bind_params :: "><span class="description">Current SQL Bind Parameters</span><pre>$bind_params</pre></a></li>
+<li class="property protected "><a href="#property_bound" title="$bound :: "><span class="description">User is bound to data source for this transaction (true or false)</span><pre>$bound</pre></a></li>
+<li class="property protected "><a href="#property_conn_open" title="$conn_open :: "><span class="description">Connection Open (true or false)</span><pre>$conn_open</pre></a></li>
+<li class="property protected "><a href="#property_conn_str" title="$conn_str :: "><span class="description">Database specific connection string</span><pre>$conn_str</pre></a></li>
+<li class="property protected "><a href="#property_curr_query" title="$curr_query :: "><span class="description">Current SQL Query</span><pre>$curr_query</pre></a></li>
+<li class="property protected "><a href="#property_data_result" title="$data_result :: "><span class="description">The Data Result Object for the last run query with this object.</span><pre>$data_result</pre></a></li>
+<li class="property protected "><a href="#property_data_src" title="$data_src :: "><span class="description">Data source index/name</span><pre>$data_src</pre></a></li>
+<li class="property protected "><a href="#property_data_type" title="$data_type :: "><span class="description">Data source type (mysql, mysqli, pgsql, ldap, oracle, mssql, db2, sqlsrv, sqlite)</span><pre>$data_type</pre></a></li>
+<li class="property protected "><a href="#property_disp_dt" title="$disp_dt :: "><span class="description">Display Data Type</span><pre>$disp_dt</pre></a></li>
+<li class="property protected "><a href="#property_first_use" title="$first_use :: "><span class="description">Is this the first use of this data source?</span><pre>$first_use</pre></a></li>
+<li class="property protected "><a href="#property_handle" title="$handle :: "><span class="description">Connection handle of the current data source connection</span><pre>$handle</pre></a></li>
+<li class="property protected "><a href="#property_inst_opts" title="$inst_opts :: "><span class="description">Options that affect the current instantiated object</span><pre>$inst_opts</pre></a></li>
+<li class="property protected "><a href="#property_instance" title="$instance :: "><span class="description">Database instance to use when connecting to the data source</span><pre>$instance</pre></a></li>
+<li class="property protected "><a href="#property_last_id" title="$last_id :: "><span class="description">ID of the last inserted row for the current connection</span><pre>$last_id</pre></a></li>
+<li class="property protected "><a href="#property_num_fields" title="$num_fields :: "><span class="description">Number of fields in the record set returned</span><pre>$num_fields</pre></a></li>
+<li class="property protected "><a href="#property_num_rows" title="$num_rows :: "><span class="description">Number of rows in the record set returned</span><pre>$num_rows</pre></a></li>
+<li class="property protected "><a href="#property_options" title="$options :: "><span class="description">Database specific options</span><pre>$options</pre></a></li>
+<li class="property protected "><a href="#property_pass" title="$pass :: "><span class="description">Password to use when connecting to the data source</span><pre>$pass</pre></a></li>
+<li class="property protected "><a href="#property_persistent" title="$persistent :: "><span class="description">Connection is Persistent (true or false)</span><pre>$persistent</pre></a></li>
+<li class="property protected "><a href="#property_port" title="$port :: "><span class="description">Server port to use when connecting to the data source</span><pre>$port</pre></a></li>
+<li class="property protected "><a href="#property_result" title="$result :: "><span class="description">The record set</span><pre>$result</pre></a></li>
+<li class="property protected "><a href="#property_results_set" title="$results_set :: "><span class="description">A flag to determine if the results from the query have been saved/cached.</span><pre>$results_set</pre></a></li>
+<li class="property protected "><a href="#property_reuse_connection" title="$reuse_connection :: "><span class="description">Reuse one Connection (true or false)</span><pre>$reuse_connection</pre></a></li>
+<li class="property protected "><a href="#property_rsrc_id" title="$rsrc_id :: "><span class="description">Resource ID of the data source record set</span><pre>$rsrc_id</pre></a></li>
+<li class="property protected "><a href="#property_server" title="$server :: "><span class="description">Server address to use when connecting to the data source</span><pre>$server</pre></a></li>
+<li class="property protected "><a href="#property_source" title="$source :: "><span class="description">Database or directory to use when connecting to the data source</span><pre>$source</pre></a></li>
+<li class="property protected "><a href="#property_stmt" title="$stmt :: "><span class="description">A prepared SQL Statement handle or FALSE when invalid or not set.</span><pre>$stmt</pre></a></li>
+<li class="property protected "><a href="#property_trans_started" title="$trans_started :: "><span class="description">Has a transaction been started?</span><pre>$trans_started</pre></a></li>
+<li class="property protected "><a href="#property_trans_type" title="$trans_type :: "><span class="description">Data transaction type</span><pre>$trans_type</pre></a></li>
+<li class="property protected "><a href="#property_user" title="$user :: "><span class="description">User to use when connecting to the data source</span><pre>$user</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\dt_structure"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/dt_structure.html">dt_structure</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">dt_structure Class</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/phpOpenFW.Database.Tools.html">phpOpenFW</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Database_Tools</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($data_src, $tmp_trans_type) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data_src</h4></div>
+<div class="subelement argument"><h4>$tmp_trans_type</h4></div>
+</div></div>
+</div>
+<a id="method___destruct"></a><div class="element clickable method public method___destruct" data-toggle="collapse" data-target=".method___destruct .collapse">
+<h2>__destruct()
+        </h2>
+<pre>__destruct() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_affected_rows"></a><div class="element clickable method public method_affected_rows" data-toggle="collapse" data-target=".method_affected_rows .collapse">
+<h2>affected_rows()
+        </h2>
+<pre>affected_rows() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_assoc_result"></a><div class="element clickable method public method_assoc_result" data-toggle="collapse" data-target=".method_assoc_result .collapse">
+<h2>assoc_result()
+        </h2>
+<pre>assoc_result() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_auto_commit"></a><div class="element clickable method public method_auto_commit" data-toggle="collapse" data-target=".method_auto_commit .collapse">
+<h2>auto_commit()
+        </h2>
+<pre>auto_commit($auto_commit) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$auto_commit</h4></div>
+</div></div>
+</div>
+<a id="method_bind"></a><div class="element clickable method public method_bind" data-toggle="collapse" data-target=".method_bind .collapse">
+<h2>bind()
+        </h2>
+<pre>bind($user, $pass) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$user</h4></div>
+<div class="subelement argument"><h4>$pass</h4></div>
+</div></div>
+</div>
+<a id="method_clear_last_insert_id"></a><div class="element clickable method public method_clear_last_insert_id" data-toggle="collapse" data-target=".method_clear_last_insert_id .collapse">
+<h2>clear_last_insert_id()
+        </h2>
+<pre>clear_last_insert_id() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_clear_result"></a><div class="element clickable method public method_clear_result" data-toggle="collapse" data-target=".method_clear_result .collapse">
+<h2>clear_result()
+        </h2>
+<pre>clear_result() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_commit"></a><div class="element clickable method public method_commit" data-toggle="collapse" data-target=".method_commit .collapse">
+<h2>commit()
+        </h2>
+<pre>commit($start_new) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$start_new</h4></div>
+</div></div>
+</div>
+<a id="method_execute"></a><div class="element clickable method public method_execute" data-toggle="collapse" data-target=".method_execute .collapse">
+<h2>execute()
+        </h2>
+<pre>execute($bind_param) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$bind_param</h4></div>
+</div></div>
+</div>
+<a id="method_get_conn_handle"></a><div class="element clickable method public method_get_conn_handle" data-toggle="collapse" data-target=".method_get_conn_handle .collapse">
+<h2>get_conn_handle()
+        </h2>
+<pre>get_conn_handle() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_get_opt"></a><div class="element clickable method public method_get_opt" data-toggle="collapse" data-target=".method_get_opt .collapse">
+<h2>get_opt()
+        </h2>
+<pre>get_opt($opt) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$opt</h4></div>
+</div></div>
+</div>
+<a id="method_get_pass"></a><div class="element clickable method public method_get_pass" data-toggle="collapse" data-target=".method_get_pass .collapse">
+<h2>get_pass()
+        </h2>
+<pre>get_pass() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_get_query"></a><div class="element clickable method public method_get_query" data-toggle="collapse" data-target=".method_get_query .collapse">
+<h2>get_query()
+        </h2>
+<pre>get_query() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_get_user"></a><div class="element clickable method public method_get_user" data-toggle="collapse" data-target=".method_get_user .collapse">
+<h2>get_user()
+        </h2>
+<pre>get_user() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_is_bound"></a><div class="element clickable method public method_is_bound" data-toggle="collapse" data-target=".method_is_bound .collapse">
+<h2>is_bound()
+        </h2>
+<pre>is_bound() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_is_open"></a><div class="element clickable method public method_is_open" data-toggle="collapse" data-target=".method_is_open .collapse">
+<h2>is_open()
+        </h2>
+<pre>is_open() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_is_trans_started"></a><div class="element clickable method public method_is_trans_started" data-toggle="collapse" data-target=".method_is_trans_started .collapse">
+<h2>is_trans_started()
+        </h2>
+<pre>is_trans_started() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_key_assoc_result"></a><div class="element clickable method public method_key_assoc_result" data-toggle="collapse" data-target=".method_key_assoc_result .collapse">
+<h2>key_assoc_result()
+        </h2>
+<pre>key_assoc_result($key) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$key</h4></div>
+</div></div>
+</div>
+<a id="method_key_val_result"></a><div class="element clickable method public method_key_val_result" data-toggle="collapse" data-target=".method_key_val_result .collapse">
+<h2>key_val_result()
+        </h2>
+<pre>key_val_result($key, $value) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$key</h4></div>
+<div class="subelement argument"><h4>$value</h4></div>
+</div></div>
+</div>
+<a id="method_last_insert_id"></a><div class="element clickable method public method_last_insert_id" data-toggle="collapse" data-target=".method_last_insert_id .collapse">
+<h2>last_insert_id()
+        </h2>
+<pre>last_insert_id() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_num_fields"></a><div class="element clickable method public method_num_fields" data-toggle="collapse" data-target=".method_num_fields .collapse">
+<h2>num_fields()
+        </h2>
+<pre>num_fields() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_num_rows"></a><div class="element clickable method public method_num_rows" data-toggle="collapse" data-target=".method_num_rows .collapse">
+<h2>num_rows()
+        </h2>
+<pre>num_rows() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_prepare"></a><div class="element clickable method public method_prepare" data-toggle="collapse" data-target=".method_prepare .collapse">
+<h2>prepare()
+        </h2>
+<pre>prepare($stmt) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$stmt</h4></div>
+</div></div>
+</div>
+<a id="method_rollback"></a><div class="element clickable method public method_rollback" data-toggle="collapse" data-target=".method_rollback .collapse">
+<h2>rollback()
+        </h2>
+<pre>rollback($start_new) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$start_new</h4></div>
+</div></div>
+</div>
+<a id="method_set_opt"></a><div class="element clickable method public method_set_opt" data-toggle="collapse" data-target=".method_set_opt .collapse">
+<h2>set_opt()
+        </h2>
+<pre>set_opt($opt, $val) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$opt</h4></div>
+<div class="subelement argument"><h4>$val</h4></div>
+</div></div>
+</div>
+<a id="method_set_trans_type"></a><div class="element clickable method public method_set_trans_type" data-toggle="collapse" data-target=".method_set_trans_type .collapse">
+<h2>set_trans_type()
+        </h2>
+<pre>set_trans_type($trans_type) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$trans_type</h4></div>
+</div></div>
+</div>
+<a id="method_shutdown"></a><div class="element clickable method public method_shutdown" data-toggle="collapse" data-target=".method_shutdown .collapse">
+<h2>shutdown()
+        </h2>
+<pre>shutdown() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_start_trans"></a><div class="element clickable method public method_start_trans" data-toggle="collapse" data-target=".method_start_trans .collapse">
+<h2>start_trans()
+        </h2>
+<pre>start_trans() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_cache_results"></a><div class="element clickable method protected method_cache_results" data-toggle="collapse" data-target=".method_cache_results .collapse">
+<h2>cache_results()
+        </h2>
+<pre>cache_results() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_connection_error"></a><div class="element clickable method protected method_connection_error" data-toggle="collapse" data-target=".method_connection_error .collapse">
+<h2>connection_error()
+        </h2>
+<pre>connection_error($error, $errno) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$error</h4></div>
+<div class="subelement argument"><h4>$errno</h4></div>
+</div></div>
+</div>
+<a id="method_gen_error"></a><div class="element clickable method protected method_gen_error" data-toggle="collapse" data-target=".method_gen_error .collapse">
+<h2>gen_error()
+        </h2>
+<pre>gen_error($error) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$error</h4></div>
+</div></div>
+</div>
+<a id="method_increment_counters"></a><div class="element clickable method protected method_increment_counters" data-toggle="collapse" data-target=".method_increment_counters .collapse">
+<h2>increment_counters()
+        </h2>
+<pre>increment_counters() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_not_available"></a><div class="element clickable method protected method_not_available" data-toggle="collapse" data-target=".method_not_available .collapse">
+<h2>not_available()
+        </h2>
+<pre>not_available($function) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$function</h4></div>
+</div></div>
+</div>
+<a id="method_display_error"></a><div class="element clickable method private method_display_error" data-toggle="collapse" data-target=".method_display_error .collapse">
+<h2>display_error()
+        </h2>
+<pre>display_error($function, $msg) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$function</h4></div>
+<div class="subelement argument"><h4>$msg</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_affected_rows"> </a><div class="element clickable property protected property_affected_rows" data-toggle="collapse" data-target=".property_affected_rows .collapse">
+<h2>Number of rows affected by query</h2>
+<pre>$affected_rows : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_auto_commit"> </a><div class="element clickable property protected property_auto_commit" data-toggle="collapse" data-target=".property_auto_commit .collapse">
+<h2>Auto commit flag</h2>
+<pre>$auto_commit : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_bind_params"> </a><div class="element clickable property protected property_bind_params" data-toggle="collapse" data-target=".property_bind_params .collapse">
+<h2>Current SQL Bind Parameters</h2>
+<pre>$bind_params : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_bound"> </a><div class="element clickable property protected property_bound" data-toggle="collapse" data-target=".property_bound .collapse">
+<h2>User is bound to data source for this transaction (true or false)</h2>
+<pre>$bound : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_conn_open"> </a><div class="element clickable property protected property_conn_open" data-toggle="collapse" data-target=".property_conn_open .collapse">
+<h2>Connection Open (true or false)</h2>
+<pre>$conn_open : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_conn_str"> </a><div class="element clickable property protected property_conn_str" data-toggle="collapse" data-target=".property_conn_str .collapse">
+<h2>Database specific connection string</h2>
+<pre>$conn_str : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_curr_query"> </a><div class="element clickable property protected property_curr_query" data-toggle="collapse" data-target=".property_curr_query .collapse">
+<h2>Current SQL Query</h2>
+<pre>$curr_query : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_data_result"> </a><div class="element clickable property protected property_data_result" data-toggle="collapse" data-target=".property_data_result .collapse">
+<h2>The Data Result Object for the last run query with this object.</h2>
+<pre>$data_result : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_data_src"> </a><div class="element clickable property protected property_data_src" data-toggle="collapse" data-target=".property_data_src .collapse">
+<h2>Data source index/name</h2>
+<pre>$data_src : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_data_type"> </a><div class="element clickable property protected property_data_type" data-toggle="collapse" data-target=".property_data_type .collapse">
+<h2>Data source type (mysql, mysqli, pgsql, ldap, oracle, mssql, db2, sqlsrv, sqlite)</h2>
+<pre>$data_type : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_disp_dt"> </a><div class="element clickable property protected property_disp_dt" data-toggle="collapse" data-target=".property_disp_dt .collapse">
+<h2>Display Data Type</h2>
+<pre>$disp_dt : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_first_use"> </a><div class="element clickable property protected property_first_use" data-toggle="collapse" data-target=".property_first_use .collapse">
+<h2>Is this the first use of this data source?</h2>
+<pre>$first_use : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_handle"> </a><div class="element clickable property protected property_handle" data-toggle="collapse" data-target=".property_handle .collapse">
+<h2>Connection handle of the current data source connection</h2>
+<pre>$handle : resource</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_inst_opts"> </a><div class="element clickable property protected property_inst_opts" data-toggle="collapse" data-target=".property_inst_opts .collapse">
+<h2>Options that affect the current instantiated object</h2>
+<pre>$inst_opts : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_instance"> </a><div class="element clickable property protected property_instance" data-toggle="collapse" data-target=".property_instance .collapse">
+<h2>Database instance to use when connecting to the data source</h2>
+<pre>$instance : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_last_id"> </a><div class="element clickable property protected property_last_id" data-toggle="collapse" data-target=".property_last_id .collapse">
+<h2>ID of the last inserted row for the current connection</h2>
+<pre>$last_id : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_num_fields"> </a><div class="element clickable property protected property_num_fields" data-toggle="collapse" data-target=".property_num_fields .collapse">
+<h2>Number of fields in the record set returned</h2>
+<pre>$num_fields : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_num_rows"> </a><div class="element clickable property protected property_num_rows" data-toggle="collapse" data-target=".property_num_rows .collapse">
+<h2>Number of rows in the record set returned</h2>
+<pre>$num_rows : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_options"> </a><div class="element clickable property protected property_options" data-toggle="collapse" data-target=".property_options .collapse">
+<h2>Database specific options</h2>
+<pre>$options : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_pass"> </a><div class="element clickable property protected property_pass" data-toggle="collapse" data-target=".property_pass .collapse">
+<h2>Password to use when connecting to the data source</h2>
+<pre>$pass : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_persistent"> </a><div class="element clickable property protected property_persistent" data-toggle="collapse" data-target=".property_persistent .collapse">
+<h2>Connection is Persistent (true or false)</h2>
+<pre>$persistent : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_port"> </a><div class="element clickable property protected property_port" data-toggle="collapse" data-target=".property_port .collapse">
+<h2>Server port to use when connecting to the data source</h2>
+<pre>$port : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_result"> </a><div class="element clickable property protected property_result" data-toggle="collapse" data-target=".property_result .collapse">
+<h2>The record set</h2>
+<pre>$result : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_results_set"> </a><div class="element clickable property protected property_results_set" data-toggle="collapse" data-target=".property_results_set .collapse">
+<h2>A flag to determine if the results from the query have been saved/cached.</h2>
+<pre>$results_set : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_reuse_connection"> </a><div class="element clickable property protected property_reuse_connection" data-toggle="collapse" data-target=".property_reuse_connection .collapse">
+<h2>Reuse one Connection (true or false)</h2>
+<pre>$reuse_connection : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_rsrc_id"> </a><div class="element clickable property protected property_rsrc_id" data-toggle="collapse" data-target=".property_rsrc_id .collapse">
+<h2>Resource ID of the data source record set</h2>
+<pre>$rsrc_id : resource</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_server"> </a><div class="element clickable property protected property_server" data-toggle="collapse" data-target=".property_server .collapse">
+<h2>Server address to use when connecting to the data source</h2>
+<pre>$server : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_source"> </a><div class="element clickable property protected property_source" data-toggle="collapse" data-target=".property_source .collapse">
+<h2>Database or directory to use when connecting to the data source</h2>
+<pre>$source : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_stmt"> </a><div class="element clickable property protected property_stmt" data-toggle="collapse" data-target=".property_stmt .collapse">
+<h2>A prepared SQL Statement handle or FALSE when invalid or not set.</h2>
+<pre>$stmt : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_trans_started"> </a><div class="element clickable property protected property_trans_started" data-toggle="collapse" data-target=".property_trans_started .collapse">
+<h2>Has a transaction been started?</h2>
+<pre>$trans_started : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_trans_type"> </a><div class="element clickable property protected property_trans_type" data-toggle="collapse" data-target=".property_trans_type .collapse">
+<h2>Data transaction type</h2>
+<pre>$trans_type : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_user"> </a><div class="element clickable property protected property_user" data-toggle="collapse" data-target=".property_user .collapse">
+<h2>User to use when connecting to the data source</h2>
+<pre>$user : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-11-21T13:10:14-05:00.<br></footer></div>
+</div>
+</body>
+</html>

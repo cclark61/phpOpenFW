@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class data_result</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> data_result</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Data Result Class</p>
+		<p class="notes">
+			Located in <a class="field" href="_core---data_access---data_result.class.php.html">/core/data_access/data_result.class.php</a> (line <span class="field"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_result.class.php.html#a21">21</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">data_result</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$resource</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$data_src</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$opts</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Destructor.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__destruct" title="details" class="method-name">__destruct</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#fetch_all_rows" title="details" class="method-name">fetch_all_rows</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#fetch_row" title="details" class="method-name">fetch_row</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">The</span>
+										<a href="#get_opt" title="details" class="method-name">get_opt</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$opt</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">The</span>
+										<a href="#get_raw_resource" title="details" class="method-name">get_raw_resource</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#num_fields" title="details" class="method-name">num_fields</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#num_rows" title="details" class="method-name">num_rows</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#set_opt" title="details" class="method-name">set_opt</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$opt</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#set_result_pointer" title="details" class="method-name">set_result_pointer</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">0</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+													<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_result.class.php.html#a51">51</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor function</p>
+<p class="description"><p>Initializes data result object</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">data_result</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$resource</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$data_src</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$opts</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$resource</span><span class="var-description">: The result resource id or object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data_src</span><span class="var-description">: A valid data source handle as specified in the configuration</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$opts</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__destruct" id="__destruct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Destructor.png" />
+		<span class="method-title">Destructor __destruct</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_result.class.php.html#a102">102</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Destructor Function</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__destruct
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodfetch_all_rows" id="fetch_all_rows"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">fetch_all_rows</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_result.class.php.html#a134">134</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Fetch all rows in a result</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			fetch_all_rows
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodfetch_row" id="fetch_row"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">fetch_row</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_result.class.php.html#a144">144</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Fetch a row from the result set</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			fetch_row
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_opt" id="get_opt"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">get_opt</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_result.class.php.html#a169">169</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get Transaction Option</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> value of the option or false if it does not exist</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">The</span>
+		<span class="method-name">
+			get_opt
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$opt</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$opt</span><span class="var-description">: Option Key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_raw_resource" id="get_raw_resource"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">get_raw_resource</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_result.class.php.html#a192">192</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get Raw Resource</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> raw resource or statement handle returned from the query.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">The</span>
+		<span class="method-name">
+			get_raw_resource
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodnum_fields" id="num_fields"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">num_fields</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_result.class.php.html#a127">127</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the number fields in a result set. A False value means the value could not be determined.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			num_fields
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodnum_rows" id="num_rows"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">num_rows</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_result.class.php.html#a120">120</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the number records in a result set. A False value means the value could not be determined.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			num_rows
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodset_opt" id="set_opt"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">set_opt</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_result.class.php.html#a181">181</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Transaction Option</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_opt
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$opt</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$opt</span><span class="var-description">: Option Key</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$val</span><span class="var-description">: Option Value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_result_pointer" id="set_result_pointer"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">set_result_pointer</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_result.class.php.html#a156">156</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Result Pointer</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_result_pointer
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$offset</span><span class="var-description">: The numeric position to set the pointer at.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 21 Nov 2012 18:25:21 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

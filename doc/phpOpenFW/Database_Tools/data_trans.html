@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class data_trans</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> data_trans</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Data Transaction Class</p>
+		<p class="notes">
+			Located in <a class="field" href="_core---data_access---data_trans.class.php.html">/core/data_access/data_trans.class.php</a> (line <span class="field"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a21">21</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">data_trans</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$data_src</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$tmp_trans_type</span> = <span class="var-default">'qry'</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Destructor.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__destruct" title="details" class="method-name">__destruct</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#auto_commit" title="details" class="method-name">auto_commit</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$auto_commit</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#commit" title="details" class="method-name">commit</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#data_admin_bind" title="details" class="method-name">data_admin_bind</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">the</span>
+										<a href="#data_affected_rows" title="details" class="method-name">data_affected_rows</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#data_assoc_result" title="details" class="method-name">data_assoc_result</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#data_debug" title="details" class="method-name">data_debug</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$print_queries</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#data_key_assoc" title="details" class="method-name">data_key_assoc</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#data_key_val" title="details" class="method-name">data_key_val</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#data_num_fields" title="details" class="method-name">data_num_fields</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">the</span>
+										<a href="#data_num_rows" title="details" class="method-name">data_num_rows</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#data_query" title="details" class="method-name">data_query</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#data_raw_output" title="details" class="method-name">data_raw_output</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#data_user_bind" title="details" class="method-name">data_user_bind</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$user</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$pass</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#display_query" title="details" class="method-name">display_query</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#execute" title="details" class="method-name">execute</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">The</span>
+										<a href="#get_conn_handle" title="details" class="method-name">get_conn_handle</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">The</span>
+										<a href="#get_opt" title="details" class="method-name">get_opt</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$opt</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">whether</span>
+										<a href="#is_bound" title="details" class="method-name">is_bound</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#last_insert_id" title="details" class="method-name">last_insert_id</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#prepare" title="details" class="method-name">prepare</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$statement</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#rollback" title="details" class="method-name">rollback</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#set_opt" title="details" class="method-name">set_opt</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$opt</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#set_trans_type" title="details" class="method-name">set_trans_type</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$in_type</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#start_trans" title="details" class="method-name">start_trans</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+													<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a51">51</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor function</p>
+<p class="description"><p>Initializes data transaction, setting all necessary variables from specified data source</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">data_trans</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$data_src</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$tmp_trans_type</span> = <span class="var-default">'qry'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data_src</span><span class="var-description">: The name of data source to use as specified in config.inc.php</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tmp_trans_type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__destruct" id="__destruct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Destructor.png" />
+		<span class="method-title">Destructor __destruct</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a100">100</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Destructor Function</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__destruct
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodauto_commit" id="auto_commit"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">auto_commit</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a315">315</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Transactions auto commit flag (if supported)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			auto_commit
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$auto_commit</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$auto_commit</span><span class="var-description">: True (default) = auto commit, False = no auto commit</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcommit" id="commit"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">commit</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a329">329</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Commit current Outstanding Statements / Transaction(s)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			commit
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddata_admin_bind" id="data_admin_bind"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">data_admin_bind</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a146">146</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Bind to the Data Source with user and password specified in the configuration</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			data_admin_bind
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddata_affected_rows" id="data_affected_rows"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">data_affected_rows</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a276">276</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the number rows in the current record set</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> number rows in the current record set</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">the</span>
+		<span class="method-name">
+			data_affected_rows
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddata_assoc_result" id="data_assoc_result"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">data_assoc_result</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a169">169</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the current record set in the form of an associative array</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> current record set in the form of an associate array</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			data_assoc_result
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddata_debug" id="data_debug"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">data_debug</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a299">299</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Print all queries run through this transaction</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			data_debug
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$print_queries</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$print_queries</span><span class="var-description">: True (default) = Enable print of queries, False = Disable printing of queries</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddata_key_assoc" id="data_key_assoc"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">data_key_assoc</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a195">195</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the current record set in the form of an associative array with $key as the key for each record</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return the current record set in the form of an associative array with $key as the key for each record</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			data_key_assoc
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The index of the field to be used as the 'key' for each record</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddata_key_val" id="data_key_val"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">data_key_val</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a183">183</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return an abbreviated form of the current record set in the form of an associative array</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> abbreviated form of the current record set in the form of an associative array</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			data_key_val
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: field to be used as the 'key' in the associative array</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: field to be used as the 'value' in the associative array</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddata_num_fields" id="data_num_fields"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">data_num_fields</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a265">265</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the number fields in the current record set</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The number fields in the current record set</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			data_num_fields
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddata_num_rows" id="data_num_rows"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">data_num_rows</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a254">254</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the number rows in the current record set</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> number rows in the current record set</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">the</span>
+		<span class="method-name">
+			data_num_rows
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddata_query" id="data_query"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">data_query</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a110">110</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Executes a query based on the data source type</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			data_query
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$query</span><span class="var-description">: MySQL: SQL Statement, PostgreSQL: SQL Statement, LDAP: properly formatted and filled array</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: Bind Parameters (Optional)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddata_raw_output" id="data_raw_output"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">data_raw_output</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a286">286</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Show the current record set in raw format</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			data_raw_output
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddata_user_bind" id="data_user_bind"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">data_user_bind</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a157">157</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Bind to the Data Source with the provided user and password</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			data_user_bind
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$user</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$pass</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$user</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$pass</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddisplay_query" id="display_query"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">display_query</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a397">397</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Display the current query being run</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			display_query
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodexecute" id="execute"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">execute</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a370">370</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Executes a prepared SQL statement given parameters</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			execute
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: An array of parameters to be passed during binding.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_conn_handle" id="get_conn_handle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">get_conn_handle</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a454">454</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get Connection Handle</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> database connection handle being used</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">The</span>
+		<span class="method-name">
+			get_conn_handle
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_opt" id="get_opt"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">get_opt</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a429">429</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get Transaction Option</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> value of the option or false if it does not exist</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">The</span>
+		<span class="method-name">
+			get_opt
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$opt</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$opt</span><span class="var-description">: Option Key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodis_bound" id="is_bound"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">is_bound</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a307">307</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return whether the current user is bound to the current data source</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the current user is bound to the current data source</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">whether</span>
+		<span class="method-name">
+			is_bound
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodlast_insert_id" id="last_insert_id"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">last_insert_id</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a207">207</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return ID of the last inserted row for the current session</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ID of the last inserted row for the current session</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			last_insert_id
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodprepare" id="prepare"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">prepare</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a344">344</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prepares an SQL statement to be executed</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			prepare
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$statement</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$statement</span><span class="var-description">: SQL Statement</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrollback" id="rollback"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">rollback</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a336">336</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Rollback current Outstanding Statements / Transaction(s)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			rollback
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodset_opt" id="set_opt"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">set_opt</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a442">442</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Transaction Option</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_opt
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$opt</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$opt</span><span class="var-description">: Option Key</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$val</span><span class="var-description">: Option Value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_trans_type" id="set_trans_type"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">set_trans_type</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a222">222</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the current transaction type</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_trans_type
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$in_type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$in_type</span><span class="var-description">: Query Type: '?' - query (default, all SQL queries), '+' - add (LDAP), '~' - modify (LDAP),  '-' - delete (LDAP), '?1' - one level query (LDAP)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstart_trans" id="start_trans"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">start_trans</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Database_Tools_coredata_accessdata_trans.class.php.html#a322">322</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Start a new Database Transaction</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			start_trans
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sat, 10 Aug 2013 04:00:09 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

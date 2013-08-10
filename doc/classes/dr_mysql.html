@@ -1,0 +1,482 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpOpenFW Developer Documentation » \dr_mysql</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpOpenFW Developer Documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/phpOpenFW.html"><i class="icon-folder-open"></i> phpOpenFW</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">521</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#method___destruct" title="__destruct :: "><span class="description">__destruct()
+        </span><pre>__destruct()</pre></a></li>
+<li class="method public inherited"><a href="#method_fetch_all_rows" title="fetch_all_rows :: "><span class="description">fetch_all_rows()
+        </span><pre>fetch_all_rows()</pre></a></li>
+<li class="method public "><a href="#method_fetch_row" title="fetch_row :: "><span class="description">fetch_row()
+        </span><pre>fetch_row()</pre></a></li>
+<li class="method public inherited"><a href="#method_get_opt" title="get_opt :: "><span class="description">get_opt()
+        </span><pre>get_opt()</pre></a></li>
+<li class="method public inherited"><a href="#method_get_raw_resource" title="get_raw_resource :: "><span class="description">get_raw_resource()
+        </span><pre>get_raw_resource()</pre></a></li>
+<li class="method public inherited"><a href="#method_num_fields" title="num_fields :: "><span class="description">num_fields()
+        </span><pre>num_fields()</pre></a></li>
+<li class="method public inherited"><a href="#method_num_rows" title="num_rows :: "><span class="description">num_rows()
+        </span><pre>num_rows()</pre></a></li>
+<li class="method public inherited"><a href="#method_reset_flags" title="reset_flags :: "><span class="description">reset_flags()
+        </span><pre>reset_flags()</pre></a></li>
+<li class="method public "><a href="#method_set_num_fields" title="set_num_fields :: "><span class="description">set_num_fields()
+        </span><pre>set_num_fields()</pre></a></li>
+<li class="method public "><a href="#method_set_num_rows" title="set_num_rows :: "><span class="description">set_num_rows()
+        </span><pre>set_num_rows()</pre></a></li>
+<li class="method public inherited"><a href="#method_set_opt" title="set_opt :: "><span class="description">set_opt()
+        </span><pre>set_opt()</pre></a></li>
+<li class="method public "><a href="#method_set_result_pointer" title="set_result_pointer :: "><span class="description">set_result_pointer()
+        </span><pre>set_result_pointer()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected inherited"><a href="#method_display_error" title="display_error :: "><span class="description">display_error()
+        </span><pre>display_error()</pre></a></li>
+<li class="method protected inherited"><a href="#method_fetch_all_rows2" title="fetch_all_rows2 :: "><span class="description">fetch_all_rows2()
+        </span><pre>fetch_all_rows2()</pre></a></li>
+<li class="method protected inherited"><a href="#method_not_available" title="not_available :: "><span class="description">not_available()
+        </span><pre>not_available()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property_data_src" title="$data_src :: "><span class="description">Data source index as specified in the configuration</span><pre>$data_src</pre></a></li>
+<li class="property protected inherited"><a href="#property_data_type" title="$data_type :: "><span class="description">Data source type (mysql, mysqli, pgsql, ldap, oracle, mssql, db2, sqlsrv, sqlite)</span><pre>$data_type</pre></a></li>
+<li class="property protected inherited"><a href="#property_disp_dt" title="$disp_dt :: "><span class="description">Display Data Type</span><pre>$disp_dt</pre></a></li>
+<li class="property protected inherited"><a href="#property_flags" title="$flags :: "><span class="description">Internal Flags / Counters</span><pre>$flags</pre></a></li>
+<li class="property protected inherited"><a href="#property_handle" title="$handle :: "><span class="description">Internal Connection Handle. Not required and not necessary for most drivers.</span><pre>$handle</pre></a></li>
+<li class="property protected inherited"><a href="#property_num_fields" title="$num_fields :: "><span class="description">The number of fields in the record set.</span><pre>$num_fields</pre></a></li>
+<li class="property protected inherited"><a href="#property_num_recs" title="$num_recs :: "><span class="description">The number of records in the record set.</span><pre>$num_recs</pre></a></li>
+<li class="property protected inherited"><a href="#property_records" title="$records :: "><span class="description">The records returned from the result set</span><pre>$records</pre></a></li>
+<li class="property protected inherited"><a href="#property_records_set" title="$records_set :: "><span class="description">A flag to determine if the records have been cached/saved.</span><pre>$records_set</pre></a></li>
+<li class="property protected inherited"><a href="#property_resource" title="$resource :: "><span class="description">Internal Result Handle or Object</span><pre>$resource</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\dr_mysql"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/dr_mysql.html">dr_mysql</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">dr_mysql Class</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/phpOpenFW.Database.Tools.html">phpOpenFW</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Database_Tools</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($resource, $data_src, $opts) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::__construct()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$resource</h4></div>
+<div class="subelement argument"><h4>$data_src</h4></div>
+<div class="subelement argument"><h4>$opts</h4></div>
+</div></div>
+</div>
+<a id="method___destruct"></a><div class="element clickable method public method___destruct" data-toggle="collapse" data-target=".method___destruct .collapse">
+<h2>__destruct()
+        </h2>
+<pre>__destruct() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::__destruct()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_fetch_all_rows"></a><div class="element clickable method public method_fetch_all_rows" data-toggle="collapse" data-target=".method_fetch_all_rows .collapse">
+<h2>fetch_all_rows()
+        </h2>
+<pre>fetch_all_rows() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::fetch_all_rows()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_fetch_row"></a><div class="element clickable method public method_fetch_row" data-toggle="collapse" data-target=".method_fetch_row .collapse">
+<h2>fetch_row()
+        </h2>
+<pre>fetch_row() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_get_opt"></a><div class="element clickable method public method_get_opt" data-toggle="collapse" data-target=".method_get_opt .collapse">
+<h2>get_opt()
+        </h2>
+<pre>get_opt($opt) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::get_opt()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$opt</h4></div>
+</div></div>
+</div>
+<a id="method_get_raw_resource"></a><div class="element clickable method public method_get_raw_resource" data-toggle="collapse" data-target=".method_get_raw_resource .collapse">
+<h2>get_raw_resource()
+        </h2>
+<pre>get_raw_resource() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::get_raw_resource()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_num_fields"></a><div class="element clickable method public method_num_fields" data-toggle="collapse" data-target=".method_num_fields .collapse">
+<h2>num_fields()
+        </h2>
+<pre>num_fields() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::num_fields()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_num_rows"></a><div class="element clickable method public method_num_rows" data-toggle="collapse" data-target=".method_num_rows .collapse">
+<h2>num_rows()
+        </h2>
+<pre>num_rows() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::num_rows()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_reset_flags"></a><div class="element clickable method public method_reset_flags" data-toggle="collapse" data-target=".method_reset_flags .collapse">
+<h2>reset_flags()
+        </h2>
+<pre>reset_flags() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::reset_flags()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_set_num_fields"></a><div class="element clickable method public method_set_num_fields" data-toggle="collapse" data-target=".method_set_num_fields .collapse">
+<h2>set_num_fields()
+        </h2>
+<pre>set_num_fields() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_set_num_rows"></a><div class="element clickable method public method_set_num_rows" data-toggle="collapse" data-target=".method_set_num_rows .collapse">
+<h2>set_num_rows()
+        </h2>
+<pre>set_num_rows() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_set_opt"></a><div class="element clickable method public method_set_opt" data-toggle="collapse" data-target=".method_set_opt .collapse">
+<h2>set_opt()
+        </h2>
+<pre>set_opt($opt, $val) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::set_opt()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$opt</h4></div>
+<div class="subelement argument"><h4>$val</h4></div>
+</div></div>
+</div>
+<a id="method_set_result_pointer"></a><div class="element clickable method public method_set_result_pointer" data-toggle="collapse" data-target=".method_set_result_pointer .collapse">
+<h2>set_result_pointer()
+        </h2>
+<pre>set_result_pointer($offset) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$offset</h4></div>
+</div></div>
+</div>
+<a id="method_display_error"></a><div class="element clickable method protected method_display_error" data-toggle="collapse" data-target=".method_display_error .collapse">
+<h2>display_error()
+        </h2>
+<pre>display_error($function, $msg) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::display_error()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$function</h4></div>
+<div class="subelement argument"><h4>$msg</h4></div>
+</div></div>
+</div>
+<a id="method_fetch_all_rows2"></a><div class="element clickable method protected method_fetch_all_rows2" data-toggle="collapse" data-target=".method_fetch_all_rows2 .collapse">
+<h2>fetch_all_rows2()
+        </h2>
+<pre>fetch_all_rows2() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::fetch_all_rows2()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_not_available"></a><div class="element clickable method protected method_not_available" data-toggle="collapse" data-target=".method_not_available .collapse">
+<h2>not_available()
+        </h2>
+<pre>not_available($function) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::not_available()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$function</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_data_src"> </a><div class="element clickable property protected property_data_src" data-toggle="collapse" data-target=".property_data_src .collapse">
+<h2>Data source index as specified in the configuration</h2>
+<pre>$data_src : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::$$data_src</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_data_type"> </a><div class="element clickable property protected property_data_type" data-toggle="collapse" data-target=".property_data_type .collapse">
+<h2>Data source type (mysql, mysqli, pgsql, ldap, oracle, mssql, db2, sqlsrv, sqlite)</h2>
+<pre>$data_type : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::$$data_type</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_disp_dt"> </a><div class="element clickable property protected property_disp_dt" data-toggle="collapse" data-target=".property_disp_dt .collapse">
+<h2>Display Data Type</h2>
+<pre>$disp_dt : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::$$disp_dt</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_flags"> </a><div class="element clickable property protected property_flags" data-toggle="collapse" data-target=".property_flags .collapse">
+<h2>Internal Flags / Counters</h2>
+<pre>$flags : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::$$flags</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_handle"> </a><div class="element clickable property protected property_handle" data-toggle="collapse" data-target=".property_handle .collapse">
+<h2>Internal Connection Handle. Not required and not necessary for most drivers.</h2>
+<pre>$handle : resource</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::$$handle</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_num_fields"> </a><div class="element clickable property protected property_num_fields" data-toggle="collapse" data-target=".property_num_fields .collapse">
+<h2>The number of fields in the record set.</h2>
+<pre>$num_fields : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::$$num_fields</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_num_recs"> </a><div class="element clickable property protected property_num_recs" data-toggle="collapse" data-target=".property_num_recs .collapse">
+<h2>The number of records in the record set.</h2>
+<pre>$num_recs : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::$$num_recs</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_records"> </a><div class="element clickable property protected property_records" data-toggle="collapse" data-target=".property_records .collapse">
+<h2>The records returned from the result set</h2>
+<pre>$records : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::$$records</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_records_set"> </a><div class="element clickable property protected property_records_set" data-toggle="collapse" data-target=".property_records_set .collapse">
+<h2>A flag to determine if the records have been cached/saved.</h2>
+<pre>$records_set : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::$$records_set</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_resource"> </a><div class="element clickable property protected property_resource" data-toggle="collapse" data-target=".property_resource .collapse">
+<h2>Internal Result Handle or Object</h2>
+<pre>$resource : resource</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\dr_structure::$$resource</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-11-21T13:10:14-05:00.<br></footer></div>
+</div>
+</body>
+</html>

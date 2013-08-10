@@ -1,0 +1,697 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpOpenFW Developer Documentation » \table</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpOpenFW Developer Documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/phpOpenFW.html"><i class="icon-folder-open"></i> phpOpenFW</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">521</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#method___destruct" title="__destruct :: "><span class="description">__destruct()
+        </span><pre>__destruct()</pre></a></li>
+<li class="method public inherited"><a href="#method___toString" title="__toString :: "><span class="description">__toString()
+        </span><pre>__toString()</pre></a></li>
+<li class="method public inherited"><a href="#method_add_child" title="add_child :: "><span class="description">add_child()
+        </span><pre>add_child()</pre></a></li>
+<li class="method public inherited"><a href="#method_attr" title="attr :: "><span class="description">attr()
+        </span><pre>attr()</pre></a></li>
+<li class="method public inherited"><a href="#method_attrs" title="attrs :: "><span class="description">attrs()
+        </span><pre>attrs()</pre></a></li>
+<li class="method public "><a href="#method_caption" title="caption :: "><span class="description">caption()
+        </span><pre>caption()</pre></a></li>
+<li class="method public inherited"><a href="#method_display_inline" title="display_inline :: "><span class="description">display_inline()
+        </span><pre>display_inline()</pre></a></li>
+<li class="method public inherited"><a href="#method_display_tree" title="display_tree :: "><span class="description">display_tree()
+        </span><pre>display_tree()</pre></a></li>
+<li class="method public "><a href="#method_fieldset" title="fieldset :: "><span class="description">fieldset()
+        </span><pre>fieldset()</pre></a></li>
+<li class="method public inherited"><a href="#method_force_endtag" title="force_endtag :: "><span class="description">force_endtag()
+        </span><pre>force_endtag()</pre></a></li>
+<li class="method public inherited"><a href="#method_inset" title="inset :: "><span class="description">inset()
+        </span><pre>inset()</pre></a></li>
+<li class="method public "><a href="#method_no_xsl" title="no_xsl :: "><span class="description">no_xsl()
+        </span><pre>no_xsl()</pre></a></li>
+<li class="method public "><a href="#method_render" title="render :: "><span class="description">render()
+        </span><pre>render()</pre></a></li>
+<li class="method public "><a href="#method_set_alt_rows" title="set_alt_rows :: "><span class="description">set_alt_rows()
+        </span><pre>set_alt_rows()</pre></a></li>
+<li class="method public inherited"><a href="#method_set_attribute" title="set_attribute :: "><span class="description">set_attribute()
+        </span><pre>set_attribute()</pre></a></li>
+<li class="method public "><a href="#method_set_columns" title="set_columns :: "><span class="description">set_columns()
+        </span><pre>set_columns()</pre></a></li>
+<li class="method public inherited"><a href="#method_set_tabs" title="set_tabs :: "><span class="description">set_tabs()
+        </span><pre>set_tabs()</pre></a></li>
+<li class="method public inherited"><a href="#method_set_xsl" title="set_xsl :: "><span class="description">set_xsl()
+        </span><pre>set_xsl()</pre></a></li>
+<li class="method public "><a href="#method_td" title="td :: "><span class="description">td()
+        </span><pre>td()</pre></a></li>
+<li class="method public "><a href="#method_td_footer" title="td_footer :: "><span class="description">td_footer()
+        </span><pre>td_footer()</pre></a></li>
+<li class="method public "><a href="#method_td_header" title="td_header :: "><span class="description">td_header()
+        </span><pre>td_header()</pre></a></li>
+<li class="method public "><a href="#method_th" title="th :: "><span class="description">th()
+        </span><pre>th()</pre></a></li>
+<li class="method public "><a href="#method_th_footer" title="th_footer :: "><span class="description">th_footer()
+        </span><pre>th_footer()</pre></a></li>
+<li class="method public "><a href="#method_th_header" title="th_header :: "><span class="description">th_header()
+        </span><pre>th_header()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="method protected inherited"><a href="#method_xml_escape" title="xml_escape :: "><span class="description">xml_escape()
+        </span><pre>xml_escape()</pre></a></li></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="method private "><a href="#method_add_element" title="add_element :: "><span class="description">add_element()
+        </span><pre>add_element()</pre></a></li>
+<li class="method private "><a href="#method_build_element_structure" title="build_element_structure :: "><span class="description">build_element_structure()
+        </span><pre>build_element_structure()</pre></a></li>
+<li class="method private "><a href="#method_process_element" title="process_element :: "><span class="description">process_element()
+        </span><pre>process_element()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property_attributes" title="$attributes :: "><span class="description">An associative array of element attributes in the form of ["name" =&gt; "value"]</span><pre>$attributes</pre></a></li>
+<li class="property protected inherited"><a href="#property_child_nodes" title="$child_nodes :: "><span class="description">An array of child nodes</span><pre>$child_nodes</pre></a></li>
+<li class="property protected inherited"><a href="#property_element" title="$element :: "><span class="description">name of XML elements</span><pre>$element</pre></a></li>
+<li class="property protected inherited"><a href="#property_element_xml" title="$element_xml :: "><span class="description">The raw XML of the element</span><pre>$element_xml</pre></a></li>
+<li class="property protected inherited"><a href="#property_endtag" title="$endtag :: "><span class="description">Force and endtag for this element</span><pre>$endtag</pre></a></li>
+<li class="property protected inherited"><a href="#property_inset_val" title="$inset_val :: "><span class="description">The value between the opening and ending element tags</span><pre>$inset_val</pre></a></li>
+<li class="property protected inherited"><a href="#property_style" title="$style :: "><span class="description">Output Style</span><pre>$style</pre></a></li>
+<li class="property protected inherited"><a href="#property_tabs" title="$tabs :: "><span class="description">Number of tabs</span><pre>$tabs</pre></a></li>
+<li class="property protected inherited"><a href="#property_xsl_template" title="$xsl_template :: "><span class="description">The file path to the XSL stylesheet to be used for transformation</span><pre>$xsl_template</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_alt_rows" title="$alt_rows :: "><span class="description">true = put "alt" class in row element, false = don't</span><pre>$alt_rows</pre></a></li>
+<li class="property private "><a href="#property_columns" title="$columns :: "><span class="description">number of columns in the table</span><pre>$columns</pre></a></li>
+<li class="property private "><a href="#property_table_data" title="$table_data :: "><span class="description">An array of all of the data for this table</span><pre>$table_data</pre></a></li>
+<li class="property private "><a href="#property_table_elements" title="$table_elements :: "><span class="description">An array of elements in the table</span><pre>$table_elements</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\table"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/table.html">table</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">(XHTML) Table Class</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/phpOpenFW.Objects.html">phpOpenFW</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Objects</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method___destruct"></a><div class="element clickable method public method___destruct" data-toggle="collapse" data-target=".method___destruct .collapse">
+<h2>__destruct()
+        </h2>
+<pre>__destruct() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::__destruct()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method___toString"></a><div class="element clickable method public method___toString" data-toggle="collapse" data-target=".method___toString .collapse">
+<h2>__toString()
+        </h2>
+<pre>__toString() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::__toString()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_add_child"></a><div class="element clickable method public method_add_child" data-toggle="collapse" data-target=".method_add_child .collapse">
+<h2>add_child()
+        </h2>
+<pre>add_child($child) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::add_child()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$child</h4></div>
+</div></div>
+</div>
+<a id="method_attr"></a><div class="element clickable method public method_attr" data-toggle="collapse" data-target=".method_attr .collapse">
+<h2>attr()
+        </h2>
+<pre>attr($attr, $value, $append) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::attr()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$attr</h4></div>
+<div class="subelement argument"><h4>$value</h4></div>
+<div class="subelement argument"><h4>$append</h4></div>
+</div></div>
+</div>
+<a id="method_attrs"></a><div class="element clickable method public method_attrs" data-toggle="collapse" data-target=".method_attrs .collapse">
+<h2>attrs()
+        </h2>
+<pre>attrs($attrs, $append) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::attrs()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$attrs</h4></div>
+<div class="subelement argument"><h4>$append</h4></div>
+</div></div>
+</div>
+<a id="method_caption"></a><div class="element clickable method public method_caption" data-toggle="collapse" data-target=".method_caption .collapse">
+<h2>caption()
+        </h2>
+<pre>caption($caption) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$caption</h4></div>
+</div></div>
+</div>
+<a id="method_display_inline"></a><div class="element clickable method public method_display_inline" data-toggle="collapse" data-target=".method_display_inline .collapse">
+<h2>display_inline()
+        </h2>
+<pre>display_inline() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::display_inline()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_display_tree"></a><div class="element clickable method public method_display_tree" data-toggle="collapse" data-target=".method_display_tree .collapse">
+<h2>display_tree()
+        </h2>
+<pre>display_tree() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::display_tree()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_fieldset"></a><div class="element clickable method public method_fieldset" data-toggle="collapse" data-target=".method_fieldset .collapse">
+<h2>fieldset()
+        </h2>
+<pre>fieldset($legend, $id, $class) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$legend</h4></div>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$class</h4></div>
+</div></div>
+</div>
+<a id="method_force_endtag"></a><div class="element clickable method public method_force_endtag" data-toggle="collapse" data-target=".method_force_endtag .collapse">
+<h2>force_endtag()
+        </h2>
+<pre>force_endtag($bool) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::force_endtag()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$bool</h4></div>
+</div></div>
+</div>
+<a id="method_inset"></a><div class="element clickable method public method_inset" data-toggle="collapse" data-target=".method_inset .collapse">
+<h2>inset()
+        </h2>
+<pre>inset($value) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::inset()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$value</h4></div>
+</div></div>
+</div>
+<a id="method_no_xsl"></a><div class="element clickable method public method_no_xsl" data-toggle="collapse" data-target=".method_no_xsl .collapse">
+<h2>no_xsl()
+        </h2>
+<pre>no_xsl() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_render"></a><div class="element clickable method public method_render" data-toggle="collapse" data-target=".method_render .collapse">
+<h2>render()
+        </h2>
+<pre>render($buffer) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$buffer</h4></div>
+</div></div>
+</div>
+<a id="method_set_alt_rows"></a><div class="element clickable method public method_set_alt_rows" data-toggle="collapse" data-target=".method_set_alt_rows .collapse">
+<h2>set_alt_rows()
+        </h2>
+<pre>set_alt_rows() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_set_attribute"></a><div class="element clickable method public method_set_attribute" data-toggle="collapse" data-target=".method_set_attribute .collapse">
+<h2>set_attribute()
+        </h2>
+<pre>set_attribute($attr, $value) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::set_attribute()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$attr</h4></div>
+<div class="subelement argument"><h4>$value</h4></div>
+</div></div>
+</div>
+<a id="method_set_columns"></a><div class="element clickable method public method_set_columns" data-toggle="collapse" data-target=".method_set_columns .collapse">
+<h2>set_columns()
+        </h2>
+<pre>set_columns($cols) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$cols</h4></div>
+</div></div>
+</div>
+<a id="method_set_tabs"></a><div class="element clickable method public method_set_tabs" data-toggle="collapse" data-target=".method_set_tabs .collapse">
+<h2>set_tabs()
+        </h2>
+<pre>set_tabs($tabs) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::set_tabs()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$tabs</h4></div>
+</div></div>
+</div>
+<a id="method_set_xsl"></a><div class="element clickable method public method_set_xsl" data-toggle="collapse" data-target=".method_set_xsl .collapse">
+<h2>set_xsl()
+        </h2>
+<pre>set_xsl($stylesheet) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::set_xsl()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$stylesheet</h4></div>
+</div></div>
+</div>
+<a id="method_td"></a><div class="element clickable method public method_td" data-toggle="collapse" data-target=".method_td .collapse">
+<h2>td()
+        </h2>
+<pre>td($table_element, $num_cols, $attrs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$table_element</h4></div>
+<div class="subelement argument"><h4>$num_cols</h4></div>
+<div class="subelement argument"><h4>$attrs</h4></div>
+</div></div>
+</div>
+<a id="method_td_footer"></a><div class="element clickable method public method_td_footer" data-toggle="collapse" data-target=".method_td_footer .collapse">
+<h2>td_footer()
+        </h2>
+<pre>td_footer($table_element, $num_cols, $attrs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$table_element</h4></div>
+<div class="subelement argument"><h4>$num_cols</h4></div>
+<div class="subelement argument"><h4>$attrs</h4></div>
+</div></div>
+</div>
+<a id="method_td_header"></a><div class="element clickable method public method_td_header" data-toggle="collapse" data-target=".method_td_header .collapse">
+<h2>td_header()
+        </h2>
+<pre>td_header($table_element, $num_cols, $attrs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$table_element</h4></div>
+<div class="subelement argument"><h4>$num_cols</h4></div>
+<div class="subelement argument"><h4>$attrs</h4></div>
+</div></div>
+</div>
+<a id="method_th"></a><div class="element clickable method public method_th" data-toggle="collapse" data-target=".method_th .collapse">
+<h2>th()
+        </h2>
+<pre>th($table_element, $num_cols, $attrs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$table_element</h4></div>
+<div class="subelement argument"><h4>$num_cols</h4></div>
+<div class="subelement argument"><h4>$attrs</h4></div>
+</div></div>
+</div>
+<a id="method_th_footer"></a><div class="element clickable method public method_th_footer" data-toggle="collapse" data-target=".method_th_footer .collapse">
+<h2>th_footer()
+        </h2>
+<pre>th_footer($table_element, $num_cols, $attrs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$table_element</h4></div>
+<div class="subelement argument"><h4>$num_cols</h4></div>
+<div class="subelement argument"><h4>$attrs</h4></div>
+</div></div>
+</div>
+<a id="method_th_header"></a><div class="element clickable method public method_th_header" data-toggle="collapse" data-target=".method_th_header .collapse">
+<h2>th_header()
+        </h2>
+<pre>th_header($table_element, $num_cols, $attrs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$table_element</h4></div>
+<div class="subelement argument"><h4>$num_cols</h4></div>
+<div class="subelement argument"><h4>$attrs</h4></div>
+</div></div>
+</div>
+<a id="method_xml_escape"></a><div class="element clickable method protected method_xml_escape" data-toggle="collapse" data-target=".method_xml_escape .collapse">
+<h2>xml_escape()
+        </h2>
+<pre>xml_escape($str_data) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::xml_escape()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$str_data</h4></div>
+</div></div>
+</div>
+<a id="method_add_element"></a><div class="element clickable method private method_add_element" data-toggle="collapse" data-target=".method_add_element .collapse">
+<h2>add_element()
+        </h2>
+<pre>add_element($table_element, $num_cols, $attrs, $location, $type) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$table_element</h4></div>
+<div class="subelement argument"><h4>$num_cols</h4></div>
+<div class="subelement argument"><h4>$attrs</h4></div>
+<div class="subelement argument"><h4>$location</h4></div>
+<div class="subelement argument"><h4>$type</h4></div>
+</div></div>
+</div>
+<a id="method_build_element_structure"></a><div class="element clickable method private method_build_element_structure" data-toggle="collapse" data-target=".method_build_element_structure .collapse">
+<h2>build_element_structure()
+        </h2>
+<pre>build_element_structure($source, $destination) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$source</h4></div>
+<div class="subelement argument"><h4>$destination</h4></div>
+</div></div>
+</div>
+<a id="method_process_element"></a><div class="element clickable method private method_process_element" data-toggle="collapse" data-target=".method_process_element .collapse">
+<h2>process_element()
+        </h2>
+<pre>process_element($element) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$element</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_attributes"> </a><div class="element clickable property protected property_attributes" data-toggle="collapse" data-target=".property_attributes .collapse">
+<h2>An associative array of element attributes in the form of ["name" =&gt; "value"]</h2>
+<pre>$attributes : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::$$attributes</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_child_nodes"> </a><div class="element clickable property protected property_child_nodes" data-toggle="collapse" data-target=".property_child_nodes .collapse">
+<h2>An array of child nodes</h2>
+<pre>$child_nodes : Array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::$$child_nodes</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_element"> </a><div class="element clickable property protected property_element" data-toggle="collapse" data-target=".property_element .collapse">
+<h2>name of XML elements</h2>
+<pre>$element : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::$$element</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_element_xml"> </a><div class="element clickable property protected property_element_xml" data-toggle="collapse" data-target=".property_element_xml .collapse">
+<h2>The raw XML of the element</h2>
+<pre>$element_xml : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::$$element_xml</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_endtag"> </a><div class="element clickable property protected property_endtag" data-toggle="collapse" data-target=".property_endtag .collapse">
+<h2>Force and endtag for this element</h2>
+<pre>$endtag : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::$$endtag</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_inset_val"> </a><div class="element clickable property protected property_inset_val" data-toggle="collapse" data-target=".property_inset_val .collapse">
+<h2>The value between the opening and ending element tags</h2>
+<pre>$inset_val : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::$$inset_val</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_style"> </a><div class="element clickable property protected property_style" data-toggle="collapse" data-target=".property_style .collapse">
+<h2>Output Style</h2>
+<pre>$style : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::$$style</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_tabs"> </a><div class="element clickable property protected property_tabs" data-toggle="collapse" data-target=".property_tabs .collapse">
+<h2>Number of tabs</h2>
+<pre>$tabs : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::$$tabs</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_xsl_template"> </a><div class="element clickable property protected property_xsl_template" data-toggle="collapse" data-target=".property_xsl_template .collapse">
+<h2>The file path to the XSL stylesheet to be used for transformation</h2>
+<pre>$xsl_template : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\element::$$xsl_template</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_alt_rows"> </a><div class="element clickable property private property_alt_rows" data-toggle="collapse" data-target=".property_alt_rows .collapse">
+<h2>true = put "alt" class in row element, false = don't</h2>
+<pre>$alt_rows : \Flag:</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_columns"> </a><div class="element clickable property private property_columns" data-toggle="collapse" data-target=".property_columns .collapse">
+<h2>number of columns in the table</h2>
+<pre>$columns : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_table_data"> </a><div class="element clickable property private property_table_data" data-toggle="collapse" data-target=".property_table_data .collapse">
+<h2>An array of all of the data for this table</h2>
+<pre>$table_data : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_table_elements"> </a><div class="element clickable property private property_table_elements" data-toggle="collapse" data-target=".property_table_elements .collapse">
+<h2>An array of elements in the table</h2>
+<pre>$table_elements : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-11-21T13:10:14-05:00.<br></footer></div>
+</div>
+</body>
+</html>

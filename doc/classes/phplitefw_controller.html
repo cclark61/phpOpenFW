@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpOpenFW Developer Documentation » \phplitefw_controller</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpOpenFW Developer Documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/phpOpenFW.html"><i class="icon-folder-open"></i> phpOpenFW</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">521</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_default_data_source" title="default_data_source :: "><span class="description">default_data_source()
+        </span><pre>default_data_source()</pre></a></li>
+<li class="method public "><a href="#method_load_db_config" title="load_db_config :: "><span class="description">load_db_config()
+        </span><pre>load_db_config()</pre></a></li>
+<li class="method public "><a href="#method_load_db_engine" title="load_db_engine :: "><span class="description">load_db_engine()
+        </span><pre>load_db_engine()</pre></a></li>
+<li class="method public "><a href="#method_load_form_engine" title="load_form_engine :: "><span class="description">load_form_engine()
+        </span><pre>load_form_engine()</pre></a></li>
+<li class="method public "><a href="#method_load_plugin" title="load_plugin :: "><span class="description">load_plugin()
+        </span><pre>load_plugin()</pre></a></li>
+<li class="method public "><a href="#method_reg_data_source" title="reg_data_source :: "><span class="description">reg_data_source()
+        </span><pre>reg_data_source()</pre></a></li>
+<li class="method public "><a href="#method_set_plugin_folder" title="set_plugin_folder :: "><span class="description">set_plugin_folder()
+        </span><pre>set_plugin_folder()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_app_plugin_folder" title="$app_plugin_folder :: "><span class="description"></span><pre>$app_plugin_folder</pre></a></li>
+<li class="property private "><a href="#property_db_config_set" title="$db_config_set :: "><span class="description"></span><pre>$db_config_set</pre></a></li>
+<li class="property private "><a href="#property_frame_path" title="$frame_path :: "><span class="description"></span><pre>$frame_path</pre></a></li>
+<li class="property private "><a href="#property_mode" title="$mode :: "><span class="description"></span><pre>$mode</pre></a></li>
+<li class="property private "><a href="#property_site_url" title="$site_url :: "><span class="description"></span><pre>$site_url</pre></a></li>
+<li class="property private "><a href="#property_xml_ext_loaded" title="$xml_ext_loaded :: "><span class="description"></span><pre>$xml_ext_loaded</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\phplitefw_controller"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/phplitefw_controller.html">phplitefw_controller</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Main Framework Controller (phpLiteFW)</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/phpOpenFW.Controllers.html">phpOpenFW</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Controllers</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($mode) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$mode</h4></div>
+</div></div>
+</div>
+<a id="method_default_data_source"></a><div class="element clickable method public method_default_data_source" data-toggle="collapse" data-target=".method_default_data_source .collapse">
+<h2>default_data_source()
+        </h2>
+<pre>default_data_source($index) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$index</h4></div>
+</div></div>
+</div>
+<a id="method_load_db_config"></a><div class="element clickable method public method_load_db_config" data-toggle="collapse" data-target=".method_load_db_config .collapse">
+<h2>load_db_config()
+        </h2>
+<pre>load_db_config($db_config, $force_config) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$db_config</h4></div>
+<div class="subelement argument"><h4>$force_config</h4></div>
+</div></div>
+</div>
+<a id="method_load_db_engine"></a><div class="element clickable method public method_load_db_engine" data-toggle="collapse" data-target=".method_load_db_engine .collapse">
+<h2>load_db_engine()
+        </h2>
+<pre>load_db_engine() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_load_form_engine"></a><div class="element clickable method public method_load_form_engine" data-toggle="collapse" data-target=".method_load_form_engine .collapse">
+<h2>load_form_engine()
+        </h2>
+<pre>load_form_engine() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_load_plugin"></a><div class="element clickable method public method_load_plugin" data-toggle="collapse" data-target=".method_load_plugin .collapse">
+<h2>load_plugin()
+        </h2>
+<pre>load_plugin($plugin) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$plugin</h4></div>
+</div></div>
+</div>
+<a id="method_reg_data_source"></a><div class="element clickable method public method_reg_data_source" data-toggle="collapse" data-target=".method_reg_data_source .collapse">
+<h2>reg_data_source()
+        </h2>
+<pre>reg_data_source($ds_index, $ds_params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$ds_index</h4></div>
+<div class="subelement argument"><h4>$ds_params</h4></div>
+</div></div>
+</div>
+<a id="method_set_plugin_folder"></a><div class="element clickable method public method_set_plugin_folder" data-toggle="collapse" data-target=".method_set_plugin_folder .collapse">
+<h2>set_plugin_folder()
+        </h2>
+<pre>set_plugin_folder($dir, $remember) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$dir</h4></div>
+<div class="subelement argument"><h4>$remember</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_app_plugin_folder"> </a><div class="element clickable property private property_app_plugin_folder" data-toggle="collapse" data-target=".property_app_plugin_folder .collapse">
+<h2></h2>
+<pre>$app_plugin_folder </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_db_config_set"> </a><div class="element clickable property private property_db_config_set" data-toggle="collapse" data-target=".property_db_config_set .collapse">
+<h2></h2>
+<pre>$db_config_set </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_frame_path"> </a><div class="element clickable property private property_frame_path" data-toggle="collapse" data-target=".property_frame_path .collapse">
+<h2></h2>
+<pre>$frame_path </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_mode"> </a><div class="element clickable property private property_mode" data-toggle="collapse" data-target=".property_mode .collapse">
+<h2></h2>
+<pre>$mode </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_site_url"> </a><div class="element clickable property private property_site_url" data-toggle="collapse" data-target=".property_site_url .collapse">
+<h2></h2>
+<pre>$site_url </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_xml_ext_loaded"> </a><div class="element clickable property private property_xml_ext_loaded" data-toggle="collapse" data-target=".property_xml_ext_loaded .collapse">
+<h2></h2>
+<pre>$xml_ext_loaded </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-11-21T13:10:14-05:00.<br></footer></div>
+</div>
+</body>
+</html>

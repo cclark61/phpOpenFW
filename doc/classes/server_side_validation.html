@@ -1,0 +1,285 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpOpenFW Developer Documentation » \server_side_validation</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpOpenFW Developer Documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/phpOpenFW.html"><i class="icon-folder-open"></i> phpOpenFW</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">521</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_add_check" title="add_check :: "><span class="description">add_check()
+        </span><pre>add_check()</pre></a></li>
+<li class="method public "><a href="#method_check_post_sub_array" title="check_post_sub_array :: "><span class="description">check_post_sub_array()
+        </span><pre>check_post_sub_array()</pre></a></li>
+<li class="method public "><a href="#method_debug_mode" title="debug_mode :: "><span class="description">debug_mode()
+        </span><pre>debug_mode()</pre></a></li>
+<li class="method public "><a href="#method_display_fail_messages" title="display_fail_messages :: "><span class="description">display_fail_messages()
+        </span><pre>display_fail_messages()</pre></a></li>
+<li class="method public "><a href="#method_fail_messages" title="fail_messages :: "><span class="description">fail_messages()
+        </span><pre>fail_messages()</pre></a></li>
+<li class="method public "><a href="#method_failed_checks" title="failed_checks :: "><span class="description">failed_checks()
+        </span><pre>failed_checks()</pre></a></li>
+<li class="method public "><a href="#method_status" title="status :: "><span class="description">status()
+        </span><pre>status()</pre></a></li>
+<li class="method public "><a href="#method_validate" title="validate :: "><span class="description">validate()
+        </span><pre>validate()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_check_get" title="$check_get :: "><span class="description">Check $_GET for variables to validate</span><pre>$check_get</pre></a></li>
+<li class="property private "><a href="#property_check_post" title="$check_post :: "><span class="description">Check $_POST for variables to validate</span><pre>$check_post</pre></a></li>
+<li class="property private "><a href="#property_debug_mode" title="$debug_mode :: "><span class="description">Debug Mode (Default: false)</span><pre>$debug_mode</pre></a></li>
+<li class="property private "><a href="#property_fail_messages" title="$fail_messages :: "><span class="description">Validation error messages</span><pre>$fail_messages</pre></a></li>
+<li class="property private "><a href="#property_failed_checks" title="$failed_checks :: "><span class="description">Failed Validations</span><pre>$failed_checks</pre></a></li>
+<li class="property private "><a href="#property_post_sub_arrays" title="$post_sub_arrays :: "><span class="description">POST Sub Arrays to check</span><pre>$post_sub_arrays</pre></a></li>
+<li class="property private "><a href="#property_valid_types" title="$valid_types :: "><span class="description">Validation Types</span><pre>$valid_types</pre></a></li>
+<li class="property private "><a href="#property_validation_status" title="$validation_status :: "><span class="description">Validation Status</span><pre>$validation_status</pre></a></li>
+<li class="property private "><a href="#property_validations" title="$validations :: "><span class="description">Validations to perform</span><pre>$validations</pre></a></li>
+<li class="property private "><a href="#property_xsl" title="$xsl :: "><span class="description">Transformation XSL Stylesheet</span><pre>$xsl</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\server_side_validation"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/server_side_validation.html">server_side_validation</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Server Side Validation Class</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/phpOpenFW.Plugin.html">phpOpenFW</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Plugin</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($check_post, $check_get) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$check_post</h4></div>
+<div class="subelement argument"><h4>$check_get</h4></div>
+</div></div>
+</div>
+<a id="method_add_check"></a><div class="element clickable method public method_add_check" data-toggle="collapse" data-target=".method_add_check .collapse">
+<h2>add_check()
+        </h2>
+<pre>add_check($field_name, $valid_type, $valid_txt, $field2_name) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$field_name</h4></div>
+<div class="subelement argument"><h4>$valid_type</h4></div>
+<div class="subelement argument"><h4>$valid_txt</h4></div>
+<div class="subelement argument"><h4>$field2_name</h4></div>
+</div></div>
+</div>
+<a id="method_check_post_sub_array"></a><div class="element clickable method public method_check_post_sub_array" data-toggle="collapse" data-target=".method_check_post_sub_array .collapse">
+<h2>check_post_sub_array()
+        </h2>
+<pre>check_post_sub_array($sub_array) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$sub_array</h4></div>
+</div></div>
+</div>
+<a id="method_debug_mode"></a><div class="element clickable method public method_debug_mode" data-toggle="collapse" data-target=".method_debug_mode .collapse">
+<h2>debug_mode()
+        </h2>
+<pre>debug_mode($tmp_bool) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$tmp_bool</h4></div>
+</div></div>
+</div>
+<a id="method_display_fail_messages"></a><div class="element clickable method public method_display_fail_messages" data-toggle="collapse" data-target=".method_display_fail_messages .collapse">
+<h2>display_fail_messages()
+        </h2>
+<pre>display_fail_messages($new_xsl) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$new_xsl</h4></div>
+</div></div>
+</div>
+<a id="method_fail_messages"></a><div class="element clickable method public method_fail_messages" data-toggle="collapse" data-target=".method_fail_messages .collapse">
+<h2>fail_messages()
+        </h2>
+<pre>fail_messages() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_failed_checks"></a><div class="element clickable method public method_failed_checks" data-toggle="collapse" data-target=".method_failed_checks .collapse">
+<h2>failed_checks()
+        </h2>
+<pre>failed_checks() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_status"></a><div class="element clickable method public method_status" data-toggle="collapse" data-target=".method_status .collapse">
+<h2>status()
+        </h2>
+<pre>status() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_validate"></a><div class="element clickable method public method_validate" data-toggle="collapse" data-target=".method_validate .collapse">
+<h2>validate()
+        </h2>
+<pre>validate() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_check_get"> </a><div class="element clickable property private property_check_get" data-toggle="collapse" data-target=".property_check_get .collapse">
+<h2>Check $_GET for variables to validate</h2>
+<pre>$check_get : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_check_post"> </a><div class="element clickable property private property_check_post" data-toggle="collapse" data-target=".property_check_post .collapse">
+<h2>Check $_POST for variables to validate</h2>
+<pre>$check_post : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_debug_mode"> </a><div class="element clickable property private property_debug_mode" data-toggle="collapse" data-target=".property_debug_mode .collapse">
+<h2>Debug Mode (Default: false)</h2>
+<pre>$debug_mode : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_fail_messages"> </a><div class="element clickable property private property_fail_messages" data-toggle="collapse" data-target=".property_fail_messages .collapse">
+<h2>Validation error messages</h2>
+<pre>$fail_messages : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_failed_checks"> </a><div class="element clickable property private property_failed_checks" data-toggle="collapse" data-target=".property_failed_checks .collapse">
+<h2>Failed Validations</h2>
+<pre>$failed_checks : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_post_sub_arrays"> </a><div class="element clickable property private property_post_sub_arrays" data-toggle="collapse" data-target=".property_post_sub_arrays .collapse">
+<h2>POST Sub Arrays to check</h2>
+<pre>$post_sub_arrays : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_valid_types"> </a><div class="element clickable property private property_valid_types" data-toggle="collapse" data-target=".property_valid_types .collapse">
+<h2>Validation Types</h2>
+<pre>$valid_types : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_validation_status"> </a><div class="element clickable property private property_validation_status" data-toggle="collapse" data-target=".property_validation_status .collapse">
+<h2>Validation Status</h2>
+<pre>$validation_status : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_validations"> </a><div class="element clickable property private property_validations" data-toggle="collapse" data-target=".property_validations .collapse">
+<h2>Validations to perform</h2>
+<pre>$validations : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_xsl"> </a><div class="element clickable property private property_xsl" data-toggle="collapse" data-target=".property_xsl .collapse">
+<h2>Transformation XSL Stylesheet</h2>
+<pre>$xsl : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-11-21T13:10:14-05:00.<br></footer></div>
+</div>
+</body>
+</html>

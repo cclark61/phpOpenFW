@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page xml_transform.inc.php</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name"><img src="../../media/images/Page_logo.png" alt="File" style="vertical-align: middle">/plugins/xml_transform.inc.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Plugin for performing XML Transformations using XSL Stylesheets</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Christian J. Clark</li>
+				<li><span class="field">version:</span> Started: 3-15-2006, Last updated: 1-29-2013</li>
+				<li><span class="field">copyright:</span> Copyright (c) Christian J. Clark</li>
+				<li><span class="field">filesource:</span> <a href="../../__filesource/fsource_phpOpenFW_Plugin_pluginsxml_transform.inc.php.html">Source Code for this file</a></li>
+				<li><span class="field">license:</span> <a href="http://www.gnu.org/licenses/gpl-2.0.txt">http://www.gnu.org/licenses/gpl-2.0.txt</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionarray2xml" id="functionarray2xml"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">array2xml</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Plugin_pluginsxml_transform.inc.php.html#a115">115</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generate XML Data from an array</p>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			array2xml
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$num_prefix</span> = <span class="var-default">&#039;data_&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$depth</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">0</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: Top level XML data element name</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: Array to generate XML from</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$num_prefix</span><span class="var-description">: Prefix to use for numeric element names</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$depth</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$count</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionHandleXSLError" id="functionHandleXSLError"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">HandleXSLError</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Plugin_pluginsxml_transform.inc.php.html#a95">95</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XSL Load Error Handler</p>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			HandleXSLError
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$errno</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$errstr</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$errfile</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$errline</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$errno</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$errstr</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$errfile</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$errline</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionstrip_cdata_tags" id="functionstrip_cdata_tags"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">strip_cdata_tags</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Plugin_pluginsxml_transform.inc.php.html#a193">193</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Strip all CDATA begin and end tags from the string passed.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Cleaned string</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			strip_cdata_tags
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str_data</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str_data</span><span class="var-description">: String to strip CDATA tags from</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionxml_escape" id="functionxml_escape"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">xml_escape</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Plugin_pluginsxml_transform.inc.php.html#a155">155</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return a string as valid XML escaped value</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Escaped data</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			xml_escape
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str_data</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str_data</span><span class="var-description">: Data to escape</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionxml_escape_array" id="functionxml_escape_array"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">xml_escape_array</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Plugin_pluginsxml_transform.inc.php.html#a171">171</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return an array with valid XML escaped values</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Escaped data</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			xml_escape_array
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$in_data</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$in_data</span><span class="var-description">: Data to escape</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionxml_transform" id="functionxml_transform"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">xml_transform</span> (line <span class="line-number"><a href="../../__filesource/fsource_phpOpenFW_Plugin_pluginsxml_transform.inc.php.html#a24">24</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XML Transformation function</p>
+<p class="description"><p>Transform an XML string given an XSL template</p></p>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			xml_transform
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$xml_data</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$xsl_template</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$show_xml_on_error</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$use_cache</span> = <span class="var-default">true</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xml_data</span><span class="var-description">: XML data string</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xsl_template</span><span class="var-description">: File path to an XSL template</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$show_xml_on_error</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$use_cache</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sat, 10 Aug 2013 04:00:21 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

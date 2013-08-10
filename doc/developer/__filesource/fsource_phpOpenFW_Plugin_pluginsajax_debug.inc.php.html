@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for ajax_debug.inc.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file ajax_debug.inc.php</h1>
+<p>Documentation is available at <a href="../phpOpenFW/Plugin/_plugins---ajax_debug.inc.php.html">ajax_debug.inc.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;AJAX&nbsp;Debug&nbsp;Plugin</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;phpOpenFW</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;Plugin</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christian&nbsp;J.&nbsp;Clark</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;Copyright&nbsp;(c)&nbsp;Christian&nbsp;J.&nbsp;Clark</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@license</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.gnu.org/licenses/gpl-2.0.txt</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@version</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Started:&nbsp;7-12-2006,&nbsp;Last&nbsp;updated:&nbsp;3-20-2010</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">&nbsp;***/</span></div></li>
+<li><div class="src-line"><a name="a12"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-comm">//&nbsp;Typical&nbsp;use:</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-comm">//</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-comm">//&nbsp;load_plugin(&quot;ajax_debug&quot;);</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-comm">//&nbsp;start_ajax_debug();</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-comm">//&nbsp;[&nbsp;CODE&nbsp;HERE&nbsp;]</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-comm">//&nbsp;stop_ajax_debug(dirname(__file__)&nbsp;.&nbsp;&quot;/debug.txt&quot;);</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-comm">//</span></div></li>
+<li><div class="src-line"><a name="a20"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-comm">//***********************************************************</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-doc">&nbsp;*&nbsp;Start&nbsp;AJAX&nbsp;debugging&nbsp;(i.e.&nbsp;Start&nbsp;buffering)</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-comm">//***********************************************************</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-key">function&nbsp;</span><a href="../phpOpenFW/Plugin/_plugins---ajax_debug.inc.php.html#functionstart_ajax_debug">start_ajax_debug</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a28"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/ob_start">ob_start</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-comm">//***********************************************************</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-doc">&nbsp;*&nbsp;Stop&nbsp;AJAX&nbsp;debug&nbsp;(i.e.&nbsp;Write&nbsp;buffer&nbsp;content&nbsp;to&nbsp;file)</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-comm">//***********************************************************</span></div></li>
+<li><div class="src-line"><a name="a36"></a><span class="src-key">function&nbsp;</span><a href="../phpOpenFW/Plugin/_plugins---ajax_debug.inc.php.html#functionstop_ajax_debug">stop_ajax_debug</a><span class="src-sym">(</span><span class="src-var">$file</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$debug&nbsp;</span>=&nbsp;<a href="http://www.php.net/ob_get_clean">ob_get_clean</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$wh&nbsp;</span>=&nbsp;<a href="http://www.php.net/fopen">fopen</a><span class="src-sym">(</span><span class="src-var">$file</span><span class="src-sym">,&nbsp;</span><span class="src-str">'w'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$wh</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a41"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/fwrite">fwrite</a><span class="src-sym">(</span><span class="src-var">$wh</span><span class="src-sym">,&nbsp;</span><span class="src-var">$debug</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a42"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/fclose">fclose</a><span class="src-sym">(</span><span class="src-var">$wh</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-id">true</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">else&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-id">false</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a48"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a50"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 21 Nov 2012 18:25:18 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</body>
+</html>

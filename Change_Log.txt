@@ -1,0 +1,784 @@
+*****************************************************************
+*****************************************************************
+*** phpOpenFW 1.x Change Log
+*****************************************************************
+*****************************************************************
+
+-----------------------------------------------------------------
+v1.2.2
+-----------------------------------------------------------------
+- Updated Form classes to be able to be used as strings
+- Bug Fix / mispelling in the dt_structure class
+- Updated mystamp_pretty() function in the date_time plugin to detect if
+the passed date could not be parsed and return false.
+
+-----------------------------------------------------------------
+v1.2.1
+-----------------------------------------------------------------
+- Rewrote record set list class (rs_list). 
+	- Added ability to add attributes to header elements using "set_header_attr()"
+- Added the site_controller application/site logic
+
+-----------------------------------------------------------------
+v1.2.0 and prior
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+1/31/2013
+-----------------------------------------------------------------
+- Bug fix in the element class
+- Bug fix in the form_too default template
+
+-----------------------------------------------------------------
+1/29/2013
+-----------------------------------------------------------------
+- Bug fix for loading a record using bind parameters with DIO classes.
+- Updated element class to allow the use of short notation for setting 
+"id" and "class" attributes with the allow attribute setting functions. 
+"." = class, "#" = id. Example: $el->attr('.', 'my_class');
+
+- Added the ability to specify a session based template for server side validation.
+Ex. $_SESSION['ssv_template'] = '/path/to/template.xsl'
+- Minor Clean ups
+
+-----------------------------------------------------------------
+1/25/2013
+-----------------------------------------------------------------
+- Fixed a bug in the "form_key()" function in the form_too class
+
+-----------------------------------------------------------------
+12/28/2012
+-----------------------------------------------------------------
+- Added a "custom" style option for complex form elements
+
+-----------------------------------------------------------------
+12/18/2012
+-----------------------------------------------------------------
+- Changed module class to not overwrite existing variables from GET or POST values when extracting GET or POST.
+Instead, the variables are prefixed with "GET_" or "POST_" respectively.
+
+-----------------------------------------------------------------
+12/14/2012
+-----------------------------------------------------------------
+Fixed an issue in the "dr_mssql" where mssql_data_seek() throws an error instead of returning false when offset is invalid.
+
+-----------------------------------------------------------------
+12/12/2012
+-----------------------------------------------------------------
+- Added the form_too class for creating forms that do not use HTML tables, 
+but instead rely on CSS for style and positioning.
+- Form class is now extendable
+
+-----------------------------------------------------------------
+11/26/2012
+-----------------------------------------------------------------
+- Removed the requirement to use the MySQL Native Driver (mysqlnd) for MySQLi database transactions
+
+-----------------------------------------------------------------
+11/15/2012 - 11/22/2012
+-----------------------------------------------------------------
+- Major updates to data access classes.
+	- Added the "data_result" class which is used to pull all results internally and
+	can be used externally when returned by the "query()" function or the "execute" function
+	in the "data_trans" class. This class features a "fetch_row()" function and a 
+	"fetch_all_rows()" function. 
+	- Added "qdb_result()" function to qdba plugin. This function will return a 
+	"data_result" object when there are records or the number affected rows otherwise.
+- phpOpenFW now requires PHP >= 5.3
+- phpOpenFW now requires the MySQL Native Driver (mysqlnd) for use of the MySQLi PHP Driver
+- Added a Version File
+- The version of the framework can now be determined using the defined constant 'PHPOPENFW_VERSION'
+or the session variable $_SESSION['PHPOPENFW_VERSION']
+- Removed "sds" and "jsv" classes from form engine
+- Added the "attr()" function to the element class. 
+	* attr() Usage:
+		// Set a Value
+		$e->attr('class', 'value');
+	
+		// Add a value
+		$e->attr('class', 'value2');
+	
+		// Overwrite an attributes value
+		$e->attr('class', 'value3', false);
+	
+		// Remove an attribute completely
+		$e->attr('class');
+
+	* attrs() Usage:
+		* Same as above except, each array element represents one attribute
+
+		// Append Values
+		$e->attrs(array(
+			'id' => 'my-id'
+			'class' => 'my-class'
+		));
+
+		// Overwrite Values
+		$e->attrs(array(
+			'id' => 'my-id'
+			'class' => 'my-class'
+		), false);
+
+- Updated Complex form elements (ssa, sst, rga, rgt, cga) to be able to add attributes to the 
+elements by using the elements_attrs() function of the class.
+- The classes that extend the database_interface_object class no return a value from the load function.
+  1 = data was loaded successfully, 0 = no data was found, 2 = table defaults where loaded
+- Made it easier to theme your application. Added the "add_theme_js_file()" and "add_theme_css_file()" 
+functions to the module class. Also, if there is a "templates" folder in your theme folder, 
+that will be used as the location for the application templates.
+
+-----------------------------------------------------------------
+11/2/2012
+-----------------------------------------------------------------
+- Updated main controller to use the configuration option $config_arr['html_path'] for the 
+HTML path if it is specified instead of automatically determining it.
+
+-----------------------------------------------------------------
+10/30/2012
+-----------------------------------------------------------------
+- LDAP Driver Update
+- Removed the one and only use of the "eval" function.
+
+-----------------------------------------------------------------
+4/3/2012
+-----------------------------------------------------------------
+- Added "pre()" function to xhtml_gen plugin.
+
+-----------------------------------------------------------------
+3/20/2012 - 3/22/2012
+-----------------------------------------------------------------
+- Enhanced the transactional functionality for all database 
+drivers that support transactions.
+- All data source types now reuse connections by default.
+- Added "get_conn_handle()" function to data_trans class to get the 
+raw connection handle.
+
+-----------------------------------------------------------------
+3/9/2012
+-----------------------------------------------------------------
+- Added the "xhtml_gen" plugin that allows for quick and clean generation of 
+valid XHTML elements through functions such as 'span', 'p', 'ul', and more.
+
+-----------------------------------------------------------------
+3/7/2012
+-----------------------------------------------------------------
+- Updated the Database Interface Object class to allow the ability 
+to disable the use of bind parameters on a per field basis. 
+
+	- Ex. $object->set_use_bind_param('first_name', false); 
+
+- Updated the IBM DB2 driver to allow reuse of a previously existing connection. 
+By setting the super global variable "$GLOBALS['phpopenfw_db2_conn']", the driver
+will automatically pickup on the existing connection and use it.
+
+	- Ex. $GLOBALS['phpopenfw_db2_conn'] = $conn;
+
+-----------------------------------------------------------------
+3/6/2012
+-----------------------------------------------------------------
+- Updated the print_array() function to work in the PHP Command Line 
+Interface (CLI) and display without <pre> tags.
+
+-----------------------------------------------------------------
+2/21/2012
+-----------------------------------------------------------------
+- Added the ability to pass options to QDBA functions in the form of an array. 
+The "debug" option set to anything that evaluates to true will enable the 
+verbose printing of the query by using the "data_debug()" function in the "data_trans" 
+class.
+- Using the "data_debug()" function in the "data_trans" class will now output queries 
+that use bind parameters as an array in the following format: 1) Query, 2) Bind Parameters, 
+and 3) Query and Bind Parameters combined into one SQL statement.
+- Added more extensive examples of database usage under the examples folder.
+
+-----------------------------------------------------------------
+2/20/2012
+-----------------------------------------------------------------
+- Updates to the "sqlsrv" database driver to make it work with functions 
+in the "qdba" plugin.
+
+-----------------------------------------------------------------
+2/17/2012
+-----------------------------------------------------------------
+- Updated "print_array()" function in "content_gen" plugin to allow 
+multiple arrays to be passed for print out.
+- Update "qdba" plugin to allow passing of bind parameters as straight 
+values instead of references for MySQLi and SQLSRV drivers.
+- Added "set_opt()" and "get_opt()" functions to "data_trans" class 
+to allow for the setting of options. The option "make_bind_params_refs" 
+with a non-false value will tell drivers that need bind parameters as 
+references to create references automatically.
+- Enhanced the debug printing of queries using the "data_debug()" function 
+in the "data_trans" class. No supports prepared queries.
+- "start_trans()" function in "data_trans" class is now supported with 
+the following drivers: mysqli, sqlsrv, and pgsql, though it is not needed 
+for general usage.
+
+-----------------------------------------------------------------
+2/3/2012
+-----------------------------------------------------------------
+- Updated MySQLi database driver to have a "start_trans()" function that 
+can be used to start database transactions.
+
+-----------------------------------------------------------------
+1/25/2012
+-----------------------------------------------------------------
+- Fixed a small bug in main_controller.php .
+
+-----------------------------------------------------------------
+1/9/2012
+-----------------------------------------------------------------
+- Fixed a bug in the login process with HTTPS and redirecting 
+to a preset URL after a successful login.
+
+-----------------------------------------------------------------
+12/29/2011
+-----------------------------------------------------------------
+- Added "submit" and "button" classes to form engine.
+
+-----------------------------------------------------------------
+12/27/2011
+-----------------------------------------------------------------
+- Added ability to use DIO classes with IBM DB2, Oracle, and 
+Microsoft SQL Server (both mssql and sqlsrv drivers).
+- Added numerous enhancements to increase performance of database 
+queries and handling.
+- Added the ability to reuse connections with the MySQLi driver / type. 
+This option forces each data source to use only one connection.
+  Ex. $data_arr[$i]["reuse_connection"] = "yes";
+
+-----------------------------------------------------------------
+12/26/2011
+-----------------------------------------------------------------
+- Add ability to use persistent database connections with database drivers.
+  Using the data source configuration option "persistent" with "yes" or "1"
+  will enable persistent connections for the given data source. For MySQLi,
+  you must be using PHP > = 5.3
+  Ex. $data_arr[$i]["persistent"] = "yes";
+
+-----------------------------------------------------------------
+12/23/2011
+-----------------------------------------------------------------
+- Added new Microsoft SQL Server Driver "sqlsrv" for use on windows systems.
+- Updated DIO Class to work with IBM DB2.
+
+-----------------------------------------------------------------
+12/22/2011
+-----------------------------------------------------------------
+- Added the function load_form_elements() to controller_common.inc.php 
+so that the form elements can be used separate from the entire form engine.
+- Added qdb_row() function to return one record or value from a record set.
+
+-----------------------------------------------------------------
+12/19/2011
+-----------------------------------------------------------------
+- Added controller_common.inc.php that contrains common controller functions. 
+Both main_controller.php and phplitefw.inc.php include this. Currently, 
+the only function in this file is "session_kill()", which completely 
+destroys a session, cookies, data, and all.
+
+-----------------------------------------------------------------
+12/15/2011
+-----------------------------------------------------------------
+- Updated all complex form inputs to have a proper __toString() 
+function the returns a string instead of outputing the rendered content.
+
+-----------------------------------------------------------------
+12/14/2011
+-----------------------------------------------------------------
+- Updates to message page class.
+
+-----------------------------------------------------------------
+12/6/2011
+-----------------------------------------------------------------
+- Added Content Delivery Controller to the sample application.
+
+-----------------------------------------------------------------
+11/10/2011
+-----------------------------------------------------------------
+- Updated the qdb_lookup() function in the "qdba" plugin to accept a forth 
+parameter which should be an array of bind parameters to be used in a 
+prepared query. You must format the SQL query/statement accordingly.
+
+- Added ability to use bind parameters with the DIO Classes. 
+Usage is simple, simply add "$object->use_bind_params();" to your code, 
+and remove any use of the "addslashes()" function.
+
+- Fized a bug with using prepared statements with the MySQLi driver 
+and getting the last insert ID.
+
+-----------------------------------------------------------------
+10/20/2011
+-----------------------------------------------------------------
+- Updates for IBM DB2 database compatibility and functionality.
+- Added rs_trim() function as part of the "qdba" plugin. This function
+gives the ability to trim a recordset's data, row keys, and column keys,
+or combination of the three. The default usage only passing a recordset 
+is to only trim the data.
+
+-----------------------------------------------------------------
+9/23/2011
+-----------------------------------------------------------------
+- Added ability to use bind parameters and database transactions
+for those database drivers/engines that support them. Look in the 
+examples folder to see example usages.
+
+-----------------------------------------------------------------
+8/31/2011
+-----------------------------------------------------------------
+- Updated rs_list class to NOT change "&" to "&amp;" if the data is 
+set to be escaped (this is the default behavior).
+
+- Added the ability to load the database engine in "pre_page.inc.php".
+
+Usage: [ $this->load_db_engine(); ]
+
+- Added the ability to load the form engine in "pre_page.inc.php".
+
+Usage: [ $this->load_form_engine(); ]
+
+- Made the "set_xsl_template()" function for the page class public.
+You can now use this function to change the template being used. You must pass 
+the file file path of the template. This overrides the default option of 
+combining the template directory and page type to determine the template.
+
+Usage: [ $this->set_xsl_template($template); ]
+
+- Created the "set_template_dir()" function in the page class. 
+This can be used to change the directory where templates are looked for.
+
+Usage: [ $this->set_template_dir($dir); ]
+
+- Added the "skip_module()" function to the module class to allow for 
+skipping of the module code entirely. This must be done in the 
+"pre_module.inc.php" file. 
+
+Usage: [ $this->skip_module(); ]
+
+- Add "xhe()" function and deprecated the "gen_content()" function. The 
+usage is exactly the same.
+
+- Updated "nav.class.php". Added ability to order modules using a sort type
+of "mod_order" in config.inc.php ( $config_arr["nav_sort"] = "mod_order"; ) 
+and setting the variable $mod_order accordingly in each modules' 
+"local.inc.php". Default is 100. Code contributed by 
+Lucas Hoezee ( http://thecodify.com/ ) 4/13/2011.
+
+- Update the SST and SSA classes to have the ability to use the values added 
+using the "add_blank()" function be able to be selected using the 
+"selected_value()" function. Code contributed by 
+Lucas Hoezee ( http://thecodify.com/ ) 5/10/2011.
+
+- Add the ability to specify a "failed_login()" function that will be 
+triggered upon a failed login. If the function returns a value that 
+evaluates to a non-false value, that value will be passed to the 
+message page that is generated for the failed login.
+
+- Added ability to put HTML in Server Side Validation checks.
+
+- Add ability to add row attributes to forms. The first parameter 
+is the row number, second is the attribute name, and third is the 
+attribute value.
+
+Usage: [ $form->set_row_attr(3, 'class', 'myClass'); ]
+
+- Added ability to specify a "custom_login()" function in the config.inc.php 
+that allows for custom logins handling. The custom login function 
+must return a value that evaluates to true, which will then be used for the 
+user ID ($_SESSION['userid']). The "data_trans" class and "qdba" plugin are 
+loaded so that custom login function can easily access databases.
+
+Usage: [ $config_arr['auth_data_source'] = 'custom'; ] ( in config.inc.php )
+Also, create "custom_login()" function. 
+
+-----------------------------------------------------------------
+6/11/2011
+-----------------------------------------------------------------
+- Added ability for "print_array()" to handle SimpleXMLElement Objects.
+
+-----------------------------------------------------------------
+11/20/2010
+-----------------------------------------------------------------
+- Small data type updates to the Database Interface Object class.
+
+-----------------------------------------------------------------
+11/3/2010
+-----------------------------------------------------------------
+- Fixed a bug in the strip_cdata_tags() function.
+- Fixed a couple minor bugs with module logic and flow
+
+-----------------------------------------------------------------
+10/25/2010
+-----------------------------------------------------------------
+- Fixed a bug in the strip_cdata_tags() function.
+- Fixed a bug with the module string and argument determination process.
+
+-----------------------------------------------------------------
+9/14/2010
+-----------------------------------------------------------------
+- Added ability for framework to pick up on the "REMOTE_USER" environment 
+variable when the authentication data source is set to "none".
+
+- Fixed set_alt_rows() functionality in form engine by fixing the default 
+template.
+
+- Fixed set_alt_rows() functionality in the table generation class 
+by fixing the default template.
+
+- Fixed a bug in the strip_cdata_tags() function.
+
+-----------------------------------------------------------------
+7/17/2010
+-----------------------------------------------------------------
+- Added the strip_cdata_tags() function to the xml_transform plugin.
+
+-----------------------------------------------------------------
+5/20/2010
+-----------------------------------------------------------------
+- 2 small bug fixes
+
+-----------------------------------------------------------------
+4/10/2010
+-----------------------------------------------------------------
+- Updated / cleaned up both controllers
+
+-----------------------------------------------------------------
+4/6/2010
+-----------------------------------------------------------------
+- Removed legacy/out-dated features:
+ * Authorization
+ * Built-in Admin modules / admin users
+ * Built-in error handler
+
+- Updated Documentation
+
+-----------------------------------------------------------------
+3/28/2010
+-----------------------------------------------------------------
+- More major revisions!!!
+- Added phpLiteFW controller into phpOpenFW, 
+  now all frameworks have the same codebase.
+- Separated application logic from core framework functionality 
+  allowing for multiple application logics to be designed and 
+  built.
+
+-----------------------------------------------------------------
+3/22/2010
+-----------------------------------------------------------------
+- Added new nav style "long_url". This nav style is for use for 
+  producing friendly URLs without using mod_rewrite.
+
+  Examples: 
+    - http://app.example.com/index.php/module1/module2
+    - http://app.example.com/index.php/users/
+
+- Added a new member variable to the module class: "$this->mod_params".
+  This consists of any extra URL pieces leftover after the last valid 
+  module was found.
+
+-----------------------------------------------------------------
+3/20/2010
+-----------------------------------------------------------------
+*** MORE MAJOR REVISIONS ***
+- Structural updates / Clean up: Too many to countÉ
+
+- Added new configuration option for password security:
+
+  $config_arr["auth_pass_security"] = "[OPTION]";
+
+  Possible options are:
+  - "clear" (default when option not used in configuration)
+  - "md5"
+  - "sha1"
+  - "sha256"
+
+  ** PLEASE NOTE: You must have the correct PHP extensions installed 
+  to use these encryption algorithms (md5, sha1, hash) and your database 
+  fields must be long enough to hold the hashed passwords. 
+  (HINT: Don't do a blanket update of your passwords until you know the 
+  fields in the database are long enough.)
+  Also, the passwords must already be encrypted. You can create a module 
+  to manage users that encrypts the passwords. They just need to be encrypted 
+  in the database for authentication to work.
+
+-----------------------------------------------------------------
+1/15/2010
+-----------------------------------------------------------------
+*** MAJOR REVISION ***
+- Restructured / Updated entire framework to use uniform XML generation code.
+- Removed "old" XML Nav Format.
+
+*****************************************************************
+*****************************************************************
+### BREAK BETWEEN 0.x branch and 1.x branch
+*****************************************************************
+*****************************************************************
+
+-----------------------------------------------------------------
+12/1/2009
+-----------------------------------------------------------------
+- Updated some of the classes that are children of parent class "element" to comply with STRICT standards. Changed the 'render()' method on children classes to have the same parameters as the "element" class. The children classes simply pass the argument(s) through.
+
+-----------------------------------------------------------------
+10/3/2009
+-----------------------------------------------------------------
+- Added new nav style "rewrite". This nav style is for use when 
+  using mod_rewrite to give friendly URLs. Requires Apache mod_rewrite rules.
+- Updated Main Controller to use a better method of determining the html_path for an application.
+- Updated module class for use with mod_rewrite URLs and Logic
+
+-----------------------------------------------------------------
+8/5/2009
+-----------------------------------------------------------------
+- Oracle driver update. Added the "conn_str" paramter to database 
+source configuration, for use with Oracle connection strings.
+
+-----------------------------------------------------------------
+7/28/2009, 7/29/2009
+-----------------------------------------------------------------
+- Added a driver for Microsoft SQL Server (mssql)
+- Minor updates to Core Data Access Classes
+
+-----------------------------------------------------------------
+6/4/2009 - CJC
+-----------------------------------------------------------------
+- HEAVILY updated Core Data Access Classes to make them more efficient, powerful, and flexible
+- Added MySQLi driver
+
+-----------------------------------------------------------------
+6/3/2009 - CJC
+-----------------------------------------------------------------
+- Updated Core Data Access Classes
+- Added Oracle driver for Data Access
+
+-----------------------------------------------------------------
+2/12/2009 - CJC
+-----------------------------------------------------------------
+- Updated "xml_transform" plugin. Added xml_escape_array() function.
+
+-----------------------------------------------------------------
+1/29/2009 - CJC
+-----------------------------------------------------------------
+- Updated default return format in mystamp_pretty function in date_time plugin.
+
+-----------------------------------------------------------------
+11/05/2008 - CJC
+-----------------------------------------------------------------
+- Bug fixes in Admin Modules
+- Added add_url_params() function to "content_gen" plugin
+
+-----------------------------------------------------------------
+9/26/2008 - CJC
+-----------------------------------------------------------------
+- Updated Admin Modules
+- Added "Database Search" Admin Module
+- Added "Database Replace" Admin Module
+- Added "admin.css" for Admin modules' CSS
+
+-----------------------------------------------------------------
+9/25/2008 - CJC
+-----------------------------------------------------------------
+- Table Class Bug Fix with dynamic cell/colspan calculation
+- Updated Application shell/example to a much newer, better version
+
+-----------------------------------------------------------------
+9/12/2008 - CJC
+-----------------------------------------------------------------
+- Cleaned up code for many of the form engine elements
+- Added ability to create "optgroup" elements in SSA and SST elements.
+- Added an empty destructor function to the "element" class
+- Added a file with form engine examples under the "doc/examples" directory
+  called "example_form_elements.php"
+- Added ability to set attributes for the form table cell containing
+  the form button(s). 
+  Example:
+    $form->set_button_attrs(array("class" => "test_class", "id" => "test_id"));
+
+-----------------------------------------------------------------
+9/10/2008 - CJC
+-----------------------------------------------------------------
+- Form Engine Updates
+- Form XSL Template Update
+- Module Class Update, $this->action can now be set through POST
+
+-----------------------------------------------------------------
+9/4/2008 - CJC
+-----------------------------------------------------------------
+- Element Class Updates
+- Form Engine Updates
+- Form XSL Template Update
+- JSV Class Updates
+
+-----------------------------------------------------------------
+5/17/2008 - CJC
+-----------------------------------------------------------------
+- Added Calendar Plugin
+- Updated mystamp_pretty() function in the date_time plugin.
+- Updated content_gen plugin, added div(), anchor(), and image() functions
+
+-----------------------------------------------------------------
+5/12/2008 - CJC
+-----------------------------------------------------------------
+- Form Engine Updates
+
+-----------------------------------------------------------------
+5/2/2008 - CJC
+-----------------------------------------------------------------
+- xml_transform() - Added an option to have XML data printed out automatically upon any error.
+- Added ability to use the XSLTCache (see http://code.nytimes.com/projects/xslcache). If the XSLTCache extension is loaded it will be used instead of the XSLTProcessor Class. Otherwise, the XSLTProcessor class is used.
+
+-----------------------------------------------------------------
+4/22/2008 - CJC
+-----------------------------------------------------------------
+- Table Class Updates
+- Date_Time Plugin Update
+
+-----------------------------------------------------------------
+4/21/2008 - CJC
+-----------------------------------------------------------------
+- Added Table Class
+- Form Class updates
+
+-----------------------------------------------------------------
+4/18/2008 - CJC
+-----------------------------------------------------------------
+- Page Class Updates (minor)
+- acl_trans class update - Corrected module path
+
+-----------------------------------------------------------------
+4/2/2008 - CJC
+-----------------------------------------------------------------
+- Updated SSV Plugin. Added check_post_sub_array function for telling the SSV to check a POST sub array(s). The function can be used more than once to specify more than one POST sub array. For example, if you had a form input:
+	<input type="text" name="user_info[fname]" />
+You would use $ssv->check_post_sub_array("user_info") to tell the SSV class where to find this field value.
+
+-----------------------------------------------------------------
+3/31/2008 - CJC
+-----------------------------------------------------------------
+- DIO Plugin minor update
+- Added "auth_add_to_where" config option for adding additional filters for authentication. Notice this should not start with "where" or "and".
+
+-----------------------------------------------------------------
+3/28/2008 - CJC
+-----------------------------------------------------------------
+- Updated Database Analysis module in Admin modules.
+
+-----------------------------------------------------------------
+3/22/2008 - CJC
+-----------------------------------------------------------------
+- Form engine update, Updated RGT (radio group from array) class. I don't know if it ever really worked, it does now though. Enjoy!
+
+- DIO plugin (Database Interface Object Class (i.e. Active Record)) update. Minor update.
+
+- XML_transform plugin update. Add new function: xml_escape(). This function will escape produce a valid XML escaped string given a string. For example, 
+
+$in_str = "Test String";
+$out_str = xml_escape($in_str);
+
+print $out_str; // "<![CDATA[Test String]]>"
+ 
+-----------------------------------------------------------------
+3/5/2008 - CJC
+-----------------------------------------------------------------
+- RS_LIST Update
+
+-----------------------------------------------------------------
+3/4/2008 - CJC
+-----------------------------------------------------------------
+- Form engine update. Added ability to pass an array to the set_button() function to produce multiple buttons for a given form. Array should be in the following key/value format: "name" => "value". 
+
+-----------------------------------------------------------------
+3/1/2008 - CJC
+-----------------------------------------------------------------
+- Minor Bug fixes
+- Updated Admin Modules
+
+-----------------------------------------------------------------
+2/26/2008 - CJC
+-----------------------------------------------------------------
+- Updated form engine. Added file_upload class for easy creation of a file upload input.
+- Updated error_handler class. Added ability to specify a different XSL template other than the default template.
+- Updated SSV Class. Added display_fail_messages() function, with a corresponding default XSL template, for displaying the failed check messages. Additionally, a different XSL template can be specified by passing a valid file path to the function.
+
+-----------------------------------------------------------------
+2/25/2008 - CJC
+-----------------------------------------------------------------
+- Updated date_time plugin. Added time_diff function, valid_time, date_diff2, and date_diff3 functions.
+	- time_diff() returns number of seconds, positive or negative, between two times.
+	- valid_time() evaluates a time using a regular expression to ensure it is a valid time.
+	- date_diff2() returns an array containing different forms of the difference between two dates (i.e. days, hours, minutes, seconds, etc.).
+	- date_diff3() returns the difference, positive or negative, between two dates.
+
+- Update JSV class for client side validation. Added two new checks "checkbox_is_checked" and "radio_is_checked".
+
+- Added Server Side Validation Plugin (ssv).
+
+-----------------------------------------------------------------
+1/23/2008 - CJC
+-----------------------------------------------------------------
+- Updated Module Page Class to produce two more XML elements in page data output: 
+
+<current_module_depth> = Number of modules deep the current module is.
+<current_module_args> = An index tree of the current module args.
+
+Example: mod_args = 4-7-0, output will be:
+
+<current_module>4-7-0</current_module>
+<current_module_depth>3</current_module_depth>
+<current_module_args>
+	<module_arg index="1">4</module_arg>
+	<module_arg index="2">7</module_arg>
+	<module_arg index="3">0</module_arg>
+</current_module_args>
+
+-----------------------------------------------------------------
+1/17/2008 - CJC
+-----------------------------------------------------------------
+- Added an updated format for the 'xml_nav' class. The new format is more efficient and clean. The default is still to use the old format, however, to use the new format simply place the following in config.inc.php:
+
+$config_arr["nav_xml_format"] = "new";
+
+- Added <mod_string> to each module in XML Nav.
+
+-----------------------------------------------------------------
+1/10/2008 - CJC
+-----------------------------------------------------------------
+- Added ability for 'post-module.inc.php' file, which will execute after the module page has been executed. 'post-module.inc.php' should be placed in the base of the modules directory.
+
+-----------------------------------------------------------------
+1/8/2008 - CJC
+-----------------------------------------------------------------
+- Added ability to specify static site XML data.
+Adding $config_arr["site_xml"] = "[ array or scalar data ]"; to config.inc.php will accomplish this.
+
+-----------------------------------------------------------------
+1/7/2008 - CJC
+-----------------------------------------------------------------
+- Added ability to specify modules directory.
+Adding $config_arr["modules_dir"] = "[name of modules directory here]"; to config.inc.php will accomplish this.
+
+-----------------------------------------------------------------
+1/4/2008 - CJC
+-----------------------------------------------------------------
+- Added ability to have nav array sort by directory name instead of title.
+Adding $config_arr["nav_sort"] = "dir"; to config.inc.php will accomplish this.
+
+-----------------------------------------------------------------
+12/18/2007 - CJC
+-----------------------------------------------------------------
+- Login form no longer needs a target of "/?mod=login" to login
+- Using the "$mod_def_perms variable in local.inc.php, you can now set the default permissions for a module. Acceptable values are (--, r-, rw).
+- 
+
+-----------------------------------------------------------------
+12/6/2007 - CJC
+-----------------------------------------------------------------
+- Remove set_xsl() declarations in admin modules.
+- Fixed html_path parsing in main_controller.php
+
+-----------------------------------------------------------------
+11/13/2007 - CJC
+-----------------------------------------------------------------
+	- Updated login class, authentication class, and main controller to handle applications without authentication ($config_arr["auth_data_source"] = "";).
+	- Updated authorization class to fix bug. Default permissions for all modules is now "rw" when authorization is disabled.
+
