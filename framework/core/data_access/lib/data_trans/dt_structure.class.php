@@ -9,7 +9,7 @@
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
 * @access		private
-* @version 		Started: 2-1-2007 updated: 3-14-2013
+* @version 		Started: 2-1-2007 updated: 9-1-2013
 */
 
 //***************************************************************
@@ -263,7 +263,7 @@ abstract class dt_structure {
 			$p = $_SESSION[$data_src]['reuse_connection'];
 			$this->reuse_connection = (empty($p) || strtolower($p) == 'no') ? (false) : (true);
 		}
-		else if (in_array($this->data_type, array('pgsql', 'mssql', 'mysql', 'mysqli'))) {
+		else if (in_array($this->data_type, array('pgsql', 'mssql', 'mysql', 'mysqli', 'sqlite'))) {
 			$this->reuse_connection = true;
 		}
 		else { $this->reuse_connection = false; }

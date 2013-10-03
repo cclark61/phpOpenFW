@@ -9,7 +9,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 10-17-2006 Updated: 1-29-2013
+* @version 		Started: 10-17-2006 Updated: 10-3-2013
 * @internal
 **/
 
@@ -27,23 +27,23 @@ abstract class Database_Interface_Object
 	// Member Variables
 	//====================================================================
 
-	private $data_source;
-	private $db_type;
-	private $schema;
-	private $table;
-	private $primary_key;
-	private $data;
-	private $table_info;
-	private $quoted_types;
-	private $load_prefix;
-	private $print_trans;
-	private $unset_fields;
-	private $class_name;
-	private $no_save_empty_types;
-	private $save_default_types;
-	private $use_bind_params;
-	private $bind_params;
-	private $bind_param_count;
+	protected $data_source;
+	protected $db_type;
+	protected $schema;
+	protected $table;
+	protected $primary_key;
+	protected $data;
+	protected $table_info;
+	protected $quoted_types;
+	protected $load_prefix;
+	protected $print_trans;
+	protected $unset_fields;
+	protected $class_name;
+	protected $no_save_empty_types;
+	protected $save_default_types;
+	protected $use_bind_params;
+	protected $bind_params;
+	protected $bind_param_count;
 
 	//=====================================================================
 	// Member Functions
