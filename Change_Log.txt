@@ -11,7 +11,9 @@ v1.2.2
 - Bug Fix / mispelling in the dt_structure class
 - Updated mystamp_pretty() function in the date_time plugin to detect if
 the passed date could not be parsed and return false.
-- Change class variables in the DIO class to be protected instead of private.
+- Changed class variables in the DIO class to be protected instead of private.
+- Removed extra space at the end of each PHP file
+- Added ability to select multiple values with SSA and SST classes my passing and array to the "selected_value()" function
 
 -----------------------------------------------------------------
 v1.2.1

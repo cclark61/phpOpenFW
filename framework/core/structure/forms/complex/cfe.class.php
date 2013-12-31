@@ -9,7 +9,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 11-20-2012 Updated: 12-28-2012
+* @version 		Started: 11-20-2012 Updated: 12-31-2013
 **/
 //**************************************************************************
 //**************************************************************************
@@ -53,7 +53,12 @@ abstract class select_form_element extends element
 	//*************************************************************************
 	public function selected_value($value)
 	{
-		$this->select_value = (string)$value;
+		if (is_array($value)) {
+			$this->select_value = array_flip($value);		
+		}
+		else {
+			$this->select_value = (string)$value;
+		}
 	}
 	
 	//*************************************************************************

@@ -9,7 +9,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 9-21-2005 Updated: 11-20-2012
+* @version 		Started: 9-21-2005 Updated: 12-31-2013
 **/
 //**************************************************************************
 //**************************************************************************
@@ -61,9 +61,13 @@ class sst extends select_form_element
 		$data = new data_trans($this->data_src);
 		$data->data_query($this->strsql);
 		$result = $data->data_assoc_result();
-		
+
+		$this->inset_val = '';
 		ob_start();
-		settype($this->select_value, 'string');
+
+		if (!is_array($this->select_value)) {
+			settype($this->select_value, 'string');
+		}
 
 		//============================================
 		// Added "Blank" Options
@@ -79,8 +83,15 @@ class sst extends select_form_element
 			// Selected Value
 			//-----------------------------------------
 			if (isset($this->select_value)) {
-                settype($bv[0], 'string');
-				if ($this->select_value === $bv[0]) { $o_attrs['selected'] = 'selected'; }
+                if (is_array($this->select_value) && isset($this->select_value[$bv[0]])) {
+	                $o_attrs['selected'] = 'selected';
+                }
+				else {
+					settype($bv[0], 'string');
+					if ($this->select_value === $bv[0]) {
+						$o_attrs['selected'] = 'selected';
+					}
+				}
 			}
 
 			//-----------------------------------------
@@ -125,7 +136,21 @@ class sst extends select_form_element
 				settype($row[$this->opt_key], 'string');
 				if ($this->select_value === $row[$this->opt_key]) { $o_attrs['selected'] = 'selected'; }
 			}	
-			
+			//-----------------------------------------
+			// Selected Value
+			//-----------------------------------------
+			if (isset($this->select_value)) {
+                if (is_array($this->select_value) && isset($this->select_value[$row[$this->opt_key]])) {
+	                $o_attrs['selected'] = 'selected';
+                }
+				else {
+					settype($row[$this->opt_key], 'string');
+					if ($this->select_value === $row[$this->opt_key]) {
+						$o_attrs['selected'] = 'selected';
+					}
+				}
+			}
+
 			//-----------------------------------------
 			// Create Option Element
 			//-----------------------------------------

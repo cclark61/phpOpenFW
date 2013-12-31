@@ -9,7 +9,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 9-19-2005 Updated: 11-20-2012
+* @version 		Started: 9-19-2005 Updated: 12-31-2013
 **/
 //**************************************************************************
 //**************************************************************************
@@ -41,15 +41,19 @@ class ssa extends select_form_element
 		$this->blank = array();
 		$this->select_vals = $val_arr;
 	}
-	
+
 	//*************************************************************************
 	// Construct and output the SSA.
 	//*************************************************************************
 	public function render($buffer=false)
 	{
+		$this->inset_val = '';
 		ob_start();
-		settype($this->select_value, 'string');
-		
+
+		if (!is_array($this->select_value)) {
+			settype($this->select_value, 'string');
+		}
+	
 		//============================================
 		// Added "Blank" Options
 		//============================================
@@ -64,8 +68,15 @@ class ssa extends select_form_element
 			// Selected Value
 			//-----------------------------------------
 			if (isset($this->select_value)) {
-                settype($bv[0], 'string');
-				if ($this->select_value === $bv[0]) { $o_attrs['selected'] = 'selected'; }
+                if (is_array($this->select_value) && isset($this->select_value[$bv[0]])) {
+	                $o_attrs['selected'] = 'selected';
+                }
+				else {
+					settype($bv[0], 'string');
+					if ($this->select_value === $bv[0]) {
+						$o_attrs['selected'] = 'selected';
+					}
+				}
 			}
 
 			//-----------------------------------------
@@ -111,8 +122,15 @@ class ssa extends select_form_element
 			// Selected Value
 			//-----------------------------------------
 			if (isset($this->select_value)) {
-                settype($key, 'string');
-				if ($this->select_value === $key) { $o_attrs['selected'] = 'selected'; }
+                if (is_array($this->select_value) && isset($this->select_value[$key])) {
+	                $o_attrs['selected'] = 'selected';
+                }
+				else {
+					settype($key, 'string');
+					if ($this->select_value === $key) {
+						$o_attrs['selected'] = 'selected';
+					}
+				}
 			}
 
 			//-----------------------------------------
