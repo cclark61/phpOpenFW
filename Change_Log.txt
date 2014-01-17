@@ -14,6 +14,7 @@ the passed date could not be parsed and return false.
 - Changed class variables in the DIO class to be protected instead of private.
 - Removed extra space at the end of each PHP file
 - Added ability to select multiple values with SSA and SST classes my passing and array to the "selected_value()" function
+- Added "add_js_file()" and "add_css_file()" class methods to the App-Logic-2 Page Class (used by site_controller).
 
 -----------------------------------------------------------------
 v1.2.1

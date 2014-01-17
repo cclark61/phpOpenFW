@@ -1,4 +1,5 @@
 <?php
+//*************************************************************************
 /**
 * A simple core class to construct the basic page framework
 *
@@ -7,16 +8,17 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 2/18/2013, Last updated: 2/19/2013
+* @version 		Started: 2/18/2013, Last updated: 1/17/2014
 **/
+//*************************************************************************
 
-//***************************************************************
+//*************************************************************************
 /**
  * Page Class
  * @package		phpOpenFW
  * @subpackage	Application-Logic-2-Structure
  */
-//***************************************************************
+//*************************************************************************
 class page
 {
 
@@ -28,6 +30,8 @@ class page
 	protected $data;
 	protected $show_data_only;
 	protected $no_escape_elements;
+	protected $js_files;
+	protected $css_files;
 
 	//*************************************************************************
 	// Constructor Function
@@ -161,10 +165,59 @@ class page
 	public function set_show_data_only($flag=true) { $this->show_data_only = (bool)$flag; }
 
 	//*************************************************************************
+	/**
+	* Add a Javascript File to be included
+	* @param string Javascript File
+	**/
+	//*************************************************************************
+	public function add_js_file($file)
+	{
+		if ($file) { $this->js_files[] = $file; }
+	}
+
+	//*************************************************************************
+	/**
+	* Add a CSS File to be included
+	* @param array CSS link attributes
+	**/
+	//*************************************************************************
+	public function add_css_file($file_attrs)
+	{
+		if (is_array($file_attrs)) {
+			if (!isset($file_attrs['rel'])) { $file_attrs['rel'] = 'stylesheet'; }
+			if (!isset($file_attrs['type'])) { $file_attrs['type'] = 'text/css'; }
+			if (!isset($file_attrs['media'])) { $file_attrs['media'] = 'all'; }
+			$this->css_files[] = $file_attrs;
+		}
+		else {
+			settype($file_attrs, 'string');
+			$css_file = $file_attrs;
+			$file_attrs = array();
+			$file_attrs['href'] = $css_file;
+			$file_attrs['rel'] = 'stylesheet';
+			$file_attrs['type'] = 'text/css';
+			$file_attrs['media'] = 'all';
+			$this->css_files[] = $file_attrs;
+		}
+	}
+
+	//*************************************************************************
+	//*************************************************************************
 	// Render Function
+	//*************************************************************************
 	//*************************************************************************
 	public function render()
 	{
+		//-------------------------------------------------------------
+		// JavaScript / CSS Add-in Files
+		//-------------------------------------------------------------
+		if (!empty($this->js_files)) {
+			$this->set_data('js_files', $this->js_files);
+		}
+		if (!empty($this->css_files)) {
+			$this->set_data('css_files', $this->css_files);
+		}
+
 		//-------------------------------------------------------------
 		// Escape Data (or not)
 		//-------------------------------------------------------------
