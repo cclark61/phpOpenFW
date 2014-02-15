@@ -255,6 +255,14 @@ class dt_mysqli extends dt_structure
 		$lazy = (isset($arg_list[1]) && $arg_list[1]) ? (true) : (false);
 
 		//----------------------------------------------
+		// Character Set
+		//----------------------------------------------
+		$charset = $this->get_opt('charset');
+        if (!empty($charset)) {
+            $this->handle->set_charset($charset);
+        }
+
+		//----------------------------------------------
 		// Bind Parameters
 		//----------------------------------------------
 		if ($bind_params) {
