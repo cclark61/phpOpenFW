@@ -169,7 +169,18 @@ if (CATCH_ERRORS) {
 //============================================================
 // Build URL Path and Parts
 //============================================================
-$full_url_path = (isset($_SERVER['REDIRECT_URL'])) ? ($_SERVER['REDIRECT_URL']) : ($_SERVER['REQUEST_URI']);
+if (isset($_SERVER['REDIRECT_URL'])) {
+	$full_url_path = $_SERVER['REDIRECT_URL'];
+}
+else {
+	$qs_start = strpos($_SERVER['REQUEST_URI'], '?');
+	if ($qs_start === false) {
+		$full_url_path = $_SERVER['REQUEST_URI'];
+	}
+	else {
+		$full_url_path = substr($_SERVER['REQUEST_URI'], 0, $qs_start);
+	}
+}
 if (strlen($full_url_path) > 0) {
 
 	//---------------------------------------------
