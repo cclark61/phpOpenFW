@@ -84,8 +84,8 @@ function execute_page_controller(&$page, $args=false)
 	// Display: "Page Not Found"
 	//============================================================
 	if ($throw_404) {
-		$controller = "{$controller_path}/error/controller_404.php";
-		if (file_exists($controller)) { include($controller); }
+		$controller_404 = "{$controller_path}/error/controller_404.php";
+		if (file_exists($controller_404)) { include($controller_404); }
 		else {
 			if (BUFFER_PAGE) { ob_end_clean(); }
 			die('404 controller not found.');
@@ -100,8 +100,8 @@ function execute_page_controller(&$page, $args=false)
 	// Display: "Page Error"
 	//============================================================
 	else if ($throw_500 || isset($_SESSION['throw_500'])) {
-		$controller = "{$controller_path}/error/controller_500.php";
-		if (file_exists($controller)) { include($controller); }
+		$controller_500 = "{$controller_path}/error/controller_500.php";
+		if (file_exists($controller_500)) { include($controller_500); }
 		else {
 			if (BUFFER_PAGE) { ob_end_clean(); }
 			die('500 controller not found.');
