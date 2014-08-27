@@ -7,7 +7,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 7-7-2006, Last updated: 3-6-2012
+* @version 		Started: 7-7-2006, Last updated: 8-27-2014
 **/
 
 //*****************************************************************************
@@ -94,6 +94,7 @@ function action_message($message)
 //*****************************************************************************
 function gen_links($links, $extra_class='')
 {
+	trigger_error('This function has been deprecated and will be removed in a future release.', E_USER_DEPRECATED);
 	if (is_array($links)) {
 		$ul_content = '';
 		foreach ($links as $link) {
@@ -157,10 +158,10 @@ function add_url_params($in_url, $params, $xml_escape=false, $url_encode=true)
 {
 	$out_url = $in_url;
 	if (!is_array($params)) {
-		trigger_error('Error: [add_url_params] :: Second argument must be an array.');
+		trigger_error('Error: [add_url_params] :: Second argument must be an array.', E_USER_WARNING );
+		return $out_url;
 	}
 	else if (count($params) <= 0) {
-		//trigger_error('Error: [add_url_params] :: No parameters given.');
 		return $out_url;
 	}
 	else {
@@ -179,16 +180,6 @@ function add_url_params($in_url, $params, $xml_escape=false, $url_encode=true)
 		}
 	}
 	return $out_url;
-}
-
-//***************************************************************************
-//***************************************************************************
-// Generate Content Element
-// DEPRECATED, Use xhe() function instead. Usage is exactly the same.
-//***************************************************************************
-//***************************************************************************
-function gen_content($elm=false, $content='', $attrs=array(), $escape=false) {
-	return xhe($elm, $content, $attrs, $escape);
 }
 
 ?>

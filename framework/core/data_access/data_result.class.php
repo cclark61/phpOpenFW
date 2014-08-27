@@ -8,7 +8,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 11/15/2012 updated: 11/18/2012
+* @version 		Started: 11/15/2012 updated: 8/27/2014
 */
 
 //***************************************************************
@@ -85,8 +85,8 @@ class data_result {
         $data_structure_lib = $data_lib . '/dr_structure.class.php';
 
         // Include necessary data structure libraries
-        include_once($data_structure_lib);
-        include_once($data_object_lib);
+        require_once($data_structure_lib);
+        require_once($data_object_lib);
 
         // Create new Data Object
         $dr_class = 'dr_' . $this->data_type;

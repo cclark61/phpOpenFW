@@ -8,7 +8,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 9-20-2005 updated: 11-16-2012
+* @version 		Started: 9-20-2005 updated: 8-27-2014
 */
 
 //***************************************************************
@@ -71,7 +71,7 @@ class data_trans {
         $this->data_type = $_SESSION[$data_src]['type'];
 
         // Include Data Result Object
-        include_once(dirname(__FILE__) . '/data_result.class.php');
+        require_once(dirname(__FILE__) . '/data_result.class.php');
 
         //=================================================================
         // Create Object based on Data Source Type
@@ -83,8 +83,8 @@ class data_trans {
         $data_object_lib = $data_lib . '/dt_' . $this->data_type . '.class.php';
 
         // Include necessary Data Object Libraries
-        include_once($data_structure_lib);
-        include_once($data_object_lib);
+        require_once($data_structure_lib);
+        require_once($data_object_lib);
 
         // Create new Data Object
         $dt_class = 'dt_' . $this->data_type;

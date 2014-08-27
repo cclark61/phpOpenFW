@@ -10,7 +10,7 @@
  * @author 		Christian J. Clark
  * @copyright	Copyright (c) Christian J. Clark
  * @license		http://www.gnu.org/licenses/gpl-2.0.txt
- * @version 	Started: 2-8-2008, Last updated: 2-18-2013
+ * @version 	Started: 2-8-2008, Last updated: 8-27-2014
  */
 //**************************************************************************
 //**************************************************************************
@@ -41,7 +41,7 @@ class phplitefw_controller
 		//============================================================
 		// Include Controller Common Functions
 		//============================================================
-		include_once(dirname(__FILE__) . '/controller_common.inc.php');
+		require_once(dirname(__FILE__) . '/controller_common.inc.php');
 
 		//============================================================
 		// Set phpOpenFW Version
@@ -83,7 +83,7 @@ class phplitefw_controller
 		//============================================================
 		// Load element class
 		//============================================================
-		include_once("{$this->frame_path}/core/structure/objects/element.class.php");
+		require_once("{$this->frame_path}/core/structure/objects/element.class.php");
 		
 		//============================================================
 		// If proper extensions are loaded, 
@@ -92,8 +92,8 @@ class phplitefw_controller
 		if ($this->xml_ext_loaded) {
 			if ($this->mode == 'litefw') {
 				$this->load_plugin('xml_transform');
-				include_once("{$this->frame_path}/core/structure/objects/rs_list.class.php");
-				include_once("{$this->frame_path}/core/structure/objects/table.class.php");
+				require_once("{$this->frame_path}/core/structure/objects/rs_list.class.php");
+				require_once("{$this->frame_path}/core/structure/objects/table.class.php");
 			}
 		}
 	}
@@ -147,11 +147,11 @@ class phplitefw_controller
 		$plugin_file2 = "{$this->frame_path}/plugins/{$plugin}.class.php";
 		
 		if (file_exists($plugin_file1)) {
-			include_once($plugin_file1);
+			require_once($plugin_file1);
 			return true;
 		}
 		else if (file_exists($plugin_file2)) {
-			include_once($plugin_file2);
+			require_once($plugin_file2);
 			return true;
 		}
 		else {
@@ -162,15 +162,15 @@ class phplitefw_controller
 					$plugin_file5 = "{$pf}/{$plugin}.class.php";
 
 					if (file_exists($plugin_file3)) {
-						include_once($plugin_file3);
+						require_once($plugin_file3);
 						return true;
 					}
 					else if (file_exists($plugin_file4)) {
-						include_once($plugin_file4);
+						require_once($plugin_file4);
 						return true;
 					}
 					else if (file_exists($plugin_file5)) {
-						include_once($plugin_file5);
+						require_once($plugin_file5);
 						return true;
 					}
 				}
@@ -178,7 +178,7 @@ class phplitefw_controller
 		}
 
 		if (file_exists($plugin)) {
-			include_once($plugin);
+			require_once($plugin);
 			return true;
 		}
 
@@ -241,8 +241,8 @@ class phplitefw_controller
 	{
 		if ($this->xml_ext_loaded) {
 			if (isset($this->frame_path)) {
-				include_once("{$this->frame_path}/core/structure/forms/form.class.php");
-				include_once("{$this->frame_path}/core/structure/forms/form_too.class.php");
+				require_once("{$this->frame_path}/core/structure/forms/form.class.php");
+				require_once("{$this->frame_path}/core/structure/forms/form_too.class.php");
 				load_form_elements();
 			}
 			else { trigger_error('Error: [phplitefw_controller]::load_form_engine() - Framework path not set!.'); }
@@ -260,8 +260,8 @@ class phplitefw_controller
 	public function load_db_engine()
 	{
 		if (isset($this->frame_path)) {
-			include_once("{$this->frame_path}/core/data_access/data_trans.class.php");
-			include_once("{$this->frame_path}/core/data_access/data_query.class.php");
+			require_once("{$this->frame_path}/core/data_access/data_trans.class.php");
+			require_once("{$this->frame_path}/core/data_access/data_query.class.php");
 			$this->load_plugin('qdba');
 			if ($this->mode == 'litefw') {
 				$this->load_plugin('dio');

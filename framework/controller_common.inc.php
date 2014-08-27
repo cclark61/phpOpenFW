@@ -12,11 +12,46 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 12/19/2011, Last updated: 11/20/2012
+* @version 		Started: 12/19/2011, Last updated: 8/27/2014
 **/
 //****************************************************************************
 //****************************************************************************
 
+//************************************************************************************
+/**
+* Get URL Path Function
+*/
+//************************************************************************************
+function POFW_get_url_path()
+{
+	//----------------------------------------------------
+	// If $_SERVER['REDIRECT_URL'] is set
+	//----------------------------------------------------
+	if (isset($_SERVER['REDIRECT_URL'])) {
+		return $_SERVER['REDIRECT_URL'];
+	}
+	//----------------------------------------------------
+	// If $_SERVER['PATH_INFO'] is set
+	//----------------------------------------------------
+	else if (isset($_SERVER['PATH_INFO'])) {
+		return $_SERVER['PATH_INFO'];
+	}
+	//----------------------------------------------------
+	// If $_SERVER['REQUEST_URI'] is set
+	//----------------------------------------------------
+	else if (isset($_SERVER['REQUEST_URI'])) {
+		$qs_start = strpos($_SERVER['REQUEST_URI'], '?');
+		if ($qs_start === false) {
+			return $_SERVER['REQUEST_URI'];
+		}
+		else {
+			return substr($_SERVER['REQUEST_URI'], 0, $qs_start);
+		}
+	}
+
+	return false;
+}
+	
 //************************************************************************************
 /**
 * Set Version Function
@@ -66,13 +101,13 @@ function load_form_elements()
 {
 	$form_elem_dir = dirname(__FILE__) . '/core/structure/forms';
 	if (is_dir($form_elem_dir)) {
-		include_once($form_elem_dir . '/simple.inc.php');
-		include_once($form_elem_dir . '/complex/cfe.class.php');
-		include_once($form_elem_dir . '/complex/ssa.class.php');
-		include_once($form_elem_dir . '/complex/sst.class.php');
-		include_once($form_elem_dir . '/complex/cga.class.php');
-		include_once($form_elem_dir . '/complex/rga.class.php');
-		include_once($form_elem_dir . '/complex/rgt.class.php');
+		require_once($form_elem_dir . '/simple.inc.php');
+		require_once($form_elem_dir . '/complex/cfe.class.php');
+		require_once($form_elem_dir . '/complex/ssa.class.php');
+		require_once($form_elem_dir . '/complex/sst.class.php');
+		require_once($form_elem_dir . '/complex/cga.class.php');
+		require_once($form_elem_dir . '/complex/rga.class.php');
+		require_once($form_elem_dir . '/complex/rgt.class.php');
 		return true;
 	}
 	return false;

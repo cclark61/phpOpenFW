@@ -9,7 +9,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 2/18/2013, Last updated: 2/19/2013
+* @version 		Started: 2/18/2013, Last updated: 8/27/2014
 **/
 //*************************************************************************
 //*************************************************************************
@@ -41,14 +41,11 @@ function execute_page_controller(&$page, $args=false)
 	if (!empty($page_args)) { extract($page_args); }
 
 	//============================================================
-	// Page setup / defaults
+	// Page Setup
+	// Default Settings
 	//============================================================
 	$page_status = 200;					// Default Status Code
 	$content_layout = 'page';			// Set default content layout
-
-	//============================================================
-	// Default Settings
-	//============================================================
 	$throw_404 = false;
 	$throw_500 = false;
 
@@ -70,16 +67,26 @@ function execute_page_controller(&$page, $args=false)
 	if (file_exists(FILE_PATH . '/pre_page.inc.php')) {
 		include(FILE_PATH . '/pre_page.inc.php');
 	}
-	
+
 	//============================================================
-	// Controller Exists
+	// Content Level Controller
 	//============================================================
-	if (file_exists($controller)) { include($controller); }
-	//============================================================
-	// Throw 404
-	//============================================================
-	else { $throw_404 = true; }
-	
+	if (!$page->get_data('skip-controller')) {
+
+		//============================================================
+		// Controller Exists
+		//============================================================
+		if (file_exists($controller)) {
+			include($controller);
+		}
+		//============================================================
+		// Throw 404
+		//============================================================
+		else {
+			$throw_404 = true;
+		}
+	}
+
 	//============================================================
 	// Display: "Page Not Found"
 	//============================================================

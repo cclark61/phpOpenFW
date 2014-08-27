@@ -7,7 +7,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 12-29-2004, Last updated: 2-18-2013
+* @version 		Started: 12-29-2004, Last updated: 8-27-2014
 **/
 
 //***************************************************************
@@ -218,7 +218,7 @@ abstract class page
 		// Pre-page Include Script (pre_page.inc.php)
 		//****************************************************
 		$pre_page_inc = "$this->file_path/$this->mods_dir/pre_page.inc.php";
-		if (file_exists($pre_page_inc)) { include_once($pre_page_inc); }
+		if (file_exists($pre_page_inc)) { require_once($pre_page_inc); }
 
 		//****************************************************
 		// Set Time Zone
@@ -434,7 +434,7 @@ abstract class page
 		// Post-page Include Script (post_page.inc.php)
 		//===========================================================
 		$post_page_inc = "$this->file_path/$this->mods_dir/post_page.inc.php";
-		if (file_exists($post_page_inc)) { include_once($post_page_inc); }
+		if (file_exists($post_page_inc)) { require_once($post_page_inc); }
 	}
 
 	//***********************************************************************************
@@ -546,8 +546,8 @@ abstract class page
 	//***********************************************************************
 	protected function load_db_engine()
 	{
-		include_once("{$this->frame_path}/core/data_access/data_trans.class.php");
-		include_once("{$this->frame_path}/core/data_access/data_query.class.php");
+		require_once("{$this->frame_path}/core/data_access/data_trans.class.php");
+		require_once("{$this->frame_path}/core/data_access/data_query.class.php");
 	}
 
 	//***********************************************************************
@@ -557,8 +557,8 @@ abstract class page
 	//***********************************************************************
 	protected function load_form_engine()
 	{
-		include_once("{$this->frame_path}/core/structure/forms/form.class.php");
-		include_once("{$this->frame_path}/core/structure/forms/form_too.class.php");
+		require_once("{$this->frame_path}/core/structure/forms/form.class.php");
+		require_once("{$this->frame_path}/core/structure/forms/form_too.class.php");
 		load_form_elements();
 	}
 	
