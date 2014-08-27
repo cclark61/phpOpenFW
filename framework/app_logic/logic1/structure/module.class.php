@@ -230,17 +230,17 @@ class module extends page
 		// Set Page URL
 		//************************************************************************************
 		if ($this->mod == '-1' || $this->mod == '') {
-			$this->page_url = "$this->html_path/";
+			$this->page_url = "{$this->html_path}/";
 		}
 		else {
 			if ($this->nav_xml_format == 'rewrite') {
-				$this->page_url = "$this->html_path/$this->mod/";
+				$this->page_url = "{$this->html_path}/{$this->mod}/";
 			}
 			else if ($this->nav_xml_format == 'long_url') {
-				$this->page_url = "$this->html_path/index.php/$this->mod/";
+				$this->page_url = "{$this->html_path}/index.php/{$this->mod}/";
 			}
 			else {
-				$this->page_url = "$this->html_path/?mod=$this->mod";
+				$this->page_url = "{$this->html_path}/?mod={$this->mod}";
 			}
 		}
 
@@ -276,12 +276,12 @@ class module extends page
 		// Core Components
 		$this->load_db_engine();
 		$this->load_form_engine();
-		require_once("$this->frame_path/core/structure/objects/rs_list.class.php");
-		require_once("$this->frame_path/core/structure/objects/table.class.php");
+		require_once("{$this->frame_path}/core/structure/objects/rs_list.class.php");
+		require_once("{$this->frame_path}/core/structure/objects/table.class.php");
 
 		// Application Logic
-		require_once("$this->app_logic_path/security/user_list.class.php");
-		require_once("$this->app_logic_path/security/module_list.class.php");
+		require_once("{$this->app_logic_path}/security/user_list.class.php");
+		require_once("{$this->app_logic_path}/security/module_list.class.php");
 
 		// Menu
 		$this->menu_xml = $_SESSION['menu_xml'];
@@ -303,7 +303,7 @@ class module extends page
 		$this->content_xml = array();
 		
 		// Pre-module Include Script (pre_module.inc.php)
-		$pre_mod_inc = "$this->file_path/$this->mods_dir/pre_module.inc.php";
+		$pre_mod_inc = "{$this->file_path}/{$this->mods_dir}/pre_module.inc.php";
 		if (file_exists($pre_mod_inc)) { require_once($pre_mod_inc); }
 
 		// Was the intended module controller found?
@@ -380,7 +380,7 @@ class module extends page
 		}
 
 		// Post-module Include Script (post_module.inc.php)
-		$post_mod_inc = "$this->file_path/$this->mods_dir/post_module.inc.php";
+		$post_mod_inc = "{$this->file_path}/{$this->mods_dir}/post_module.inc.php";
 		if (file_exists($post_mod_inc)) { require_once($post_mod_inc); }
 	}
 
@@ -467,7 +467,7 @@ class module extends page
 	**/	
 	//***********************************************************************
 	public function set_action($new_action) { $this->action = $new_action; }
-	
+
 	//***********************************************************************
 	/**
 	* Set the current page url (this function may be unnecessary)
@@ -485,7 +485,7 @@ class module extends page
 	public function set_content_xsl($xsl_file)
 	{ 
 		if (file_exists($xsl_file)) { $this->content_xsl = $xsl_file; }
-		else { echo "<strong>set_content_xsl(): Invalid file path!!<br/> \"$xsl_file\" does not exist!</strong></br>\n"; }
+		else { echo "<strong>set_content_xsl(): Invalid file path!!<br/> \"{$xsl_file}\" does not exist!</strong></br>\n"; }
 	}
 
 	//***********************************************************************
@@ -503,7 +503,7 @@ class module extends page
 		}
 		else { return false; }
 	}
-	
+
 	//***********************************************************************
 	/**
 	* Set a variable in the current module's session array
@@ -516,7 +516,7 @@ class module extends page
 		$mod_index = 'mod-' . $this->mod;
 		$_SESSION[$mod_index][$var_name] = $var_value;
 	}
-	
+
 	//***********************************************************************
 	/**
 	* Destroy the current module's session array

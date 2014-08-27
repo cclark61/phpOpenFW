@@ -154,16 +154,21 @@ abstract class page
 	* @var array An array of theme javascript files to included
 	**/
 	protected $theme_js_files;
-	
+
 	/**
 	* @var array An array of theme CSS files to included
 	**/
 	protected $theme_css_files;
-	
+
 	/**
 	* @var string Time Zone
 	**/
 	protected $time_zone;
+
+	/**
+	* @var string Skip Render
+	**/
+	protected $skip_render;
 	
 	/**
 	* Initialize basic variables
@@ -192,6 +197,7 @@ abstract class page
 		$this->page_type = (isset($_POST['page_type'])) ? ( $_POST['page_type'] ) : ( (isset($_GET['page_type'])) ? ($_GET['page_type']) : ('page') );
 		$this->output_type = 'html';
 		$this->xsl_template = false;
+		$this->skip_render = false;
 		
 		//****************************************************
 		// Template Directory
@@ -217,7 +223,7 @@ abstract class page
 		//****************************************************
 		// Pre-page Include Script (pre_page.inc.php)
 		//****************************************************
-		$pre_page_inc = "$this->file_path/$this->mods_dir/pre_page.inc.php";
+		$pre_page_inc = "{$this->file_path}/{$this->mods_dir}/pre_page.inc.php";
 		if (file_exists($pre_page_inc)) { require_once($pre_page_inc); }
 
 		//****************************************************
@@ -246,7 +252,14 @@ abstract class page
 	// Render function
 	//************************************************************************************
 	protected function render()
-	{			
+	{
+		//===========================================================
+		// Skip the Render Process?
+		//===========================================================
+		if ($this->skip_render || (defined('POFW_SKIP_RENDER') && POFW_SKIP_RENDER)) {
+			return false;
+		}
+
 		//===========================================================
 		// Set Master XSL Template File
 		//===========================================================
@@ -327,7 +340,7 @@ abstract class page
 		// Copyright
 		//===========================================================
 		$curr_year = date('Y');
-		$page->add_child(new gen_element('copyright', "$curr_year $this->creator"));
+		$page->add_child(new gen_element('copyright', "{$curr_year} {$this->creator}"));
 
 		//===========================================================
 		// Account Name
@@ -342,7 +355,7 @@ abstract class page
 		if ($this->site_xml) {
 			if (is_array($this->site_xml)) {
 				$tmp_site_xml = array2xml('site_data', $this->site_xml);
-				$page->add_child("$tmp_site_xml\n");
+				$page->add_child("{$tmp_site_xml}\n");
 			}
 			else {
 				$page->add_child(new gen_element('site_data', $this->site_xml));
@@ -359,7 +372,7 @@ abstract class page
 			foreach ($this->app_xml as $xml_line) {
 				if (is_array($xml_line[1])) {
 					$new_xml_line = array2xml($xml_line[0], $xml_line[1]);
-					$tmp->add_child("$new_xml_line\n");	
+					$tmp->add_child("{$new_xml_line}\n");	
 				}
 				else {
 					$tmp->add_child(new gen_element($xml_line[0], $xml_line[1]));
@@ -389,7 +402,7 @@ abstract class page
 			$tmp2 = new gen_element('link');
 			$tmp2->display_tree();
 			$tmp2->add_child(new gen_element('linkdesc', $exit_phrase));
-			$tmp2->add_child(new gen_element('linkhref', "$this->html_path/?mod=logout"));
+			$tmp2->add_child(new gen_element('linkhref', "{$this->html_path}/?mod=logout"));
 			$tmp->add_child($tmp2);
 
 			$page->add_child($tmp);
@@ -433,7 +446,7 @@ abstract class page
 		//===========================================================
 		// Post-page Include Script (post_page.inc.php)
 		//===========================================================
-		$post_page_inc = "$this->file_path/$this->mods_dir/post_page.inc.php";
+		$post_page_inc = "{$this->file_path}/{$this->mods_dir}/post_page.inc.php";
 		if (file_exists($post_page_inc)) { require_once($post_page_inc); }
 	}
 
@@ -482,12 +495,25 @@ abstract class page
 
 	//***********************************************************************
 	/**
+	* Skip Render Function
+	*
+	* @param bool True = Skip (Default), False = Do NOT Skip
+	**/
+	//***********************************************************************
+	protected function skip_render($skip=true)
+	{
+		$this->skip_render = (bool)$skip;
+	}
+
+	//***********************************************************************
+	/**
 	* Set the XSL template directory to be used for transformation during page rendering
 	*
 	* @param string absolute file path to the template directory
 	**/
 	//***********************************************************************
-	public function set_template_dir($dir) {
+	public function set_template_dir($dir)
+	{
 		if (is_dir($dir)) { $this->templates_dir = $dir; }
 		else {
 			$msg = __METHOD__ . "(): Template directory '{$dir}' does not exist or is not readable.";
@@ -503,7 +529,8 @@ abstract class page
 	* @param string absolute file path to XSL Template
 	**/
 	//***********************************************************************
-	public function set_xsl_template($xsl_temp) {
+	public function set_xsl_template($xsl_temp)
+	{
 		if (file_exists($xsl_temp)) { $this->xsl_template = $xsl_temp; }
 		else {
 			$msg = __METHOD__ . "(): Template '{$xsl_temp}' does not exist or is not readable.";
@@ -535,8 +562,12 @@ abstract class page
 	//***********************************************************************
 	protected function add_xml($key='', $val='')
 	{
-		if ($key == '') { trigger_error('Error: add_xml() :: XML key must not be blank.'); }
-		else { $this->app_xml[] = array($key, $val); }
+		if ($key == '') {
+			trigger_error('Error: add_xml() :: XML key must not be blank.');
+		}
+		else {
+			$this->app_xml[] = array($key, $val);
+		}
 	}
 
 	//***********************************************************************
@@ -567,7 +598,6 @@ abstract class page
 // End page.class.php
 //*************************************************************************************
 //*************************************************************************************
-
 }
 
 ?>

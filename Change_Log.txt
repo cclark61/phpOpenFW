@@ -21,7 +21,11 @@ For Example: $page->set_data_format('json'); Valid values are: 'xml', 'json', 'a
 - Added ability to change the default render function using site_controller mode in the pre-page.inc.php file.
 For Example: $page->set_data('render-function', 'my_render_function'); Render Functions are called in the format:
 return my_render_function($data, $template);
-- 
+- Added ability to Skip the render process using the main_controller mode by doing either of the following:
+define('POFW_SKIP_RENDER', 1);
+$this->skip_render();
+- Added ability to manually fail a server side validation by using the new $ssv->add_fail() method.
+Ex. $ssv->add_fail("Forced Fail Message.");
 
 -----------------------------------------------------------------
 v1.2.2
