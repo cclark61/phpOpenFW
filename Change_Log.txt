@@ -26,6 +26,7 @@ define('POFW_SKIP_RENDER', 1);
 $this->skip_render();
 - Added ability to manually fail a server side validation by using the new $ssv->add_fail() method.
 Ex. $ssv->add_fail("Forced Fail Message.");
+- Included an updated sample site.
 
 -----------------------------------------------------------------
 v1.2.2
