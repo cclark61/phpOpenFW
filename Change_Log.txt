@@ -27,6 +27,7 @@ $this->skip_render();
 - Added ability to manually fail a server side validation by using the new $ssv->add_fail() method.
 Ex. $ssv->add_fail("Forced Fail Message.");
 - Included an updated sample site.
+- Included an updated sample application.
 
 -----------------------------------------------------------------
 v1.2.2
