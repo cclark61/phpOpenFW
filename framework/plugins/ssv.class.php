@@ -8,7 +8,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 2-25-2008, Last updated: 8-27-2014
+* @version 		Started: 2-25-2008, Last updated: 8-28-2014
 **/
 
 //***************************************************************
@@ -262,8 +262,8 @@ class server_side_validation
 					break;
 				
 				case 'custom':
-					if ($var_val1) { eval("\{$vr} = ({$var_val1});"); }
-					else if ($var_val2) { eval("\{$vr} = ({$var_val2});"); }
+					if ($var_val1) { eval("\$vr = ($var_val1);"); }
+					else if ($var_val2) { eval("\$vr = ($var_val2);"); }
 					else { trigger_error('[Server Side Validation]::validate() - Invalid custom expression!'); }
 					break;
 
