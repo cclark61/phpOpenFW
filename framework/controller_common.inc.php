@@ -90,7 +90,7 @@ function load_form_elements()
 //************************************************************************************
 function reg_data_source($ds_index, $ds_params)
 {
-	$known_params = array('type', 'server', 'port', 'source', 'user', 'pass', 'instance', 'conn_str', 'options', 'persistent', 'reuse_connection');
+	$known_params = array('type', 'server', 'port', 'source', 'user', 'pass', 'instance', 'conn_str', 'options', 'persistent', 'reuse_connection', 'charset');
 	$optional_params = array('port' => '', 'user' => '', 'pass' => '', 'instance' => '', 'conn_str' => '', 'options' => '', 'persistent' => '', 'reuse_connection' => '');
 	settype($ds_index, 'string');
 	if (!is_array($ds_params)) {
