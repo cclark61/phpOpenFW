@@ -8,7 +8,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 2/18/2013, Last updated: 1/17/2014
+* @version 		Started: 2/18/2013, Last updated: 8/28/2014
 **/
 //*************************************************************************
 
@@ -26,6 +26,8 @@ class page
 	// Class Variables
 	//*************************************************************************
 	protected $root_node;
+	protected $data_format;
+	protected $data_formats;
 	protected $template;
 	protected $data;
 	protected $show_data_only;
@@ -39,10 +41,16 @@ class page
     public function __construct($root_node='page')
     {
     	$this->set_root_node($root_node);
+    	$this->data_formats = array('xml', 'json', 'array');
+    	$this->data_format = 'xml';
     	$this->template = false;
 	    $this->data = array();
 	    $this->show_data_only = false;
-	    $this->no_escape_elements = array();
+	    $this->no_escape_elements = array(
+	    	'render-function' => 'render-function',
+	    	'skip-controller' => 'skip-controller',
+	    	'no-render' => 'no-render'
+	    );
     }
 
 	//*************************************************************************
@@ -99,6 +107,24 @@ class page
 	}
 
 	//*************************************************************************
+	// Set Data Format Function
+	//*************************************************************************
+	public function set_data_format($format)
+	{
+		if (!$format) { return false; }
+		$format = strtolower($format);
+		if (!in_array($format, $this->data_formats)) {
+			$data_formats = implode(', ', $this->data_formats);
+			$msg = "Invalid data format '{$format}'. Data format must be one of the following: {$data_formats}";
+			$this->display_error(__FUNCTION__, $msg);
+			return false;			
+		}
+
+		$this->data_format = $format;
+		return true;
+	}
+
+	//*************************************************************************
 	// No Escape Function
 	//*************************************************************************
 	public function no_escape_element($e)
@@ -116,13 +142,7 @@ class page
 	//*************************************************************************
 	public function set_template($template)
 	{
-		$new_temp = (string)$template;
-		if (!file_exists($new_temp)) {
-			$msg = "Invalid template. File '{$new_temp}' does not exist.";
-			$this->display_error(__FUNCTION__, $msg);
-			return false;
-		}
-		$this->template = $new_temp;
+		$this->template = (string)$template;
 		return true;
 	}
 
@@ -145,6 +165,14 @@ class page
 	public function get_data($node)
 	{
 		return (isset($this->data[$node])) ? ($this->data[$node]) : (false);
+	}
+
+	//*************************************************************************
+	// Get All Data Function
+	//*************************************************************************
+	public function get_all_data($node)
+	{
+		return $this->data;
 	}
 
 	//*************************************************************************
@@ -208,6 +236,14 @@ class page
 	//*************************************************************************
 	public function render()
 	{
+
+		//-------------------------------------------------------------
+		// No Render?
+		//-------------------------------------------------------------
+		if ($this->get_data('no-render') || (defined('POFW_SKIP_RENDER') && POFW_SKIP_RENDER)) {
+			return true;
+		}
+
 		//-------------------------------------------------------------
 		// JavaScript / CSS Add-in Files
 		//-------------------------------------------------------------
@@ -221,31 +257,76 @@ class page
 		//-------------------------------------------------------------
 		// Escape Data (or not)
 		//-------------------------------------------------------------
-		foreach ($this->data as $dkey => &$dval) {
-			if (!isset($this->no_escape_elements[$dkey])) {
-				$dval = xml_escape_array($dval);
+		if ($this->data_format == 'xml') {
+			foreach ($this->data as $dkey => &$dval) {
+				if (!isset($this->no_escape_elements[$dkey])) {
+					$dval = xml_escape_array($dval);
+				}
 			}
 		}
 
 		//-------------------------------------------------------------
-		// Create XML
+		// Create Data
 		//-------------------------------------------------------------
-		$xml = array2xml($this->root_node, $this->data);
+		if ($this->data_format == 'xml') {
+			$data = array2xml($this->root_node, $this->data);
+		}
+		else if ($this->data_format == 'json') {
+			$data = json_encode($this->data);
+		}
+		else {
+			$data = $this->data;
+		}
 
 		//-------------------------------------------------------------
 		// Output
 		//-------------------------------------------------------------
 		if ($this->show_data_only) {
-			print $xml;
-			return true;
-		}
-		else if ($this->template) {
-			xml_transform($xml, $this->template);
+			if (is_array($data)) {
+				print_array($data);
+			}
+			else {
+				print $data;
+			}
 			return true;
 		}
 		else {
-			print "No valid template file set.";
+			$render_function = $this->get_data('render-function');
+
+			//----------------------------------------------------
+			// XML
+			//----------------------------------------------------
+			if ($this->data_format == 'xml') {
+				if ($render_function) {
+					return $render_function($data, $this->template);
+				}
+				else {
+					if (file_exists($this->template)) {
+						return xml_transform($data, $this->template);
+					}
+					else {
+						if (empty($this->template)) {
+							print "No template file has been specified.";
+						}
+						else {
+							print "Invalid template file specified.";
+						}
+					}
+				}
+			}
+			//----------------------------------------------------
+			// JSON / Array
+			//----------------------------------------------------
+			else {
+				if ($render_function) {
+					return $render_function($data, $this->template);
+				}
+				else {
+					print "No valid render function was specified.";
+				}				
+			}
 		}
+
 		return false;
 	}
 

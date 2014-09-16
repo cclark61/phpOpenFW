@@ -1,3 +1,8 @@
 {
-    "name": "cclark61/phpOpenFW"
+    "name": "cclark61/phpOpenFW",
+    "version": "1.2.3",
+    "dist": {
+        "url": "https://github.com/cclark61/phpOpenFW/archive/master.zip",
+        "type": "zip"
+    }
 }

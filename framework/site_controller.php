@@ -10,7 +10,7 @@
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
 * @link			http://www.emonlade.net/phpopenfw/
-* @version 		Started: 2009, Last updated: 2/19/2013
+* @version 		Started: 2009, Last updated: 8/27/2014
 **/
 //**************************************************************************
 //**************************************************************************
@@ -50,8 +50,8 @@ if (!empty($_SESSION['redirect_url'])) {
 // Start Page Data
 // Create new Page Object
 //============================================================
-include_once(__DIR__ . '/app_logic/logic2/page.class.php');
-include_once(__DIR__ . '/app_logic/logic2/functions.inc.php');
+require_once(__DIR__ . '/app_logic/logic2/page.class.php');
+require_once(__DIR__ . '/app_logic/logic2/functions.inc.php');
 $page = new page();
 $controller_args = array();
 
@@ -169,7 +169,8 @@ if (CATCH_ERRORS) {
 //============================================================
 // Build URL Path and Parts
 //============================================================
-$full_url_path = (isset($_SERVER['REDIRECT_URL'])) ? ($_SERVER['REDIRECT_URL']) : ($_SERVER['REQUEST_URI']);
+$full_url_path = POFW_get_url_path();
+
 if (strlen($full_url_path) > 0) {
 
 	//---------------------------------------------

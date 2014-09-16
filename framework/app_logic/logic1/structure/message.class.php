@@ -7,7 +7,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 1-19-2006, Last updated: 2-18-2013
+* @version 		Started: 1-19-2006, Last updated: 8-27-2014
 **/
 
 //***************************************************************
@@ -63,11 +63,15 @@ class message extends page
 	//*********************************************************************	
 	public function render()
 	{
+		//----------------------------------------------------------
 		// Pre-message Include Script (pre_message.inc.php)
+		//----------------------------------------------------------
 		$pre_msg_inc = "{$this->file_path}/{$this->mods_dir}/pre_message.inc.php";
-		if (file_exists($pre_msg_inc)) { include_once($pre_msg_inc); }
+		if (file_exists($pre_msg_inc)) { require_once($pre_msg_inc); }
 
+		//----------------------------------------------------------
 		// Start building message page
+		//----------------------------------------------------------
 		$tmp = new gen_element('message');
 		$tmp->add_child(new gen_element('code', $this->msg_code));
 		$tmp->add_child(new gen_element('login_link', $this->html_path . '/'));
@@ -98,9 +102,11 @@ class message extends page
     			break;
 		}
 
+		//----------------------------------------------------------
 		// Post-message Include Script (post_message.inc.php)
+		//----------------------------------------------------------
 		$post_msg_inc = $this->file_path . '/' . $this->mods_dir . '/post_message.inc.php';
-		if (file_exists($post_msg_inc)) { include_once($post_msg_inc); }
+		if (file_exists($post_msg_inc)) { require_once($post_msg_inc); }
 	}
 }
 

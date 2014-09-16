@@ -7,7 +7,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 1-19-2006, Last updated: 2-18-2013
+* @version 		Started: 1-19-2006, Last updated: 8-27-2014
 **/
 
 //***************************************************************
@@ -92,7 +92,9 @@ class module extends page
 	//************************************************************************************
 	public function __construct()
 	{
+		//----------------------------------------------------
 		// Initialize
+		//----------------------------------------------------
 		parent::initialize();
 		$this->mod_controller_found = 1;
 		$this->mod_params = array();
@@ -107,29 +109,28 @@ class module extends page
 		//**************************************
 		if ($this->nav_xml_format == 'rewrite') {
 
-			// If $_SERVER['REDIRECT_URL'] is NOT set
-			if (!isset($_SERVER['REDIRECT_URL'])) {
-				$tmp_msg = 'Error: "nav_xml_format" is set to "rewrite" but "REDIRECT_URL"';
-				$tmp_msg .= ' is not set in the server\'s environment variables (i.e. $_SERVER[\'REDIRECT_URL\'] is not set).';
-				print new gen_element('div', $tmp_msg, array('style' => 'color: blue; padding: 20px; font-weight: bold;'));
-				exit;
-			}
-			// If $_SERVER['REDIRECT_URL'] is set, pull module arguments
-			else {
-				$this->mod = $_SERVER['REDIRECT_URL'];
-			}
+			//----------------------------------------------------
+			// Get URL Path
+			//----------------------------------------------------
+			$this->mod = POFW_get_url_path();
 
+			//----------------------------------------------------
 			// Remove contents of $this->html_path if it exists
+			//----------------------------------------------------
 			if ($this->html_path != '') {
 				$this->mod = str_replace($this->html_path, '', $this->mod);
 			}
 
+			//----------------------------------------------------
 			// Check for leading slash
+			//----------------------------------------------------
 			if (substr($this->mod, 0, 1) == '/') {
 				$this->mod = substr($this->mod, 1, strlen($this->mod) - 1);
 			}
 
+			//----------------------------------------------------
 			// Check for trailing slash
+			//----------------------------------------------------
 			if (substr($this->mod, strlen($this->mod) - 1, 1) == '/') {
 				$this->mod = substr($this->mod, 0, strlen($this->mod) - 1);
 			}
@@ -142,25 +143,35 @@ class module extends page
 		//**************************************
 		else if ($this->nav_xml_format == 'long_url') {
 
+			//----------------------------------------------------
 			// Pull module arguments from $_SERVER['PHP_SELF']
+			//----------------------------------------------------
 			$this->mod = $_SERVER['PHP_SELF'];
 
+			//----------------------------------------------------
 			// Remove contents of $this->html_path if it exists
+			//----------------------------------------------------
 			if ($this->html_path != '') {
 				$this->mod = str_replace($this->html_path, '', $this->mod);
 			}
 
+			//----------------------------------------------------
 			// Check for leading slash
+			//----------------------------------------------------
 			if (substr($this->mod, 0, 1) == '/') {
 				$this->mod = substr($this->mod, 1, strlen($this->mod) - 1);
 			}
 
+			//----------------------------------------------------
 			// Remove "index.php/"
+			//----------------------------------------------------
 			if (substr($this->mod, 0, 10) == 'index.php/') {
 				$this->mod = substr($this->mod, 10, strlen($this->mod) - 1);
 			}
 
+			//----------------------------------------------------
 			// Check for trailing slash
+			//----------------------------------------------------
 			if (substr($this->mod, strlen($this->mod) - 1, 1) == '/') {
 				$this->mod = substr($this->mod, 0, strlen($this->mod) - 1);
 			}
@@ -219,17 +230,17 @@ class module extends page
 		// Set Page URL
 		//************************************************************************************
 		if ($this->mod == '-1' || $this->mod == '') {
-			$this->page_url = "$this->html_path/";
+			$this->page_url = "{$this->html_path}/";
 		}
 		else {
 			if ($this->nav_xml_format == 'rewrite') {
-				$this->page_url = "$this->html_path/$this->mod/";
+				$this->page_url = "{$this->html_path}/{$this->mod}/";
 			}
 			else if ($this->nav_xml_format == 'long_url') {
-				$this->page_url = "$this->html_path/index.php/$this->mod/";
+				$this->page_url = "{$this->html_path}/index.php/{$this->mod}/";
 			}
 			else {
-				$this->page_url = "$this->html_path/?mod=$this->mod";
+				$this->page_url = "{$this->html_path}/?mod={$this->mod}";
 			}
 		}
 
@@ -265,12 +276,12 @@ class module extends page
 		// Core Components
 		$this->load_db_engine();
 		$this->load_form_engine();
-		include_once("$this->frame_path/core/structure/objects/rs_list.class.php");
-		include_once("$this->frame_path/core/structure/objects/table.class.php");
+		require_once("{$this->frame_path}/core/structure/objects/rs_list.class.php");
+		require_once("{$this->frame_path}/core/structure/objects/table.class.php");
 
 		// Application Logic
-		include_once("$this->app_logic_path/security/user_list.class.php");
-		include_once("$this->app_logic_path/security/module_list.class.php");
+		require_once("{$this->app_logic_path}/security/user_list.class.php");
+		require_once("{$this->app_logic_path}/security/module_list.class.php");
 
 		// Menu
 		$this->menu_xml = $_SESSION['menu_xml'];
@@ -292,8 +303,8 @@ class module extends page
 		$this->content_xml = array();
 		
 		// Pre-module Include Script (pre_module.inc.php)
-		$pre_mod_inc = "$this->file_path/$this->mods_dir/pre_module.inc.php";
-		if (file_exists($pre_mod_inc)) { include_once($pre_mod_inc); }
+		$pre_mod_inc = "{$this->file_path}/{$this->mods_dir}/pre_module.inc.php";
+		if (file_exists($pre_mod_inc)) { require_once($pre_mod_inc); }
 
 		// Was the intended module controller found?
 		$this->content_xml[] = new gen_element('mod_controller_found', $this->mod_controller_found);
@@ -348,7 +359,7 @@ class module extends page
 			
 			// Include local controller
 			ob_start();
-			if (!$this->skip_mod_controller) { include_once($this->mod_controller); }
+			if (!$this->skip_mod_controller) { require_once($this->mod_controller); }
 			
 			// Perform an XML Transformation if necessary
 			if (isset($this->content_xsl) && !empty($this->content_xsl)) {
@@ -369,8 +380,8 @@ class module extends page
 		}
 
 		// Post-module Include Script (post_module.inc.php)
-		$post_mod_inc = "$this->file_path/$this->mods_dir/post_module.inc.php";
-		if (file_exists($post_mod_inc)) { include_once($post_mod_inc); }
+		$post_mod_inc = "{$this->file_path}/{$this->mods_dir}/post_module.inc.php";
+		if (file_exists($post_mod_inc)) { require_once($post_mod_inc); }
 	}
 
 	//************************************************************************************
@@ -456,7 +467,7 @@ class module extends page
 	**/	
 	//***********************************************************************
 	public function set_action($new_action) { $this->action = $new_action; }
-	
+
 	//***********************************************************************
 	/**
 	* Set the current page url (this function may be unnecessary)
@@ -474,7 +485,7 @@ class module extends page
 	public function set_content_xsl($xsl_file)
 	{ 
 		if (file_exists($xsl_file)) { $this->content_xsl = $xsl_file; }
-		else { echo "<strong>set_content_xsl(): Invalid file path!!<br/> \"$xsl_file\" does not exist!</strong></br>\n"; }
+		else { echo "<strong>set_content_xsl(): Invalid file path!!<br/> \"{$xsl_file}\" does not exist!</strong></br>\n"; }
 	}
 
 	//***********************************************************************
@@ -492,7 +503,7 @@ class module extends page
 		}
 		else { return false; }
 	}
-	
+
 	//***********************************************************************
 	/**
 	* Set a variable in the current module's session array
@@ -505,7 +516,7 @@ class module extends page
 		$mod_index = 'mod-' . $this->mod;
 		$_SESSION[$mod_index][$var_name] = $var_value;
 	}
-	
+
 	//***********************************************************************
 	/**
 	* Destroy the current module's session array

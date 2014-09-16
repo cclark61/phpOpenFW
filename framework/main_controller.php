@@ -9,7 +9,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: ??-??-????, Last updated: 2-28-2013
+* @version 		Started: ??-??-????, Last updated: 8-27-2014
 **/
 //****************************************************************************
 //****************************************************************************
@@ -17,7 +17,7 @@
 //============================================================
 // Include Controller Common Functions
 //============================================================
-include_once(dirname(__FILE__) . '/controller_common.inc.php');
+require_once(dirname(__FILE__) . '/controller_common.inc.php');
 
 //============================================================
 // Load Config if not logged in
@@ -38,14 +38,14 @@ $app_logic_path = $_SESSION['app_logic_path'];
 //============================================================
 // Include necessary core components
 //============================================================
-include_once("{$_SESSION['frame_path']}/core/structure/objects/element.class.php");
+require_once("{$_SESSION['frame_path']}/core/structure/objects/element.class.php");
 
 //============================================================
 // Include necessary application logic
 //============================================================
-include_once("{$app_logic_path}/structure/page.class.php");
-include_once("{$app_logic_path}/structure/message.class.php");
-include_once("{$app_logic_path}/structure/module.class.php");
+require_once("{$app_logic_path}/structure/page.class.php");
+require_once("{$app_logic_path}/structure/message.class.php");
+require_once("{$app_logic_path}/structure/module.class.php");
 load_plugin('xml_transform');
 
 //============================================================
@@ -85,14 +85,14 @@ switch ($mod) {
 	// * Login
 	//************************************************************
 	case 'login':
-		include_once("{$app_logic_path}/security/login.class.php");
+		require_once("{$app_logic_path}/security/login.class.php");
 
 		// Perform Login Operation
 		if (!isset($_SESSION['userid'])) {
 			$login = new login();
 
 			// If login.inc.php exists include it
-			if (file_exists("{$_SESSION['file_path']}/login.inc.php")) { include_once("{$_SESSION['file_path']}/login.inc.php"); }
+			if (file_exists("{$_SESSION['file_path']}/login.inc.php")) { require_once("{$_SESSION['file_path']}/login.inc.php"); }
 
 			// If previous URL given go there after login
 			if (isset($_SESSION['login_url'])) {
@@ -143,11 +143,11 @@ switch ($mod) {
 					
 				default:
 					// Perform Login Operation
-					include_once("{$app_logic_path}/security/login.class.php");
+					require_once("{$app_logic_path}/security/login.class.php");
 					$login = new login();
 					
 					// If login.inc.php exists include it
-					if (file_exists("{$_SESSION['file_path']}/login.inc.php")) { include_once("{$_SESSION['file_path']}/login.inc.php"); }
+					if (file_exists("{$_SESSION['file_path']}/login.inc.php")) { require_once("{$_SESSION['file_path']}/login.inc.php"); }
 		
 					// If previous URL given go there after login
 					if (isset($_SESSION['login_url'])) {
@@ -296,21 +296,21 @@ function load_plugin($plugin)
 		$plugin_file5 = "{$pf}/{$plugin}.class.php";
 
 		if (file_exists($plugin_file3)) {
-			include_once($plugin_file3);
+			require_once($plugin_file3);
 			return true;
 		}
 		else if (file_exists($plugin_file4)) {
-			include_once($plugin_file4);
+			require_once($plugin_file4);
 			return true;
 		}
 		else if (file_exists($plugin_file5)) {
-			include_once($plugin_file5);
+			require_once($plugin_file5);
 			return true;
 		}	
 	}
 
 	if (file_exists($plugin)) {
-		include_once($plugin);
+		require_once($plugin);
 		return true;
 	}
 

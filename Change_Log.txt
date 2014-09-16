@@ -5,6 +5,32 @@
 *****************************************************************
 
 -----------------------------------------------------------------
+v1.2.3
+-----------------------------------------------------------------
+- Updated how $full_url_path is determined in site_controller.php
+- Updated how $this->mod is determined for module.class.php. Rewrite Nav Format no longer requires 
+$_SERVER['REDIRECT_URL'] to be set.
+- Updated all include_once() uses to require_once() internally.
+- Removed gen_content() function from content_gen.inc.php plugin.
+- Deprecated gen_links() function in content_gen.inc.php plugin.
+- Added ability to skip the page controller using site_controller mode by specifying 
+$page->set_data('skip-controller', 1) in the pre-page.inc.php file.
+- Added ability to skip the page render process using site_controller mode by specifying 
+$page->set_data('no-render', 1).
+- Added ability to change data formats using site_controller mode by changing the data format.
+For Example: $page->set_data_format('json'); Valid values are: 'xml', 'json', 'array'. Default is 'xml'.
+- Added ability to change the default render function using site_controller mode in the pre-page.inc.php file.
+For Example: $page->set_data('render-function', 'my_render_function'); Render Functions are called in the format:
+return my_render_function($data, $template);
+- Added ability to Skip the render process using the main_controller mode by doing either of the following:
+define('POFW_SKIP_RENDER', 1);
+$this->skip_render();
+- Added ability to manually fail a server side validation by using the new $ssv->add_fail() method.
+Ex. $ssv->add_fail("Forced Fail Message.");
+- Included an updated sample site.
+- Included an updated sample application.
+
+-----------------------------------------------------------------
 v1.2.2
 -----------------------------------------------------------------
 - Updated Form classes to be able to be used as strings

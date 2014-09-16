@@ -7,7 +7,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 8-16-2005, Last updated: 8-31-2011
+* @version 		Started: 8-16-2005, Last updated: 8-27-2014
 * @access		private
 **/
 
@@ -50,11 +50,11 @@ class login {
 		$this->status = false;
 
 		// Include necessary classes
-		include_once($_SESSION['frame_path'] . '/core/data_access/data_trans.class.php');
-		include_once($local_path . '/nav.class.php');
-		include_once($local_path . '/xml_nav.class.php');
-		include_once($local_path . '/authentication.class.php');
-		include_once($local_path . '/module_list.class.php');
+		require_once($_SESSION['frame_path'] . '/core/data_access/data_trans.class.php');
+		require_once($local_path . '/nav.class.php');
+		require_once($local_path . '/xml_nav.class.php');
+		require_once($local_path . '/authentication.class.php');
+		require_once($local_path . '/module_list.class.php');
 
 		//****************************************************
 		// Build Array NAVs		

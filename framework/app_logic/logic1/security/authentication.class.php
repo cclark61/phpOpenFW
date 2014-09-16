@@ -7,7 +7,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 3-11-2005, Last updated: 12-26-2011
+* @version 		Started: 3-11-2005, Last updated: 8-27-2014
 * @access		private
 **/
 
@@ -119,12 +119,12 @@ class authentication {
 			}
 
 			// Load Data Transaction Class
-			include_once($_SESSION['frame_path'] . '/core/data_access/data_trans.class.php');
+			require_once($_SESSION['frame_path'] . '/core/data_access/data_trans.class.php');
 		}
 		else if ($this->data_src == 'custom') {
 			// Load Database Engine
-			include_once($_SESSION['frame_path'] . '/core/data_access/data_trans.class.php');
-			include_once($_SESSION['frame_path'] . '/plugins/qdba.inc.php');
+			require_once($_SESSION['frame_path'] . '/core/data_access/data_trans.class.php');
+			require_once($_SESSION['frame_path'] . '/plugins/qdba.inc.php');
 			$this->data_type = 'custom';
 		}
 		else {

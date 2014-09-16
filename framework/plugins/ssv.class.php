@@ -8,7 +8,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 2-25-2008, Last updated: 1-29-2013
+* @version 		Started: 2-25-2008, Last updated: 8-28-2014
 **/
 
 //***************************************************************
@@ -139,6 +139,20 @@ class server_side_validation
 			$this->validations[] = array($field_name, $valid_type, xml_escape($valid_txt), $field2_name);
 		}
 	}
+
+	//**************************************************************************************
+	/**
+	* Add a Failed validation
+	* @param string Fail Message
+	**/
+	//**************************************************************************************
+	// Add Fail Function
+	//**************************************************************************************
+	public function add_fail($fail_message)
+	{
+		if (empty($fail_message)) { return false; }
+		$this->validations[] = array(false, 'fail', xml_escape($fail_message), false);
+	}
 	
 	//**************************************************************************************
 	/**
@@ -169,33 +183,40 @@ class server_side_validation
 	{
 		foreach ($this->validations as $key => $check) {
 			
+			//==============================================================
 			// Set / Reset variable values
+			//==============================================================
 			$var_val1 = null;
 			$var_val2 = null;
 			$vr = null;
 			
-			//*************************************
+			//==============================================================
 			// Pull variable value(s)
-			//*************************************
-			
+			//==============================================================
 			if ($check[1] == 'custom') {
 				$var_val1 = (isset($check[0])) ? ($check[0]) : (false);
 				$var_val2 = (isset($check[3])) ? ($check[3]) : (false);
 			}
 			else {
+				//-------------------------------------------------------
 				// POST
+				//-------------------------------------------------------
 				if ($this->check_post) {
 					$var_val1 = (isset($_POST[$check[0]]) && $_POST[$check[0]] != '') ? ($_POST[$check[0]]) : (null);
 					$var_val2 = (isset($_POST[$check[3]]) && $_POST[$check[3]] != '') ? ($_POST[$check[3]]) : (null);
 				}
 				
+				//-------------------------------------------------------
 				// GET
+				//-------------------------------------------------------
 				if ($this->check_get && is_null($var_val1)) {
 					$var_val1 = (is_null($var_val1) && isset($_GET[$check[0]]) && $_GET[$check[0]] != '') ? ($_GET[$check[0]]) : (null);
 					$var_val2 = (is_null($var_val2) && isset($_GET[$check[3]]) && $_GET[$check[3]] != '') ? ($_GET[$check[3]]) : (null);
 				}
 				
+				//-------------------------------------------------------
 				// Check POST Sub Arrays
+				//-------------------------------------------------------
 				if (is_null($var_val1)) {
 					foreach ($this->post_sub_arrays as $sub_array) {
 						if (!is_null($var_val1)) { break; }
@@ -205,8 +226,11 @@ class server_side_validation
 				}
 			}
 			
+			//==============================================================
 			// Perform Validation
+			//==============================================================
 			switch ($check[1]) {
+
 				case 'is_not_empty':
 					$vr = ($var_val1 != '');
 					break;
@@ -252,12 +276,16 @@ class server_side_validation
 					break;
 			}
 			
+			//==============================================================
 			// Result of current validation
+			//==============================================================
 			$this->check_status[$key] = $vr;
 			if (!$vr) {
 				$this->validation_status = false;
 				$this->num_failed_checks++; 
-				if ($check[2] != '') { $this->fail_messages[$key] = $check[2]; }
+				if ($check[2] != '') {
+					$this->fail_messages[$key] = $check[2];
+				}
 			}
 			else if ($vr && is_null($this->validation_status)) {
 				$this->validation_status = true;
@@ -271,6 +299,7 @@ class server_side_validation
 			print_r($_POST);
 			print "</pre>\n";
 		}
+
 		return $this->validation_status;
 	}
 
