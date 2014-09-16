@@ -56,6 +56,11 @@ class dt_mysqli extends dt_structure
         	$this->start_trans();
         }
 
+        // Set the character Set If needed
+        if ($this->charset) {
+            $this->handle->set_charset($this->charset);
+        }
+
         return true;
 	}
 	
