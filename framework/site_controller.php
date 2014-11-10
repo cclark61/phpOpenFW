@@ -10,7 +10,7 @@
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
 * @link			http://www.emonlade.net/phpopenfw/
-* @version 		Started: 2009, Last updated: 8/27/2014
+* @version 		Started: 2009, Last updated: 11/10/2014
 **/
 //**************************************************************************
 //**************************************************************************
@@ -65,13 +65,15 @@ $https = (!empty($_SERVER['HTTPS'])) ? (1) : (0);
 //============================================================
 // Settings
 //============================================================
+$base_url = str_replace('index.php', '', $_SERVER['SCRIPT_NAME']);
+if (!$base_url) { $base_url = '/'; }
 $base_path = $file_path;
 $templates = $file_path . '/templates';
 $nav_dir = $file_path . '/navs';
 $controller_path = "{$file_path}/controllers";
 $http_prefix = ($https) ? ('https://') : ('http://');
 $site_home_url = ($http_host) ? ($http_host) : ($server_name);
-$site_home_url = $http_prefix . $site_home_url;
+$site_home_url = $http_prefix . $site_home_url . $base_url;
 $catch_errors = (!empty($_SESSION['catch_errors'])) ? (1) : (0);
 if (!isset($buffer_page)) { $buffer_page = false; }
 if (!isset($mode)) { $mode = false; }
@@ -79,6 +81,7 @@ if (!isset($mode)) { $mode = false; }
 //============================================================
 // Defined Constants
 //============================================================
+define('BASE_URL', $base_url);
 define('SERVER_NAME', $server_name);
 define('HTTP_HOST', $http_host);
 define('HTTPS', $https);
@@ -169,27 +172,29 @@ if (CATCH_ERRORS) {
 //============================================================
 // Build URL Path and Parts
 //============================================================
-$full_url_path = POFW_get_url_path();
-
-if (strlen($full_url_path) > 0) {
+$module_url_path = POFW_get_url_path();
+if ($base_url != '/') {
+	$module_url_path = str_replace($base_url, '', $module_url_path);
+}
+if (strlen($module_url_path) > 0) {
 
 	//---------------------------------------------
 	// Remove Trailing Slashes
 	//---------------------------------------------
-	while (substr($full_url_path, strlen($full_url_path) - 1, 1) == "/") {
-		$full_url_path = substr($full_url_path, 0, strlen($full_url_path) - 1);
+	while (substr($module_url_path, strlen($module_url_path) - 1, 1) == "/") {
+		$module_url_path = substr($module_url_path, 0, strlen($module_url_path) - 1);
 	}
 
 	//---------------------------------------------
 	// Remove Front Slashes
 	//---------------------------------------------
-	while (substr($full_url_path, 0, 1) == "/") {
-		$full_url_path = substr($full_url_path, 1, strlen($full_url_path));
+	while (substr($module_url_path, 0, 1) == "/") {
+		$module_url_path = substr($module_url_path, 1, strlen($module_url_path));
 	}
 }
 
-if ($full_url_path == '') { $full_url_path = 'home'; }
-$url_parts = explode('/', $full_url_path);
+if ($module_url_path == '') { $module_url_path = 'home'; }
+$url_parts = explode('/', $module_url_path);
 if (count($url_parts) == 1 && $url_parts[0] == '') { $url_parts[0] = 'home'; }
 
 //============================================================

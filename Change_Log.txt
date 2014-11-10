@@ -5,6 +5,12 @@
 *****************************************************************
 
 -----------------------------------------------------------------
+v1.2.4
+-----------------------------------------------------------------
+- Updated site_controller.php to correctly determine the Base URL for sites used in a sub-directory
+of a site and not at the document root of the site.
+
+-----------------------------------------------------------------
 v1.2.3
 -----------------------------------------------------------------
 - Updated how $full_url_path is determined in site_controller.php
