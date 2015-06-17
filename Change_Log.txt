@@ -9,7 +9,8 @@ v1.2.4
 -----------------------------------------------------------------
 - Updated site_controller.php to correctly determine the Base URL for sites used in a sub-directory
 of a site and not at the document root of the site.
-- Added phpOpenFW.phar, a complete and usable version of phpOpenFW in PHAR format.
+- Added pharer.php, a complete and usable version of phpOpenFW in PHAR format.
+- Changed a couple include() calls to require_once() in mona_controller.php and phplitefw.inc.php .
 
 -----------------------------------------------------------------
 v1.2.3

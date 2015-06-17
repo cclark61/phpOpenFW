@@ -110,7 +110,7 @@ class phplitefw_controller
 		if ($force_config === true || !$this->db_config_set) {
 			if (file_exists($db_config)) {
 				$data_arr = array();
-				include($db_config);
+				require_once($db_config);
 				
 				if (count($data_arr) > 0) {
 					$key_arr2 = array_keys($data_arr);

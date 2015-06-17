@@ -190,7 +190,7 @@ function load_config()
 	$data_arr = array();
 
 	// Include the configuration file
-	include($_SESSION['file_path'] . '/config.inc.php');
+	require_once($_SESSION['file_path'] . '/config.inc.php');
 
 	//*************************************************************
 	// Set HTML Path
