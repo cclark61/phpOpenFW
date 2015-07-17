@@ -186,6 +186,11 @@ abstract class dt_structure {
 	**/
 	protected $results_set;
 
+    /**
+     * @var mixed String containing the character set i.e. utf8 or false if not using one
+     */
+    protected $charset;
+
 	/**
 	* Constructor function
 	*
@@ -226,6 +231,7 @@ abstract class dt_structure {
 		$this->pass = (isset($_SESSION[$data_src]['pass'])) ? ($_SESSION[$data_src]['pass']) : (false);
 		$this->conn_str = (isset($_SESSION[$data_src]['conn_str'])) ? ($_SESSION[$data_src]['conn_str']) : (false);
 		$this->options = (isset($_SESSION[$data_src]['options'])) ? ($_SESSION[$data_src]['options']) : (false);
+        $this->charset = (isset($_SESSION[$data_src]['charset'])) ? ($_SESSION[$data_src]['charset']) : (false);
 		$this->trans_type = $tmp_trans_type;
 		$this->handle = false;
 		$this->result = array();
@@ -302,6 +308,13 @@ abstract class dt_structure {
 		if (isset($_SESSION['data_debug']) && $_SESSION['data_debug']) {
 			$this->print_query = true;
 		}
+
+        //----------------------------------------------------------
+        // Character Set
+        //----------------------------------------------------------
+        if ($this->charset) {
+            $this->set_opt('charset', $this->charset);
+        }
 
 		//----------------------------------------------------------
 		// Open Connection
