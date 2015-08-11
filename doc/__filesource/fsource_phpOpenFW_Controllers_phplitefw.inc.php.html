@@ -124,7 +124,7 @@
 <li><div class="src-line"><a name="a110"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if</span>&nbsp;<span class="src-sym">(</span><span class="src-var">$force_config</span>&nbsp;===&nbsp;<span class="src-id">true</span>&nbsp;||&nbsp;<span class="src-sym">!</span><span class="src-var">$this</span></span><span class="src-sym">-&gt;</span><span class="src-var">db_config_set</span><span class="src-sym">)&nbsp;<span class="src-str"></span><span class="src-sym">{</span></span></div></li>
 <li><div class="src-line"><a name="a111"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if</span>&nbsp;<span class="src-sym">(</span><span class="src-id">file_exists</span><span class="src-sym">(</span><span class="src-var">$db_config</span><span class="src-sym">))</span>&nbsp;<span class="src-sym">{</span></span></div></li>
 <li><div class="src-line"><a name="a112"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$data_arr</span>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></span></div></li>
-<li><div class="src-line"><a name="a113"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-inc">include</span><span class="src-sym">(</span><span class="src-var">$db_config</span><span class="src-sym">)</span><span class="src-sym">;</span></span></div></li>
+<li><div class="src-line"><a name="a113"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-inc">require_once</span><span class="src-sym">(</span><span class="src-var">$db_config</span><span class="src-sym">)</span><span class="src-sym">;</span></span></div></li>
 <li><div class="src-line"><a name="a114"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div></li>
 <li><div class="src-line"><a name="a115"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if</span>&nbsp;<span class="src-sym">(</span><span class="src-id">count</span><span class="src-sym">(</span><span class="src-var">$data_arr</span><span class="src-sym">)</span>&nbsp;>&nbsp;<span class="src-num">0</span><span class="src-sym">)</span>&nbsp;<span class="src-sym">{</span></span></div></li>
 <li><div class="src-line"><a name="a116"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$key_arr2</span>&nbsp;=&nbsp;<span class="src-id">array_keys</span><span class="src-sym">(</span><span class="src-var">$data_arr</span><span class="src-sym">)</span><span class="src-sym">;</span></span></div></li>
@@ -289,7 +289,7 @@
 </ol></div>
 </div>
 	<p class="notes" id="credit">
-		Documentation generated on Tue, 16 Jun 2015 04:00:14 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+		Documentation generated on Mon, 10 Aug 2015 04:00:13 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
 	</p>
 	</body>
 </html>

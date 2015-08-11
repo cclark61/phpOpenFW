@@ -11,6 +11,7 @@ v1.2.4
 of a site and not at the document root of the site.
 - Added pharer.php, a complete and usable version of phpOpenFW in PHAR format.
 - Changed a couple include() calls to require_once() in mona_controller.php and phplitefw.inc.php .
+- Bug fix in the load_config() function. (8/10/2015)
 
 -----------------------------------------------------------------
 v1.2.3
