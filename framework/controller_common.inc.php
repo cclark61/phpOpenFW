@@ -12,7 +12,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 12/19/2011, Last updated: 8/27/2014
+* @version 		Started: 12/19/2011, Last updated: 1/13/2016
 **/
 //****************************************************************************
 //****************************************************************************
@@ -70,6 +70,25 @@ function set_version()
 
 //************************************************************************************
 /**
+* Check XSL Loaded Function
+*/
+//************************************************************************************
+function check_xsl_loaded()
+{
+    if (!defined('POFW_XSL_LOADED')) {
+        if (extension_loaded('xsl') && extension_loaded('dom')) {
+            define('POFW_XSL_LOADED', true);
+        }
+        else {
+            define('POFW_XSL_LOADED', false);
+        }
+    }
+
+    return POFW_XSL_LOADED;
+}
+
+//************************************************************************************
+/**
 * Kill a Session Function
 */
 //************************************************************************************
@@ -113,6 +132,7 @@ function load_form_elements()
 	return false;
 }
 
+//************************************************************************************
 /**
 * Register Data Source Function
 * Register a new data source in the Session
@@ -154,6 +174,7 @@ function reg_data_source($ds_index, $ds_params)
 	}
 }
 
+//************************************************************************************
 /**
 * Set Default Data Source Function
 * @param string Data Source Index
@@ -181,4 +202,270 @@ function default_data_source($index)
 	}
 }
 
-?>
+//**************************************************************************************
+/**
+* Load Configuration Function
+* @access private
+*/
+//**************************************************************************************
+// Load Configuration Function
+//**************************************************************************************
+function load_config($config_file=false)
+{
+	//*************************************************************
+	// Initialize the Arrays
+	//*************************************************************
+	$config_arr = array();
+	$data_arr = array();
+
+	//*************************************************************
+	// Include the configuration file
+	//*************************************************************
+    if ($config_file && file_exists($config_file)) {
+        require($config_file);
+    }
+	else {
+    	require($_SESSION['file_path'] . '/config.inc.php');
+    }
+
+	//*************************************************************
+	// Set HTML Path
+	//*************************************************************
+	if (isset($config_arr['html_path'])) {
+		$_SESSION['html_path'] = $config_arr['html_path'];
+	}
+	else {
+		$_SESSION['html_path'] = get_html_path();
+	}
+
+	//*************************************************************
+	// Generate / initialize session variables from config.inc.php
+	//*************************************************************
+
+    //=============================================================
+	// *** Confiuration Array
+    //=============================================================
+	$key_arr = array_keys($config_arr);
+	foreach ($key_arr as $key) { $_SESSION[$key] = $config_arr[$key]; }
+
+    //=============================================================
+	// *** Data Source Array
+    //=============================================================
+	$key_arr2 = array_keys($data_arr);
+	foreach ($key_arr2 as $key2) {
+		$reg_code = reg_data_source($key2, $data_arr[$key2]);
+		if (!$reg_code) { $_SESSION[$key2]['handle'] = 0; }
+	}
+	
+	//*************************************************************
+	// Set Authentication Data Source
+	//*************************************************************
+	if (!isset($_SESSION['auth_data_source']) || empty($_SESSION['auth_data_source'])) {
+		$_SESSION['auth_data_source'] = 'none';
+	}
+	
+	//*************************************************************
+	// Set Authentication Data Type
+	//*************************************************************
+	if ($_SESSION['auth_data_source'] != 'none' && $_SESSION['auth_data_source'] != 'custom') {
+		 if (!array_key_exists($_SESSION['auth_data_source'], $data_arr) && $_SESSION['auth_data_source'] != 'none') {
+		 	$_SESSION['auth_data_type'] = 'error';
+		 }
+		 else {
+		 	$_SESSION['auth_data_type'] = $data_arr[$_SESSION['auth_data_source']]['type'];
+		 }
+	}
+	else if ($_SESSION['auth_data_source'] == 'custom') {
+		$_SESSION['auth_data_type'] = 'custom';
+	}
+	else {
+		$_SESSION['auth_data_type'] = 'none';
+	}
+}
+
+//************************************************************************************
+/**
+* Get HTML Path Function
+*/
+//************************************************************************************
+// Get HTML Path Function
+//************************************************************************************
+function get_html_path()
+{
+	$path = '';
+	if (isset($_SERVER['DOCUMENT_ROOT']) && isset($_SERVER['SCRIPT_FILENAME'])) {
+		$doc_root = $_SERVER['DOCUMENT_ROOT'];
+		$doc_root_parts = explode('/', $doc_root);
+		$script_file = $_SERVER['SCRIPT_FILENAME'];
+		$script_file_parts = explode('/', $script_file);
+
+		foreach ($script_file_parts as $key => $part) {
+			if (!isset($doc_root_parts[$key])) {
+				if ($part != 'index.php') { $path .= '/' . $part; }
+			}
+		}
+	}
+	else {
+		$_SESSION['html_path'] = $path;
+		$self = $_SERVER['PHP_SELF'];
+		$self_arr = explode('/', $self);
+		foreach ($self_arr as $item) {
+			if (!empty($item) && $item != 'index.php') { $path .= "/$item"; }
+		}
+		if ($path == '/') { $path = ''; }
+	}
+	return $path;
+}
+
+//***********************************************************************
+/**
+* Set External Plugin Folder
+* @param string File path to plugin folder
+*/
+//***********************************************************************
+function set_plugin_folder($dir)
+{
+    //=================================================================
+    // Validate Directory
+    //=================================================================
+    if (!$dir || !is_dir($dir)) {
+    	trigger_error('Error: set_plugin_folder(): Invalid directory passed.');
+    	return false;        
+    }
+
+    //=================================================================
+    // Get the MD5 Hash for indexing
+    //=================================================================
+    $pf_hash = md5($dir);
+
+    //=================================================================
+    // Does App Plugin Index Exist?
+    //=================================================================
+    if (!isset($_SESSION['app_plugin_folder'])) {
+        $_SESSION['app_plugin_folder'] = array();
+    }
+    //=================================================================
+    // Check if plugin folder is already set
+    //=================================================================
+    else if (isset($_SESSION['app_plugin_folder'][$pf_hash])) {
+        return true;
+    }
+
+    //=================================================================
+    // Addd New Plugin Folder
+    //=================================================================
+	$_SESSION['app_plugin_folder'][] = $dir;
+	return true;
+}
+
+//***********************************************************************
+/**
+* Unset External Plugin Folder
+* @param string File path to plugin folder
+*/
+//***********************************************************************
+function unset_plugin_folder($dir)
+{
+    //=================================================================
+    // Validate Directory
+    //=================================================================
+    if (!$dir || !is_dir($dir)) {
+    	trigger_error('Error: unset_plugin_folder(): Invalid directory passed.');
+    	return false;        
+    }
+
+    //=================================================================
+    // Get the MD5 Hash for indexing
+    //=================================================================
+    $pf_hash = md5($dir);
+
+    //=================================================================
+    // Does App Plugin Index Exist?
+    //=================================================================
+    if (!isset($_SESSION['app_plugin_folder'])) {
+        return false;
+    }
+    //=================================================================
+    // Check if plugin folder is already set
+    //=================================================================
+    else if (isset($_SESSION['app_plugin_folder'][$pf_hash])) {
+        unset($_SESSION['app_plugin_folder'][$pf_hash]);
+        return true;
+    }
+
+	return false;
+}
+
+//************************************************************************************
+/**
+* Load Plugin Function
+* @param string The Name of the plugin without the ".inc.php"
+*/
+//************************************************************************************
+// Load a Plugin from the "plugins" directory
+//************************************************************************************
+function load_plugin($plugin)
+{
+    if (isset($_SESSION['app_plugin_folder'])) {
+    	foreach ($_SESSION['app_plugin_folder'] as $pf) {
+    		$plugin_file3 = "{$pf}/{$plugin}.inc.php";
+    		$plugin_file4 = "{$pf}/{$plugin}.php";
+    		$plugin_file5 = "{$pf}/{$plugin}.class.php";
+    
+    		if (file_exists($plugin_file3)) {
+    			require_once($plugin_file3);
+    			return true;
+    		}
+    		else if (file_exists($plugin_file4)) {
+    			require_once($plugin_file4);
+    			return true;
+    		}
+    		else if (file_exists($plugin_file5)) {
+    			require_once($plugin_file5);
+    			return true;
+    		}	
+    	}
+    
+    	if (file_exists($plugin)) {
+    		require_once($plugin);
+    		return true;
+    	}
+    }
+
+	trigger_error("Error: load_plugin(): Plugin \"{$plugin}\" does not exist!");
+	return false;
+}
+
+//***********************************************************************
+/**
+* Load Form Engine
+*/
+//***********************************************************************
+function load_form_engine()
+{
+    load_form_elements();
+	if (defined('POFW_XSL_LOADED') && POFW_XSL_LOADED) {
+        require_once(__DIR__ . "/core/structure/forms/form.class.php");
+		require_once(__DIR__ . "/core/structure/forms/form_too.class.php");
+    }
+	else {
+		trigger_error('Error: load_form_engine(): Cannot use form engine, XSL and/or DOM are not loaded!.');
+		return false;
+	}
+
+    return true;
+}
+
+//***********************************************************************
+/**
+* Load Database Engine
+*/
+//***********************************************************************
+function load_db_engine()
+{
+	require_once(__DIR__ . "/core/data_access/data_trans.class.php");
+	require_once(__DIR__ . "/core/data_access/data_query.class.php");
+    load_plugin('qdba');
+	load_plugin('dio');
+}
+

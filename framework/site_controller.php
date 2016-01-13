@@ -100,16 +100,16 @@ define('CONTROLLER_PATH', $controller_path);
 require_once(__DIR__ . '/phplitefw.inc.php');
 $pco = new phplitefw_controller();
 if (is_dir(FILE_PATH . '/plugins')) {
-	$pco->set_plugin_folder(FILE_PATH . '/plugins');
+	set_plugin_folder(FILE_PATH . '/plugins');
 }
 
 //============================================================
 // Load Database / Config
 //============================================================
-$pco->load_db_engine();
+load_db_engine();
 if (isset($data_arr) && is_array($data_arr)) {
 	foreach ($data_arr as $key => $data_params) {
-		$pco->reg_data_source($key, $data_params);
+		reg_data_source($key, $data_params);
 	}
 }
 
@@ -304,4 +304,3 @@ if (file_exists(FILE_PATH . '/post_page.inc.php')) {
 if (isset($_SESSION['page_errors'])) { unset($_SESSION['page_errors']); }
 if (isset($_SESSION['throw_500'])) { unset($_SESSION['throw_500']); }
 
-?>

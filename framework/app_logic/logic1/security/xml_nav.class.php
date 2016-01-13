@@ -153,4 +153,3 @@ class xml_nav {
 
 }
 
-?>

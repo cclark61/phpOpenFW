@@ -7,7 +7,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 1-19-2006, Last updated: 8-27-2014
+* @version 		Started: 1-19-2006, Last updated: 1-13-2016
 **/
 
 //***************************************************************
@@ -272,21 +272,28 @@ class module extends page
 	//************************************************************************************
 	//************************************************************************************
 	public function render()
-	{		
+	{
+        //============================================================
 		// Core Components
-		$this->load_db_engine();
-		$this->load_form_engine();
+		//============================================================
+		load_db_engine();
+		load_form_engine();
 		require_once("{$this->frame_path}/core/structure/objects/rs_list.class.php");
 		require_once("{$this->frame_path}/core/structure/objects/table.class.php");
 
+        //============================================================
 		// Application Logic
-		require_once("{$this->app_logic_path}/security/user_list.class.php");
+		//============================================================
 		require_once("{$this->app_logic_path}/security/module_list.class.php");
 
+        //============================================================
 		// Menu
+		//============================================================
 		$this->menu_xml = $_SESSION['menu_xml'];
 
+        //============================================================
 		// Content
+		//============================================================
 		$this->content_constructor();
 	}
 	
@@ -301,27 +308,37 @@ class module extends page
 	public function content_constructor()
 	{
 		$this->content_xml = array();
-		
+
+        //============================================================
 		// Pre-module Include Script (pre_module.inc.php)
+		//============================================================
 		$pre_mod_inc = "{$this->file_path}/{$this->mods_dir}/pre_module.inc.php";
 		if (file_exists($pre_mod_inc)) { require_once($pre_mod_inc); }
 
+        //============================================================
 		// Was the intended module controller found?
+		//============================================================
 		$this->content_xml[] = new gen_element('mod_controller_found', $this->mod_controller_found);
-	
+
+        //============================================================
 		// Current Module Parameters
+		//============================================================
 		$this->content_xml[] = new gen_element('current_module', $this->mod);
 		if ($this->mod == '-1') { $tmp_mod_args = array('-1'); }
 		else {
 			$ex_chr = ($this->nav_xml_format == 'rewrite') ? ('/') : ('-');
 			$tmp_mod_args = explode($ex_chr, $this->mod);
 		}
-		
+
+        //============================================================
 		// Current Module Depth
+		//============================================================
 		$curr_mod_depth  = count($tmp_mod_args);
 		$this->content_xml[] = new gen_element('current_module_depth', $curr_mod_depth);
 
+        //============================================================
 		// Current Module Arguments
+		//============================================================
 		$tmp = new gen_element('current_module_args');
 		$tmp->display_tree();
 		foreach ($tmp_mod_args as $key => $arg) {
@@ -329,12 +346,16 @@ class module extends page
 			$tmp->add_child(new gen_element('module_arg', $arg, array('index' => $index_key)));
 		}
 		$this->content_xml[] = $tmp;
-		
+
+        //============================================================
 		// Start Content Block
+		//============================================================
 		$content_node = new gen_element('content');
 		$content_node->display_tree();
-		
+
+        //============================================================
 		// Section Title
+		//============================================================
 		$local_inc = $this->local_file_path . 'local.inc.php';
 		if (file_exists($local_inc)) { include($local_inc); }
 		
@@ -346,22 +367,33 @@ class module extends page
 			$content_node->add_child($tmp2);
 		}
 
+        //============================================================
+        // Controller Exists
+        //============================================================
 		if (file_exists($this->mod_controller)) {
 
+            //--------------------------------------------------------
 			// Module Exists
+            //--------------------------------------------------------
 			$content_node->add_child(new gen_element('controller_exists', 1));
 			define('CONTROLLER_EXISTS', true);
 
+            //--------------------------------------------------------
 			// Set $_GET and $_POST arrays to local variables
 			// GET first, then POST to prevent GET variables over writing POST variables
+            //--------------------------------------------------------
 			extract($_GET, EXTR_PREFIX_SAME, "GET_");
 			extract($_POST, EXTR_PREFIX_SAME, "POST_");
 			
+            //--------------------------------------------------------
 			// Include local controller
+            //--------------------------------------------------------
 			ob_start();
 			if (!$this->skip_mod_controller) { require_once($this->mod_controller); }
 			
+            //--------------------------------------------------------
 			// Perform an XML Transformation if necessary
+            //--------------------------------------------------------
 			if (isset($this->content_xsl) && !empty($this->content_xsl)) {
 				$tmp_xml = ob_get_clean();
 				ob_start();
@@ -373,13 +405,17 @@ class module extends page
 			$content_node->add_child(new gen_element('content_data', xml_escape($tmp_content)));
 			$this->content_xml[] = $content_node;
 		}
+		//============================================================
+		// Controller does NOT Exist
+		//============================================================
 		else {
-			// Module DOES NOT Exist
 			$content_node->add_child(new gen_element('controller_exists', 0));
 			define('CONTROLLER_EXISTS', false);
 		}
 
+        //============================================================
 		// Post-module Include Script (post_module.inc.php)
+		//============================================================
 		$post_mod_inc = "{$this->file_path}/{$this->mods_dir}/post_module.inc.php";
 		if (file_exists($post_mod_inc)) { require_once($post_mod_inc); }
 	}
@@ -639,4 +675,3 @@ class module extends page
 
 }
 
-?>

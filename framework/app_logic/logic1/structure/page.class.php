@@ -7,7 +7,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 12-29-2004, Last updated: 8-28-2014
+* @version 		Started: 12-29-2004, Last updated: 1-13-2016
 **/
 
 //***************************************************************
@@ -219,7 +219,6 @@ abstract class page
 		}
 		else { $this->nav_xml_format = 'numeric'; }
 
-		
 		//****************************************************
 		// Pre-page Include Script (pre_page.inc.php)
 		//****************************************************
@@ -569,35 +568,11 @@ abstract class page
 			$this->app_xml[] = array($key, $val);
 		}
 	}
-
-	//***********************************************************************
-	/**
-	* Load DB Engine
-	**/
-	//***********************************************************************
-	protected function load_db_engine()
-	{
-		require_once("{$this->frame_path}/core/data_access/data_trans.class.php");
-		require_once("{$this->frame_path}/core/data_access/data_query.class.php");
-	}
-
-	//***********************************************************************
-	/**
-	* Load Form Engine
-	**/
-	//***********************************************************************
-	protected function load_form_engine()
-	{
-		require_once("{$this->frame_path}/core/structure/forms/form.class.php");
-		require_once("{$this->frame_path}/core/structure/forms/form_too.class.php");
-		load_form_elements();
-	}
 	
+}
 //*************************************************************************************
 //*************************************************************************************
 // End page.class.php
 //*************************************************************************************
 //*************************************************************************************
-}
 
-?>
