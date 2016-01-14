@@ -77,4 +77,3 @@ $data1->execute(array('id1' => 10, 'id2' => 11));
 $data = $data1->data_key_assoc('ID');
 print_array($data);
 
-?>

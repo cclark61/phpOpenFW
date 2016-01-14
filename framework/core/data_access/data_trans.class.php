@@ -458,4 +458,3 @@ class data_trans {
 
 }
 
-?>

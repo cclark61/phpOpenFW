@@ -119,4 +119,3 @@ else {
 	print div($no_bind_msg, array('class' => 'message_box notice'));
 }
 
-?>

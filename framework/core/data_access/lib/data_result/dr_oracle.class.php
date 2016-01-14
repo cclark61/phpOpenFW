@@ -74,4 +74,3 @@ class dr_oracle extends dr_structure
 	}
 }
 
-?>

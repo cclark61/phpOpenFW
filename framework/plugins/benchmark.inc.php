@@ -100,4 +100,3 @@ class code_benchmark {
 	}
 }
 
-?>

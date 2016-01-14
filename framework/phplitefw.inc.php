@@ -40,7 +40,7 @@ class phplitefw_controller
 		//============================================================
 		// Include Controller Common Functions
 		//============================================================
-		require_once(dirname(__FILE__) . '/controller_common.inc.php');
+		require_once(__DIR__ . '/controller_common.inc.php');
 
 		//============================================================
 		// Set phpOpenFW Version
@@ -55,7 +55,7 @@ class phplitefw_controller
 		//============================================================
 		// Framework Path
 		//============================================================
-		$this->frame_path = dirname(__FILE__);
+		$this->frame_path = __DIR__;
 		if (!isset($_SESSION['frame_path'])) { $_SESSION['frame_path'] = $this->frame_path; }
 
 		//============================================================
@@ -63,11 +63,6 @@ class phplitefw_controller
 		//============================================================
 		$this->site_url = (isset($_SERVER['SERVER_NAME'])) ? ($_SERVER['SERVER_NAME']) : ('');
 		if (!isset($_SESSION['site_url'])) { $_SESSION['site_url'] = $this->site_url; }
-
-		//============================================================
-		// Check if Data Sources have been configured
-		//============================================================
-		$this->db_config_set = (isset($_SESSION['db_config_set']) && $_SESSION['db_config_set']) ? (true) : (false);
 
 		//============================================================
 		// Set Mode
@@ -83,62 +78,26 @@ class phplitefw_controller
 		// Load element class
 		//============================================================
 		require_once("{$this->frame_path}/core/structure/objects/element.class.php");
-		
+
 		//============================================================
 		// If proper extensions are loaded, 
 		// load XML transformation plugin and record set list class
 		//============================================================
 		if ($this->xml_ext_loaded) {
 			if ($this->mode == 'litefw') {
-				$this->load_plugin('xml_transform');
-				require_once("{$this->frame_path}/core/structure/objects/rs_list.class.php");
-				require_once("{$this->frame_path}/core/structure/objects/table.class.php");
+				load_plugin('xml_transform');
+				load_plugin('rs_list');
+				load_plugin('table');
 			}
 		}
-	}
-
-	//************************************************************************
-	/**
-	* Load Database Sources Configuration Function
-	* @param string Full file path to data source configuration file
-	* @param bool Force the configuration to be reloaded
-	*/
-	//************************************************************************
-	public function load_db_config($db_config, $force_config=false)
-	{
-		if ($force_config === true || !$this->db_config_set) {
-			if (file_exists($db_config)) {
-				$data_arr = array();
-				require_once($db_config);
-				
-				if (count($data_arr) > 0) {
-					$key_arr2 = array_keys($data_arr);
-					foreach ($key_arr2 as $key2){
-						$reg_code = $this->reg_data_source($key2, $data_arr[$key2]);
-						if (!$reg_code) { $_SESSION[$key2]['handle'] = 0; }
-					}
-					$this->db_config_set = true;
-					$_SESSION['db_config_set'] = true;
-				}
-				else {
-					trigger_error('Error: [phplitefw_controller]::load_db_config(): No data sources defined!');
-					$this->db_config_set = false;
-					$_SESSION['db_config_set'] = false;
-				}
-			}
-			else {
-				trigger_error('Error: [phplitefw_controller]::load_db_config(): Data Source Configuration file does not exist!');
-				$this->db_config_set = false;
-				$_SESSION['db_config_set'] = false;
-			}
-		}
-	}
+	}    
 
 	//***********************************************************************
 	/**
 	* Passthrough Functions
 	*/
 	//***********************************************************************
+	public function load_db_config($db_config, $force_config=false) { load_db_config($db_config, $force_config); }
 	public function load_plugin($plugin) { load_plugin($plugin); }
 	public function reg_data_source($ds_index, $ds_params) { reg_data_source($ds_index, $ds_params); }
 	public function default_data_source($index) { default_data_source($index); }

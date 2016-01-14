@@ -110,4 +110,3 @@ class message extends page
 	}
 }
 
-?>

@@ -193,4 +193,3 @@ abstract class group_form_element
 
 }
 
-?>

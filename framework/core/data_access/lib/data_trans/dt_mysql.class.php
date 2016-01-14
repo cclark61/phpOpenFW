@@ -159,4 +159,3 @@ class dt_mysql extends dt_structure
 
 }
 
-?>

@@ -71,4 +71,3 @@ class dr_mssql extends dr_structure
 
 }
 
-?>

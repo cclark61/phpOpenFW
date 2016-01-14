@@ -65,4 +65,3 @@ $data1->execute(array(10, 11));
 $data = $data1->data_key_assoc('id');
 print_array($data);
 
-?>

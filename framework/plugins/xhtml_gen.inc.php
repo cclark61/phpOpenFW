@@ -130,4 +130,3 @@ if (!function_exists('select')) {
 	}
 }
 
-?>

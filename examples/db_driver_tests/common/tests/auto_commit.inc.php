@@ -272,4 +272,3 @@ else {
 	print div($no_trans_msg, array('class' => 'message_box notice'));
 }
 
-?>

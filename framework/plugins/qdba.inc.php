@@ -374,4 +374,3 @@ function rs_trim($rs, $trim_data=true, $trim_row_keys=false, $trim_col_keys=fals
 	return $rs;
 }
 
-?>

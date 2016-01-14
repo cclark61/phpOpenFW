@@ -413,4 +413,3 @@ class dt_sqlsrv extends dt_structure
 	}
 }
 
-?>

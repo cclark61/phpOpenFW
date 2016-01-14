@@ -176,4 +176,3 @@ class sst extends select_form_element
 
 }
 
-?>

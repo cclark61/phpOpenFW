@@ -50,4 +50,3 @@ if ($print_only && $tmp_debug) {
 }
 else { $contact->save(); }
 
-?>

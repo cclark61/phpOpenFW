@@ -29,4 +29,3 @@ $form->add_element(button('Sign in', array('type' => "submit", 'class' => "btn")
 //================================================
 $form->render();
 
-?>

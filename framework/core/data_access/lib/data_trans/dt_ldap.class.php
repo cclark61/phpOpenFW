@@ -174,4 +174,3 @@ class dt_ldap extends dt_structure
 
 }
 
-?>

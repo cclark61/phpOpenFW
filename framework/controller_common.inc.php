@@ -243,7 +243,7 @@ function load_config($config_file=false)
 	//*************************************************************
 
     //=============================================================
-	// *** Confiuration Array
+	// *** Configuration Array
     //=============================================================
 	$key_arr = array_keys($config_arr);
 	foreach ($key_arr as $key) { $_SESSION[$key] = $config_arr[$key]; }
@@ -285,6 +285,40 @@ function load_config($config_file=false)
 
 //************************************************************************************
 /**
+* Load Database Sources Configuration Function
+* @param string Full file path to data source configuration file
+* @param bool Force the configuration to be reloaded
+*/
+//************************************************************************************
+function load_db_config($db_config, $force_config=false)
+{
+	if ((bool)$force_config === true || !empty($_SESSION['db_config_set'])) {
+		if (file_exists($db_config)) {
+			$data_arr = array();
+			require_once($db_config);
+			
+			if (isset($data_arr) && count($data_arr) > 0) {
+				$key_arr2 = array_keys($data_arr);
+				foreach ($key_arr2 as $key2){
+					$reg_code = $this->reg_data_source($key2, $data_arr[$key2]);
+					if (!$reg_code) { $_SESSION[$key2]['handle'] = 0; }
+				}
+				$_SESSION['db_config_set'] = true;
+			}
+			else {
+				trigger_error('Error: load_db_config(): No data sources defined!');
+				$_SESSION['db_config_set'] = false;
+			}
+		}
+		else {
+			trigger_error('Error: load_db_config(): Data Source Configuration file does not exist!');
+			$_SESSION['db_config_set'] = false;
+		}
+	}
+}
+
+//************************************************************************************
+/**
 * Get HTML Path Function
 */
 //************************************************************************************
@@ -317,12 +351,12 @@ function get_html_path()
 	return $path;
 }
 
-//***********************************************************************
+//************************************************************************************
 /**
 * Set External Plugin Folder
 * @param string File path to plugin folder
 */
-//***********************************************************************
+//************************************************************************************
 function set_plugin_folder($dir)
 {
     //=================================================================
@@ -358,12 +392,12 @@ function set_plugin_folder($dir)
 	return true;
 }
 
-//***********************************************************************
+//************************************************************************************
 /**
 * Unset External Plugin Folder
 * @param string File path to plugin folder
 */
-//***********************************************************************
+//************************************************************************************
 function unset_plugin_folder($dir)
 {
     //=================================================================
@@ -436,11 +470,11 @@ function load_plugin($plugin)
 	return false;
 }
 
-//***********************************************************************
+//************************************************************************************
 /**
 * Load Form Engine
 */
-//***********************************************************************
+//************************************************************************************
 function load_form_engine()
 {
     load_form_elements();
@@ -456,11 +490,11 @@ function load_form_engine()
     return true;
 }
 
-//***********************************************************************
+//************************************************************************************
 /**
 * Load Database Engine
 */
-//***********************************************************************
+//************************************************************************************
 function load_db_engine()
 {
 	require_once(__DIR__ . "/core/data_access/data_trans.class.php");

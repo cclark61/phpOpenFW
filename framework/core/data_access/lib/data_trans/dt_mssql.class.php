@@ -173,4 +173,3 @@ class dt_mssql extends dt_structure
 
 }
 
-?>

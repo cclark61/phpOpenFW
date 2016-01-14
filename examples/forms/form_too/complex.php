@@ -61,4 +61,3 @@ $form->add_element(array(
 //$form->no_xsl();
 $form->render();
 
-?>

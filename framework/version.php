@@ -1,2 +1,3 @@
 <?php
-print "phpOpenFW version 1.2.4\n";
+$version = file_get_contents(__DIR__ . '/../VERSION');
+print "phpOpenFW version {$version}\n";

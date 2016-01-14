@@ -68,4 +68,3 @@ class dr_mysql extends dr_structure
 
 }
 
-?>

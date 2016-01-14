@@ -116,4 +116,3 @@ include("{$test_dir}/auto_commit.inc.php");
 $strsql00 = 'delete from contacts where id > 5 or ID not IN (1, 2, 3, 4)';
 qdb_list($data_source, $strsql00);
 
-?>

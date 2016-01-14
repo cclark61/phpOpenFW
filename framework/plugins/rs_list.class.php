@@ -695,4 +695,3 @@ class rs_list
 	
 }
 
-?>

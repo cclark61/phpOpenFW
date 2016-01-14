@@ -328,4 +328,3 @@ abstract class dr_structure {
 
 }
 
-?>

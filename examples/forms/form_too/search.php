@@ -14,4 +14,3 @@ $form->add_element(button('Search', array('type' => "submit", 'class' => "btn"))
 //================================================
 $form->render();
 
-?>

@@ -75,4 +75,3 @@ class dr_db2 extends dr_structure
 
 }
 
-?>

@@ -376,4 +376,3 @@ class dt_mysqli extends dt_structure
 
 }
 
-?>

@@ -21,4 +21,3 @@ if (!class_exists('contact')) {
 	}
 }
 
-?>

@@ -97,4 +97,3 @@ class dr_ldap extends dr_structure
 
 }
 
-?>

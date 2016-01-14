@@ -15,5 +15,3 @@ print_header('Standard Query using qdb_list()');
 $strsql = 'select * from contacts where id IN (1, 3)';
 print_array(qdb_list($data_source, $strsql));
 
-
-?>

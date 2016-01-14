@@ -302,4 +302,3 @@ class dt_pgsql extends dt_structure
 	}
 }
 
-?>

@@ -352,4 +352,3 @@ function xhe($elm=false, $content='', $attrs=array(), $escape=false) {
     return false;
 }
 
-?>

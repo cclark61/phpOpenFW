@@ -74,4 +74,3 @@ class dr_sqlsrv extends dr_structure
 	}
 }
 
-?>

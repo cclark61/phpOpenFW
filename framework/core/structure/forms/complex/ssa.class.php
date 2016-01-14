@@ -158,4 +158,3 @@ class ssa extends select_form_element
 
 }
 
-?>

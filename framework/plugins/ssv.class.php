@@ -386,4 +386,3 @@ class server_side_validation
 	}
 }
 
-?>

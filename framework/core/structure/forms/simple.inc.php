@@ -234,4 +234,3 @@ class button extends element
 
 }
 
-?>

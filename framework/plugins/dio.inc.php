@@ -1130,4 +1130,3 @@ $GLOBALS['mysql_bind_types'] = array(
 	'LONGBLOB' => 'b'
 );
 
-?>

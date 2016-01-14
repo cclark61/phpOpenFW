@@ -2,4 +2,3 @@
 
 $mod_title = "Oracle Test";
 
-?>

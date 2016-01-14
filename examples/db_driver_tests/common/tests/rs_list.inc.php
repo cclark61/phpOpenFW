@@ -51,4 +51,3 @@ if (isset($change_row)) { $table->set_row_attr($change_row, "class", "hl_change"
 $table->identify("", "standard_rs contact_list");
 $table->render();
 
-?>

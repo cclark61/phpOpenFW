@@ -2,4 +2,3 @@
 
 $mod_title = "MySQLi Test";
 
-?>

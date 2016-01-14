@@ -5,6 +5,12 @@
 *****************************************************************
 
 -----------------------------------------------------------------
+v1.3.0
+-----------------------------------------------------------------
+- Controller Updates (Main, Site and phpLiteFW Controller)
+- Reorganization and consolidation of common functions / methods
+
+-----------------------------------------------------------------
 v1.2.4
 -----------------------------------------------------------------
 - Updated site_controller.php to correctly determine the Base URL for sites used in a sub-directory

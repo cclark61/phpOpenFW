@@ -346,4 +346,3 @@ class dt_oracle extends dt_structure
 	}
 }
 
-?>

@@ -217,4 +217,3 @@ class data_query {
 	}
 }
 
-?>

@@ -106,4 +106,3 @@ class dr_mysqli extends dr_structure
 
 }
 
-?>

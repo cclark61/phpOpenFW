@@ -118,4 +118,3 @@ function mystamp_pretty($mysql_stamp, $format='n/j/Y g:i a')
 	}
 }
 
-?>

@@ -198,4 +198,3 @@ function strip_cdata_tags($str_data)
 	return $str_data;
 }
 
-?>

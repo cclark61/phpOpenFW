@@ -18,4 +18,3 @@ function lower_rec_keys($driver_type, &$records)
 	}
 }
 
-?>

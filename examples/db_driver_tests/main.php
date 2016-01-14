@@ -53,4 +53,3 @@ display_module_info(
 );
 */
 
-?>

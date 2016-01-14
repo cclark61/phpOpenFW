@@ -20,4 +20,3 @@ if (isset($GLOBALS['mysql_conns'])) {
 	print_header("Number of MySQL Connections used: {$GLOBALS['mysql_conns']}");
 }
 
-?>

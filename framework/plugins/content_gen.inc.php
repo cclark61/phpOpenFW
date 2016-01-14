@@ -182,4 +182,3 @@ function add_url_params($in_url, $params, $xml_escape=false, $url_encode=true)
 	return $out_url;
 }
 
-?>

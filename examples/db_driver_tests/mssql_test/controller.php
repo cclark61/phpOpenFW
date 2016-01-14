@@ -13,4 +13,3 @@ $times = $cb->get_results();
 $time_elapsed = round($times['stop'] - $times['start'], 5);
 $gen_message[] = "Elapsed Time: {$time_elapsed} seconds";
 
-?>

@@ -91,4 +91,3 @@ class rga extends group_form_element
 
 }
 
-?>

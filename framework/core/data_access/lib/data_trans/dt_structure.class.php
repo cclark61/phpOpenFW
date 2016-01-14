@@ -881,4 +881,3 @@ abstract class dt_structure {
 
 }
 
-?>

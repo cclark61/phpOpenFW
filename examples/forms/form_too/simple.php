@@ -20,4 +20,3 @@ $form->add_element(button('Submit', array('type' => "submit", 'class' => "btn"))
 //================================================
 $form->render();
 
-?>

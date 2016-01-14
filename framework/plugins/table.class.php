@@ -239,4 +239,3 @@ class table extends element
 
 }
 
-?>

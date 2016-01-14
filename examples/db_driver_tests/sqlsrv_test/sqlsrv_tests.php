@@ -184,4 +184,3 @@ print_array($data);
 $cb->stop_timer();
 $cb->print_results(true);
 
-?>

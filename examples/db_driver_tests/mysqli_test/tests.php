@@ -225,4 +225,3 @@ $data = $data1->data_key_assoc('id');
 print div(xhe('strong', 'Affected Rows: ') . $affect_rows);
 print_array($data);
 
-?>

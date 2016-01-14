@@ -51,7 +51,7 @@ if (!empty($_SESSION['redirect_url'])) {
 // Create new Page Object
 //============================================================
 require_once(__DIR__ . '/app_logic/logic2/page.class.php');
-require_once(__DIR__ . '/app_logic/logic2/functions.inc.php');
+require_once(__DIR__ . '/app_logic/logic2/POFW_SiteController.class.php');
 $page = new page();
 $controller_args = array();
 
@@ -160,7 +160,7 @@ foreach (explode(' ', $message_types) as $mtype) {
 //============================================================
 if (CATCH_ERRORS) {
 	$_SESSION['page_errors'] = array();
-	set_error_handler('my_error_handler');
+	set_error_handler('POFW_SiteController::error_handler');
 }
 
 //************************************************************************
@@ -265,7 +265,7 @@ $controller_args['site_home_url'] = $site_home_url;
 //============================================================
 // Execute Page Controller
 //============================================================
-$page_status = execute_page_controller($page, $controller_args);
+$page_status = POFW_SiteController::execute_page_controller($page, $controller_args);
 
 //============================================================
 // End output buffering if using page buffering turned on

@@ -23,4 +23,3 @@ print_sub_header('Load Existing Record');
 $contact->load(1);
 $contact->dump('data');
 
-?>

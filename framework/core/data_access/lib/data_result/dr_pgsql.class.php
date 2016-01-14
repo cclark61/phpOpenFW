@@ -68,4 +68,3 @@ class dr_pgsql extends dr_structure
 
 }
 
-?>

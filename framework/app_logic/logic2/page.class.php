@@ -8,7 +8,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 2/18/2013, Last updated: 8/28/2014
+* @version 		Started: 2/18/2013, Last updated: 1/13/2016
 **/
 //*************************************************************************
 

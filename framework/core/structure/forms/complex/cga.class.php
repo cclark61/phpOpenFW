@@ -88,4 +88,3 @@ class cga extends group_form_element
 
 }
 
-?>

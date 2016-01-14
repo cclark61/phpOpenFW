@@ -278,8 +278,8 @@ class module extends page
 		//============================================================
 		load_db_engine();
 		load_form_engine();
-		require_once("{$this->frame_path}/core/structure/objects/rs_list.class.php");
-		require_once("{$this->frame_path}/core/structure/objects/table.class.php");
+		load_plugin('rs_list');
+        load_plugin('table');
 
         //============================================================
 		// Application Logic

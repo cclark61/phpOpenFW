@@ -407,4 +407,3 @@ class dt_db2 extends dt_structure
 	}
 }
 
-?>
