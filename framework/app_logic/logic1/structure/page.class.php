@@ -36,6 +36,11 @@ abstract class page
 	protected $frame_path;
 
 	/**
+	* @var object phpOpenFW Core Object
+	**/
+	protected $pofw;
+
+	/**
 	* @var string File path of the application logic directory for this logic
 	**/
 	protected $app_logic_path;
@@ -184,6 +189,7 @@ abstract class page
 		// Set Base Variables
 		$this->file_path = $_SESSION['file_path'];
 		$this->frame_path = $_SESSION['frame_path'];
+		$this->pofw = new phpOpenFW();
 		$this->app_logic_path = $_SESSION['app_logic_path'];
 		$this->html_path = $_SESSION['html_path'];
 		$this->mods_dir = (isset($_SESSION['modules_dir'])) ? ($_SESSION['modules_dir']) : ('modules');

@@ -15,36 +15,18 @@
 //****************************************************************************
 
 //============================================================
-// Include Controller Common Functions
+// Include phpOpenFW Core
 //============================================================
-require_once(dirname(__FILE__) . '/controller_common.inc.php');
+require_once(__DIR__ . '/core/phpOpenFW.class.php');
+$pofw = new phpOpenFW();
+$pofw->bootstrap();
 
 //============================================================
 // Load Config if not logged in
 //============================================================
-if (!isset($_SESSION['userid'])) { load_config(); }
-
-//============================================================
-// Set phpOpenFW Version
-//============================================================
-set_version();
-
-//============================================================
-// Is XSL / DOM Available?
-//============================================================
-check_xsl_loaded();
-
-//============================================================
-// Set Application Plugin Folders
-//============================================================
-set_plugin_folder("{$_SESSION['frame_path']}/plugins");
-set_plugin_folder("{$_SESSION['file_path']}/plugins");
-
-//============================================================
-// Include necessary core components
-//============================================================
-require_once("{$_SESSION['frame_path']}/core/structure/objects/element.class.php");
-load_plugin('xml_transform');
+if (!isset($_SESSION['userid'])) {
+    $pofw->load_config();
+}
 
 //============================================================
 // Set application logic directory
@@ -109,7 +91,9 @@ switch ($mod) {
             //--------------------------------------------------------
 			// If login.inc.php exists include it
             //--------------------------------------------------------
-			if (file_exists("{$_SESSION['file_path']}/login.inc.php")) { require_once("{$_SESSION['file_path']}/login.inc.php"); }
+			if (file_exists("{$_SESSION['file_path']}/login.inc.php")) {
+    			require_once("{$_SESSION['file_path']}/login.inc.php");
+            }
 
             //--------------------------------------------------------
 			// If previous URL given go there after login
@@ -172,7 +156,9 @@ switch ($mod) {
                     //=============================================================
 					// If login.inc.php exists include it
                     //=============================================================
-					if (file_exists("{$_SESSION['file_path']}/login.inc.php")) { require_once("{$_SESSION['file_path']}/login.inc.php"); }
+					if (file_exists("{$_SESSION['file_path']}/login.inc.php")) {
+    					require_once("{$_SESSION['file_path']}/login.inc.php");
+    				}
 
                     //=============================================================
 					// If previous URL given go there after login

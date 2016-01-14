@@ -10,7 +10,7 @@
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
 * @link			http://www.emonlade.net/phpopenfw/
-* @version 		Started: 2009, Last updated: 11/10/2014
+* @version 		Started: 2009, Last updated: 1/13/2016
 **/
 //**************************************************************************
 //**************************************************************************
@@ -46,6 +46,13 @@ if (!empty($_SESSION['redirect_url'])) {
 }
 
 //============================================================
+// Include phpOpenFW Core
+//============================================================
+require_once(__DIR__ . '/core/phpOpenFW.class.php');
+$pofw = new phpOpenFW();
+$pofw->bootstrap();
+
+//============================================================
 // Include Application Logic
 // Start Page Data
 // Create new Page Object
@@ -74,9 +81,9 @@ $controller_path = "{$file_path}/controllers";
 $http_prefix = ($https) ? ('https://') : ('http://');
 $site_home_url = ($http_host) ? ($http_host) : ($server_name);
 $site_home_url = $http_prefix . $site_home_url . $base_url;
-$catch_errors = (!empty($_SESSION['catch_errors'])) ? (1) : (0);
-if (!isset($buffer_page)) { $buffer_page = false; }
-if (!isset($mode)) { $mode = false; }
+$catch_errors = (!empty($_SESSION['config']['catch_errors'])) ? (1) : (0);
+$buffer_page = (!empty($_SESSION['config']['buffer_page'])) ? (1) : (0);
+$mode = (isset($_SESSION['config']['mode'])) ? ($_SESSION['config']['mode']) : (false);
 
 //============================================================
 // Defined Constants
@@ -95,10 +102,8 @@ define('LOGGED_IN', $logged_in);
 define('CONTROLLER_PATH', $controller_path);
 
 //============================================================
-// Load phpLiteFW Controller
+// Set Local Plugin Folder
 //============================================================
-require_once(__DIR__ . '/phplitefw.inc.php');
-$pco = new phplitefw_controller();
 if (is_dir(FILE_PATH . '/plugins')) {
 	set_plugin_folder(FILE_PATH . '/plugins');
 }
@@ -106,7 +111,7 @@ if (is_dir(FILE_PATH . '/plugins')) {
 //============================================================
 // Load Database / Config
 //============================================================
-load_db_engine();
+$pofw->load_db_engine();
 if (isset($data_arr) && is_array($data_arr)) {
 	foreach ($data_arr as $key => $data_params) {
 		reg_data_source($key, $data_params);
@@ -172,7 +177,7 @@ if (CATCH_ERRORS) {
 //============================================================
 // Build URL Path and Parts
 //============================================================
-$module_url_path = POFW_get_url_path();
+$module_url_path = $pofw->get_url_path();
 if ($base_url != '/') {
 	$module_url_path = str_replace($base_url, '', $module_url_path);
 }

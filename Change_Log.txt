@@ -9,6 +9,7 @@ v1.3.0
 -----------------------------------------------------------------
 - Controller Updates (Main, Site and phpLiteFW Controller)
 - Reorganization and consolidation of common functions / methods
+- Added ability for the load_plugin() function to cache plugin locations and work with namespaces
 
 -----------------------------------------------------------------
 v1.2.4

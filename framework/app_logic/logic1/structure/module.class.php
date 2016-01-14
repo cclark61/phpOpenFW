@@ -112,7 +112,7 @@ class module extends page
 			//----------------------------------------------------
 			// Get URL Path
 			//----------------------------------------------------
-			$this->mod = POFW_get_url_path();
+			$this->mod = $this->pofw->get_url_path();
 
 			//----------------------------------------------------
 			// Remove contents of $this->html_path if it exists
@@ -276,8 +276,8 @@ class module extends page
         //============================================================
 		// Core Components
 		//============================================================
-		load_db_engine();
-		load_form_engine();
+		$this->pofw->load_db_engine();
+		$this->pofw->load_form_engine();
 		load_plugin('rs_list');
         load_plugin('table');
 
