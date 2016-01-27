@@ -9,7 +9,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 12/19/2011, Last updated: 1/13/2016
+* @version 		Started: 12/19/2011, Last updated: 1/26/2016
 **/
 //****************************************************************************
 //****************************************************************************
@@ -199,7 +199,7 @@ function load_plugin($plugin)
     // Are there plugin folders defined?
     //=================================================================
     if (empty($_SESSION['app_plugin_folder'])) {
-    	trigger_error("Error: load_plugin(): No plugin folders are set!");
+    	//trigger_error("Error: load_plugin(): No plugin folders are set!");
     	return false;
     }
 
@@ -248,7 +248,7 @@ function load_plugin($plugin)
     //=================================================================
     // Plugin Not Found
     //=================================================================
-	trigger_error("Error: load_plugin(): Plugin \"{$plugin}\" does not exist!");
+	//trigger_error("Error: load_plugin(): Plugin \"{$plugin}\" does not exist!");
 	return false;
 }
 
