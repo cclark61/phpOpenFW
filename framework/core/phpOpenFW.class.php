@@ -247,7 +247,7 @@ class phpOpenFW
     			if (isset($data_arr) && count($data_arr) > 0) {
     				$key_arr2 = array_keys($data_arr);
     				foreach ($key_arr2 as $key2){
-    					$reg_code = $this->reg_data_source($key2, $data_arr[$key2]);
+    					$reg_code = reg_data_source($key2, $data_arr[$key2]);
     					if (!$reg_code) { $_SESSION[$key2]['handle'] = 0; }
     				}
     				$_SESSION['db_config_set'] = true;
