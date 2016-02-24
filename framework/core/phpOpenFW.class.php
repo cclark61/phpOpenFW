@@ -9,7 +9,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 1/13/2016, Last updated: 1/13/2016
+* @version 		Started: 1/13/2016, Last updated: 2/24/2016
 **/
 //************************************************************************************
 //************************************************************************************
@@ -242,7 +242,7 @@ class phpOpenFW
     	if ((bool)$force_config === true || !empty($_SESSION['db_config_set'])) {
     		if (file_exists($db_config)) {
     			$data_arr = array();
-    			require_once($db_config);
+    			require($db_config);
     			
     			if (isset($data_arr) && count($data_arr) > 0) {
     				$key_arr2 = array_keys($data_arr);
