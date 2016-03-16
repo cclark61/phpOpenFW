@@ -176,8 +176,12 @@ function xml_escape_array($in_data)
 		}
 		return $in_data;
 	}
-	else if ($in_data !== '') {
+	else if ($in_data !== '' && !is_numeric($in_data)) {
 		return '<![CDATA[' . strip_cdata_tags($in_data) . ']]>';
+	}
+	else if (is_numeric($in_data))
+	{
+		return $in_data;
 	}
 	else { return false; }
 }
