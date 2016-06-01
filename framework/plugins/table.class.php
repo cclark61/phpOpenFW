@@ -7,7 +7,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 4-21-2008 Updated: 3-24-2010
+* @version 		Started: 4-21-2008 Updated: 5-31-2016
 **/
 
 //***************************************************************
@@ -92,7 +92,14 @@ class table extends element
 		$this->inset_val = array2xml('table_data', $this->table_data);
 
 		// Render Table Element
-		parent::render($buffer);
+		if ($buffer) {
+			ob_start();
+			parent::render($buffer);
+			return ob_get_clean();
+		}
+		else {
+			parent::render($buffer);
+		}
 	}
 	
 	//*************************************************************************

@@ -8,6 +8,7 @@
 v1.3.1
 -----------------------------------------------------------------
 - Commented out the trigger_error() calls in load_plugin() function.
+- Added buffering ability to table class render() method.
 
 -----------------------------------------------------------------
 v1.3.0
