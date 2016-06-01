@@ -92,14 +92,7 @@ class table extends element
 		$this->inset_val = array2xml('table_data', $this->table_data);
 
 		// Render Table Element
-		if ($buffer) {
-			ob_start();
-			parent::render($buffer);
-			return ob_get_clean();
-		}
-		else {
-			parent::render($buffer);
-		}
+		return parent::render($buffer);
 	}
 	
 	//*************************************************************************
