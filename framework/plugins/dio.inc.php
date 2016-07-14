@@ -44,6 +44,7 @@ abstract class Database_Interface_Object
 	protected $use_bind_params;
 	protected $bind_params;
 	protected $bind_param_count;
+	protected $charset;
 
 	//=====================================================================
 	// Member Functions
@@ -405,6 +406,11 @@ abstract class Database_Interface_Object
         else {
             // Create a new data transaction and execute query
             $data1 = new data_trans($this->data_source);
+
+			// set Character set?
+			if (!empty($this->charset)) {
+				$data1->set_opt('charset', $this->charset);
+			}
 
 			// Use Bind Parameters
 			if ($this->use_bind_params) {
@@ -1094,7 +1100,18 @@ abstract class Database_Interface_Object
 	   }
 	   print "</pre>\n";
 	}
-	
+
+	//*************************************************************************
+	/**
+	* Set Charset
+	* @param string $str Example: utf8
+	**/
+	//*************************************************************************
+	public function set_charset($charset)
+	{
+	    $this->charset = $charset;
+	}
+
 }
 
 //***********************************************************************

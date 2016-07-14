@@ -35,6 +35,10 @@ function qdb_result($db_config, $strsql, $bind_params=false, $opts=false)
 	if (!empty($opts['debug'])) { $data1->data_debug(true); }
 	$data1->set_opt('make_bind_params_refs', 1);
 
+	if (!empty($opts['charset'])) {
+		$data1->set_opt('charset', $opts['charset']);
+	}
+
 	// Query: With or Without Bind Parameters
 	if ($use_bind_params) {
 		$prep_status = $data1->prepare($strsql);
@@ -65,6 +69,10 @@ function qdb_first_row($db_config, $strsql, $bind_params=false, $opts=false)
 	$data1 = new data_trans($db_config);
 	if (!empty($opts['debug'])) { $data1->data_debug(true); }
 	$data1->set_opt('make_bind_params_refs', 1);
+
+	if (!empty($opts['charset'])) {
+		$data1->set_opt('charset', $opts['charset']);
+	}
 
 	// Query: With or Without Bind Parameters
 	if ($use_bind_params) {
@@ -111,6 +119,10 @@ function qdb_row($db_config, $strsql, $row_index=0, $data_format=false, $bind_pa
 	$data1 = new data_trans($db_config);
 	if (!empty($opts['debug'])) { $data1->data_debug(true); }
 	$data1->set_opt('make_bind_params_refs', 1);
+
+	if (!empty($opts['charset'])) {
+		$data1->set_opt('charset', $opts['charset']);
+	}
 
 	// Query: With or Without Bind Parameters
 	if ($use_bind_params) {
@@ -164,6 +176,10 @@ function qdb_exec($db_config, $strsql, $bind_params, $return_format='', $opts=fa
 	if (!empty($opts['debug'])) { $data1->data_debug(true); }
 	$data1->set_opt('make_bind_params_refs', 1);
 
+	if (!empty($opts['charset'])) {
+		$data1->set_opt('charset', $opts['charset']);
+	}
+
 	// Prepare Query
 	$prep_status = $data1->prepare($strsql);
 
@@ -200,6 +216,10 @@ function qdb_list($db_config, $strsql, $return_format='', $opts=false)
 	// New Data Transaction
 	$data1 = new data_trans($db_config);
 	if (!empty($opts['debug'])) { $data1->data_debug(true); }
+
+	if (!empty($opts['charset'])) {
+		$data1->set_opt('charset', $opts['charset']);
+	}
 	
 	// Execute Query
 	$query_result = $data1->data_query($strsql);
@@ -240,6 +260,9 @@ function qdb_delete($db_config, $db_table, $where='', $opts=false)
 	$data1 = new data_trans($db_config);
 	if (!empty($opts['debug'])) { $data1->data_debug(true); }
 	$data1->set_opt('make_bind_params_refs', 1);
+	if (!empty($opts['charset'])) {
+		$data1->set_opt('charset', $opts['charset']);
+	}
 	$where = trim($where);
 	
 	if (!empty($where)) {
@@ -277,6 +300,10 @@ function qdb_lookup($data_source, $sql, $fields='', $bind_params=false, $opts=fa
 	$data1 = new data_trans($data_source);
 	if (!empty($opts['debug'])) { $data1->data_debug(true); }
 	$data1->set_opt('make_bind_params_refs', 1);
+
+	if (!empty($opts['charset'])) {
+		$data1->set_opt('charset', $opts['charset']);
+	}
 
 	// Use Bind Parameters
 	if (is_array($bind_params) && count($bind_params)) {
