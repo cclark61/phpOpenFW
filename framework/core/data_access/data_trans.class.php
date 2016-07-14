@@ -89,6 +89,12 @@ class data_trans {
         // Create new Data Object
         $dt_class = 'dt_' . $this->data_type;
         $this->data_object = new $dt_class($data_src, $tmp_trans_type);
+
+		// Check if we are setting the character set
+		if (!empty($_SESSION[$data_src]['charset'])) {
+			$this->data_object->set_opt('charset', $_SESSION[$data_src]['charset']);
+		}
+		
         return $this->data_object;
 	}
 

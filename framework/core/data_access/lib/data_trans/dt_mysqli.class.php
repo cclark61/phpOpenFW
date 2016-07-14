@@ -56,6 +56,11 @@ class dt_mysqli extends dt_structure
         	$this->start_trans();
         }
 
+		// Set the character Set If needed
+		if ($this->charset) {
+			//$this->handle->set_charset($this->charset);
+		}
+
         return true;
 	}
 	
@@ -253,6 +258,14 @@ class dt_mysqli extends dt_structure
 		//----------------------------------------------
 		$arg_list = func_get_args();
 		$lazy = (isset($arg_list[1]) && $arg_list[1]) ? (true) : (false);
+
+		//----------------------------------------------
+		// Character Set
+		//----------------------------------------------
+		$charset = $this->get_opt('charset');
+		if (!empty($charset)) {
+			$this->handle->set_charset($charset);
+		}
 
 		//----------------------------------------------
 		// Bind Parameters
