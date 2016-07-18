@@ -189,31 +189,35 @@
 <li><div class="src-line"><a name="a176"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
 <li><div class="src-line"><a name="a177"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$in_data</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a178"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
-<li><div class="src-line"><a name="a179"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">else&nbsp;</span><span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$in_data&nbsp;</span>!==&nbsp;<span class="src-str">''</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a179"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">else&nbsp;</span><span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$in_data&nbsp;</span>!==&nbsp;<span class="src-str">''&nbsp;</span>&amp;&amp;&nbsp;<span class="src-sym">!</span><a href="http://www.php.net/is_numeric">is_numeric</a><span class="src-sym">(</span><span class="src-var">$in_data</span><span class="src-sym">))&nbsp;</span><span class="src-sym">{</span></div></li>
 <li><div class="src-line"><a name="a180"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-str">'&lt;![CDATA['&nbsp;</span>.&nbsp;<a href="../phpOpenFW/Plugin/_plugins---xml_transform.inc.php.html#functionstrip_cdata_tags">strip_cdata_tags</a><span class="src-sym">(</span><span class="src-var">$in_data</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">']]&gt;'</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a181"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
-<li><div class="src-line"><a name="a182"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">else&nbsp;</span><span class="src-sym">{&nbsp;</span><span class="src-key">return&nbsp;</span><span class="src-id">false</span><span class="src-sym">;&nbsp;</span><span class="src-sym">}</span></div></li>
-<li><div class="src-line"><a name="a183"></a><span class="src-sym">}</span></div></li>
-<li><div class="src-line"><a name="a184"></a>&nbsp;</div></li>
-<li><div class="src-line"><a name="a185"></a><span class="src-comm">//*****************************************************************************</span></div></li>
-<li><div class="src-line"><a name="a186"></a><span class="src-doc">/**</span></div></li>
-<li><div class="src-line"><a name="a187"></a><span class="src-doc">&nbsp;*&nbsp;Strip&nbsp;all&nbsp;CDATA&nbsp;begin&nbsp;and&nbsp;end&nbsp;tags&nbsp;from&nbsp;the&nbsp;string&nbsp;passed.</span></div></li>
-<li><div class="src-line"><a name="a188"></a><span class="src-doc">&nbsp;*</span></div></li>
-<li><div class="src-line"><a name="a189"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">String&nbsp;to&nbsp;strip&nbsp;CDATA&nbsp;tags&nbsp;from</span></div></li>
-<li><div class="src-line"><a name="a190"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">Cleaned&nbsp;string</span></div></li>
-<li><div class="src-line"><a name="a191"></a><span class="src-doc">&nbsp;*/</span></div></li>
-<li><div class="src-line"><a name="a192"></a><span class="src-comm">//*****************************************************************************</span></div></li>
-<li><div class="src-line"><a name="a193"></a><span class="src-key">function&nbsp;</span><a href="../phpOpenFW/Plugin/_plugins---xml_transform.inc.php.html#functionstrip_cdata_tags">strip_cdata_tags</a><span class="src-sym">(</span><span class="src-var">$str_data</span><span class="src-sym">)</span></div></li>
-<li><div class="src-line"><a name="a194"></a><span class="src-sym">{</span></div></li>
-<li><div class="src-line"><a name="a195"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/settype">settype</a><span class="src-sym">(</span><span class="src-var">$str_data</span><span class="src-sym">,&nbsp;</span><span class="src-str">'string'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a196"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$str_data&nbsp;</span>=&nbsp;<a href="http://www.php.net/str_replace">str_replace</a><span class="src-sym">(</span><span class="src-str">'&lt;![CDATA['</span><span class="src-sym">,&nbsp;</span><span class="src-str">''</span><span class="src-sym">,&nbsp;</span><span class="src-var">$str_data</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a197"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$str_data&nbsp;</span>=&nbsp;<a href="http://www.php.net/str_replace">str_replace</a><span class="src-sym">(</span><span class="src-str">']]&gt;'</span><span class="src-sym">,&nbsp;</span><span class="src-str">''</span><span class="src-sym">,&nbsp;</span><span class="src-var">$str_data</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a198"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$str_data</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a199"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a182"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">else&nbsp;</span><span class="src-key">if&nbsp;</span><span class="src-sym">(</span><a href="http://www.php.net/is_numeric">is_numeric</a><span class="src-sym">(</span><span class="src-var">$in_data</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a183"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a184"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$in_data</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a185"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a186"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">else&nbsp;</span><span class="src-sym">{&nbsp;</span><span class="src-key">return&nbsp;</span><span class="src-id">false</span><span class="src-sym">;&nbsp;</span><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a187"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a188"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a189"></a><span class="src-comm">//*****************************************************************************</span></div></li>
+<li><div class="src-line"><a name="a190"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a191"></a><span class="src-doc">&nbsp;*&nbsp;Strip&nbsp;all&nbsp;CDATA&nbsp;begin&nbsp;and&nbsp;end&nbsp;tags&nbsp;from&nbsp;the&nbsp;string&nbsp;passed.</span></div></li>
+<li><div class="src-line"><a name="a192"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a193"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">String&nbsp;to&nbsp;strip&nbsp;CDATA&nbsp;tags&nbsp;from</span></div></li>
+<li><div class="src-line"><a name="a194"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">Cleaned&nbsp;string</span></div></li>
+<li><div class="src-line"><a name="a195"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a196"></a><span class="src-comm">//*****************************************************************************</span></div></li>
+<li><div class="src-line"><a name="a197"></a><span class="src-key">function&nbsp;</span><a href="../phpOpenFW/Plugin/_plugins---xml_transform.inc.php.html#functionstrip_cdata_tags">strip_cdata_tags</a><span class="src-sym">(</span><span class="src-var">$str_data</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a198"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a199"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/settype">settype</a><span class="src-sym">(</span><span class="src-var">$str_data</span><span class="src-sym">,&nbsp;</span><span class="src-str">'string'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a200"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$str_data&nbsp;</span>=&nbsp;<a href="http://www.php.net/str_replace">str_replace</a><span class="src-sym">(</span><span class="src-str">'&lt;![CDATA['</span><span class="src-sym">,&nbsp;</span><span class="src-str">''</span><span class="src-sym">,&nbsp;</span><span class="src-var">$str_data</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a201"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$str_data&nbsp;</span>=&nbsp;<a href="http://www.php.net/str_replace">str_replace</a><span class="src-sym">(</span><span class="src-str">']]&gt;'</span><span class="src-sym">,&nbsp;</span><span class="src-str">''</span><span class="src-sym">,&nbsp;</span><span class="src-var">$str_data</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a202"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$str_data</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a203"></a><span class="src-sym">}</span></div></li>
 </ol></div>
 </div>
 	<p class="notes" id="credit">
-		Documentation generated on Tue, 31 May 2016 04:00:18 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+		Documentation generated on Mon, 18 Jul 2016 04:00:18 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
 	</p>
 	</body>
 </html>

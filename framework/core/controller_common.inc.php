@@ -9,7 +9,7 @@
 * @author 		Christian J. Clark
 * @copyright	Copyright (c) Christian J. Clark
 * @license		http://www.gnu.org/licenses/gpl-2.0.txt
-* @version 		Started: 12/19/2011, Last updated: 1/26/2016
+* @version 		Started: 12/19/2011, Last updated: 7/18/2016
 **/
 //****************************************************************************
 //****************************************************************************
@@ -49,8 +49,31 @@ function load_form_elements()
 //************************************************************************************
 function reg_data_source($ds_index, $ds_params)
 {
-	$known_params = array('type', 'server', 'port', 'source', 'user', 'pass', 'instance', 'conn_str', 'options', 'persistent', 'reuse_connection', 'charset');
-	$optional_params = array('port' => '', 'user' => '', 'pass' => '', 'instance' => '', 'conn_str' => '', 'options' => '', 'persistent' => '', 'reuse_connection' => '');
+	$known_params = array(
+		'type', 
+		'server', 
+		'port', 
+		'source', 
+		'user', 
+		'pass', 
+		'instance', 
+		'conn_str', 
+		'options', 
+		'persistent', 
+		'reuse_connection', 
+		'charset'
+	);
+	$optional_params = array(
+		'port',
+		'user'
+		'pass',
+		'instance',
+		'conn_str',
+		'options',
+		'persistent',
+		'reuse_connection',
+		'charset'
+	);
 	settype($ds_index, 'string');
 	if (!is_array($ds_params)) {
 		trigger_error("Error: reg_data_source(): Index: '{$ds_index}', Second parameter must be an array.");
@@ -64,7 +87,9 @@ function reg_data_source($ds_index, $ds_params)
 				$new_data_source[$param_index] = $ds_params[$param_index];
 				$param_count--;
 			}
-			else if (isset($optional_params[$param_index])) { $param_count--; }
+			else if (in_array($param_index, $optional_params)) {
+				$param_count--;
+			}
 		}
 
 		if ($param_count > 0) {
