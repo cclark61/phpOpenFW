@@ -65,7 +65,7 @@ function reg_data_source($ds_index, $ds_params)
 	);
 	$optional_params = array(
 		'port',
-		'user'
+		'user',
 		'pass',
 		'instance',
 		'conn_str',
