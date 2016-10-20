@@ -464,35 +464,35 @@ abstract class page
 	* @return string Root File Path of Application
 	**/
 	//***********************************************************************
-	protected function file_path() { return $this->file_path; }
+	public function file_path() { return $this->file_path; }
 	
 	//***********************************************************************
 	/**
 	* @return string location of framework
 	**/
 	//***********************************************************************
-	protected function frame_path() { return $this->frame_path; }
+	public function frame_path() { return $this->frame_path; }
 	
 	//***********************************************************************
 	/**
 	* @return string root html path of the application
 	**/
 	//***********************************************************************
-	protected function html_path() { return $this->html_path; }
+	public function html_path() { return $this->html_path; }
 	
 	//***********************************************************************
 	/**
 	* @return string html path of current page 
 	**/
 	//***********************************************************************
-	protected function local_html_path() { return $this->local_html_path; }
+	public function local_html_path() { return $this->local_html_path; }
 	
 	//***********************************************************************
 	/**
 	* @return string current XSL template
 	**/
 	//***********************************************************************
-	protected function xsl_template() { return $this->xsl_template; }
+	public function xsl_template() { return $this->xsl_template; }
 
 	//***********************************************************************************
 	// Variable Set Functions
@@ -505,7 +505,7 @@ abstract class page
 	* @param bool True = Skip (Default), False = Do NOT Skip
 	**/
 	//***********************************************************************
-	protected function skip_render($skip=true)
+	public function skip_render($skip=true)
 	{
 		$this->skip_render = (bool)$skip;
 	}
@@ -551,21 +551,21 @@ abstract class page
 	* @param string page type: page (default), report, etc.??
 	**/
 	//***********************************************************************
-	protected function set_page_type($type) { $this->page_type = $type; }
+	public function set_page_type($type) { $this->page_type = $type; }
 
 	//***********************************************************************
 	/**
 	* Set the ouput method to XML, default is HTML
 	**/
 	//***********************************************************************
-	protected function set_output_xml() { $this->output_type = 'xml'; }
+	public function set_output_xml() { $this->output_type = 'xml'; }
 	
 	//***********************************************************************
 	/**
 	* Add Application XML
 	**/
 	//***********************************************************************
-	protected function add_xml($key='', $val='')
+	public function add_xml($key='', $val='')
 	{
 		if ($key == '') {
 			trigger_error('Error: add_xml() :: XML key must not be blank.');
