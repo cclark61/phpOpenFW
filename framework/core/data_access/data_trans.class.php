@@ -332,7 +332,7 @@ class data_trans {
 	* Commit current Outstanding Statements / Transaction(s)
 	**/
 	//*************************************************************************
-	public function commit() { return $this->data_object->commit(); }
+	public function commit($start_new=true) { return $this->data_object->commit($start_new); }
 
 	//*************************************************************************
 	/**

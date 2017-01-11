@@ -180,11 +180,7 @@ class dt_mysqli extends dt_structure
 	* Start a new Database Transaction
 	**/
 	//*************************************************************************
-	protected function _start_trans()
-	{
-		$st_status = $this->query('START TRANSACTION');
-		return ($st_status !== false) ? (true) : (false);
-	}
+	protected function _start_trans() { return $this->handle->begin_transaction(); }
 
     //*************************************************************************
 	/**
